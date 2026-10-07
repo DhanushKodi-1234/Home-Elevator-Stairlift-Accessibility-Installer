@@ -1,0 +1,1546 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth" data-theme="gold-obsidian">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order & Quote | Home Elevator — Request Your Bespoke Lift</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%23DFBA67'/%3E%3Cstop offset='100%25' stop-color='%23C5A059'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Cg transform='translate(14, 15.2) scale(0.07)'%3E%3Cpath fill='%23ffffff' d='M292.7-4.7l64 64c6.2 6.2 16.4 6.2 22.6 0l64-64c4.6-4.6 5.9-11.5 3.5-17.4S438.5-32 432-32L304-32c-6.5 0-12.3 3.9-14.8 9.9s-1.1 12.9 3.5 17.4zm-160-22.6l-64 64c-4.6 4.6-5.9 11.5-3.5 17.4S73.5 64 80 64l128 0c6.5 0 12.3-3.9 14.8-9.9s1.1-12.9-3.5-17.4l-64-64c-6.2-6.2-16.4-6.2-22.6 0zM64 128c-35.3 0-64 28.7-64 64L0 448c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-256c0-35.3-28.7-64-64-64L64 128zm96 96a48 48 0 1 1 0 96 48 48 0 1 1 0-96zM80 400c0-26.5 21.5-48 48-48l64 0c26.5 0 48 21.5 48 48l0 16c0 17.7-14.3 32-32 32l-96 0c-17.7 0-32-14.3-32-32l0-16zm192 0c0-26.5 21.5-48 48-48l64 0c26.5 0 48 21.5 48 48l0 16c0 17.7-14.3 32-32 32l-96 0c-17.7 0-32-14.3-32-32l0-16zm32-128a48 48 0 1 1 96 0 48 48 0 1 1 -96 0z'/%3E%3C/g%3E%3C/svg%3E">
+    <meta name="description" content="Request a quote or place an order for your bespoke elevator or stairlift. Transparent pricing, financing options, and white-glove delivery.">
+    <!-- Tailwind CSS -->
+    <script src="tailwind.js"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        'gift-slate': 'var(--color-primary)',
+                        'gift-slate-light': 'var(--color-primary-light)',
+                        'gift-slate-dark': 'var(--color-primary-dark)',
+                        'gift-slate-bright': 'var(--color-primary-bright)',
+                        'gift-accent': 'var(--color-accent)',
+                        'bg-warm': 'var(--color-bg-warm)',
+                        'neutral-dark': 'var(--color-text-dark)',
+                        'neutral-light': '#E8EDF2',
+                        'dark-bg': '#0A0D12',
+                        'dark-card': '#141A24',
+                        'dark-surface': '#1C2432',
+                    },
+                    fontFamily: {
+                        'sans': ['Plus Jakarta Sans', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+                        'display': ['Outfit', 'Plus Jakarta Sans', 'sans-serif'],
+                        'premium': ['Outfit', 'sans-serif'],
+                        'alt': ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    animation: {
+                        'slide-up': 'slideUp 0.5s ease-out',
+                        'fade-in': 'fadeIn 0.3s ease-out',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        slideUp: { '0%': { transform: 'translateY(30px)', opacity: '0' }, '100%': { transform: 'translateY(0)', opacity: '1' } },
+                        fadeIn: { '0%': { opacity: '0' }, '100%': { opacity: '1' } },
+                        float: { '0%, 100%': { transform: 'translateY(0px)' }, '50%': { transform: 'translateY(-12px)' } }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root, [data-theme="gold-obsidian"] {
+            --color-primary: #C5A059;
+            --color-primary-light: #DFBA67;
+            --color-primary-dark: #9E7D3B;
+            --color-primary-bright: #E6C687;
+            --color-accent: #D4AF37;
+            --color-bg-warm: #FAF8F5;
+            --color-text-dark: #0B0F17;
+            --color-rgb-primary: 197, 160, 89;
+            --color-rgb-bright: 230, 198, 135;
+        }
+        [data-theme="royal-sapphire"] { --color-primary: #2563EB; --color-primary-light: #60A5FA; --color-primary-dark: #1E40AF; --color-primary-bright: #93C5FD; --color-accent: #F59E0B; --color-bg-warm: #F8FAFC; --color-text-dark: #0F172A; --color-rgb-primary: 37, 99, 235; --color-rgb-bright: 147, 197, 253; }
+        [data-theme="emerald-gold"] { --color-primary: #059669; --color-primary-light: #34D399; --color-primary-dark: #047857; --color-primary-bright: #6EE7B7; --color-accent: #D4AF37; --color-bg-warm: #F4FBF7; --color-text-dark: #064E3B; --color-rgb-primary: 5, 150, 105; --color-rgb-bright: 110, 231, 183; }
+        [data-theme="rose-copper"] { --color-primary: #BE185D; --color-primary-light: #F472B6; --color-primary-dark: #831843; --color-primary-bright: #FBCFE8; --color-accent: #E07A5F; --color-bg-warm: #FDF2F8; --color-text-dark: #500724; --color-rgb-primary: 190, 24, 93; --color-rgb-bright: 251, 207, 232; }
+
+        body { font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background-color: var(--color-bg-warm); color: var(--color-text-dark); transition: background-color 0.4s ease, color 0.4s ease; }
+        .dark body { background-color: #0A0D12; color: #E2E8F0; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif; font-weight: 700; letter-spacing: -0.025em; }
+        
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #E6C687 0%, #C5A059 50%, #9E7D3B 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .dark .text-gift-slate { color: var(--color-primary-bright) !important; }
+        .dark .bg-gift-slate { background-color: var(--color-primary-bright) !important; }
+        .dark .border-gift-slate { border-color: var(--color-primary-bright) !important; }
+        .dark .from-gift-slate { --tw-gradient-from: var(--color-primary-bright) !important; }
+        .dark .service-icon { background: rgba(var(--color-rgb-bright), 0.12) !important; color: var(--color-primary-bright) !important; border: 1px solid rgba(var(--color-rgb-bright), 0.25); }
+        .dark .badge { background: rgba(var(--color-rgb-bright), 0.15) !important; color: var(--color-primary-bright) !important; border: 1px solid rgba(var(--color-rgb-bright), 0.3); }
+        .dark .dropdown-item:hover { color: var(--color-primary-bright) !important; }
+        .dark .auth-btn.login:hover { border-color: transparent !important; color: #0A0D12 !important; }
+        .dark .nav-item:hover { color: var(--color-primary-bright) !important; }
+        .dark .nav-item::after { background: var(--color-primary-bright) !important; }
+        .dark .dropdown-item i { color: var(--color-primary-bright) !important; }
+        .dark .premium-line { background: linear-gradient(90deg, var(--color-primary-bright), rgba(var(--color-rgb-bright), 0.1)); }
+        .dark .hover\:text-gift-slate:hover { color: var(--color-primary-bright) !important; }
+
+        body::-webkit-scrollbar { display: none; }
+        body { -ms-overflow-style: none; scrollbar-width: none; }
+        
+        /* Premium Navigation */
+        .nav-item { position: relative; padding: 0.5rem 0; font-weight: 600; font-size: 0.85rem; letter-spacing: 0.02em; color: var(--color-text-dark); transition: color 0.3s ease; font-family: 'Plus Jakarta Sans', sans-serif; text-transform: uppercase; white-space: nowrap; }
+        .dark .nav-item { color: #E2E8F0; }
+        .nav-item:hover { color: var(--color-primary); }
+        .dark .nav-item:hover { color: var(--color-primary-bright); }
+        .nav-item::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 0; height: 2px; background: linear-gradient(90deg, var(--color-primary), var(--color-primary-light)); transition: width 0.3s ease; }
+        .dark .nav-item::after { background: linear-gradient(90deg, var(--color-primary-bright), var(--color-primary-light)); }
+        [dir="rtl"] .nav-item::after { left: auto; right: 0; }
+        .nav-item:hover::after { width: 100%; }
+        
+        .dropdown { position: relative; }
+        .dropdown-menu { position: absolute; top: 100%; left: 0; min-width: 230px; background: rgba(255,255,255,0.98); border-radius: 16px; padding: 0.85rem 0; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.18); opacity: 0; visibility: hidden; transform: translateY(12px); transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1); z-index: 1000; border: 1px solid rgba(var(--color-rgb-primary), 0.2); backdrop-filter: blur(12px); }
+        .dark .dropdown-menu { background: rgba(20, 26, 36, 0.98); border-color: rgba(var(--color-rgb-bright), 0.25); box-shadow: 0 25px 50px -12px rgba(0,0,0,0.6); }
+        .dropdown:hover .dropdown-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+        [dir="rtl"] .dropdown-menu { left: auto; right: 0; }
+        .dropdown-item { display: flex; align-items: center; padding: 0.8rem 1.6rem; color: var(--color-text-dark); transition: all 0.2s ease; white-space: nowrap; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.9rem; font-weight: 500; }
+        .dark .dropdown-item { color: #E2E8F0; }
+        .dropdown-item:hover { background: rgba(var(--color-rgb-primary), 0.1); color: var(--color-primary); padding-left: 1.85rem; }
+        .dark .dropdown-item:hover { background: rgba(var(--color-rgb-bright), 0.15); color: var(--color-primary-bright); }
+        .dropdown-item i { margin-right: 0.85rem; width: 20px; text-align: center; color: var(--color-primary); }
+        .dark .dropdown-item i { color: var(--color-primary-bright); }
+        
+        .auth-btn { padding: 0.6rem 1.75rem; border-radius: 50px; font-weight: 600; font-size: 0.88rem; letter-spacing: 0.04em; transition: all 0.3s ease; border: 1px solid transparent; white-space: nowrap; font-family: 'Plus Jakarta Sans', sans-serif; text-transform: uppercase; }
+        .auth-btn.login { background: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-primary) 100%); color: #ffffff !important; box-shadow: 0 4px 15px rgba(var(--color-rgb-primary), 0.35); border: none; }
+        .dark .auth-btn.login { background: linear-gradient(135deg, var(--color-primary-bright) 0%, var(--color-primary) 100%); color: #0A0D12 !important; box-shadow: 0 4px 15px rgba(var(--color-rgb-bright), 0.3); border: none; }
+        .auth-btn.login:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(var(--color-rgb-primary), 0.45); color: #ffffff !important; }
+        .dark .auth-btn.login:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(var(--color-rgb-bright), 0.45); color: #0A0D12 !important; }
+        
+        .toggle-btn { width: 38px; height: 38px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: rgba(var(--color-rgb-primary), 0.12); color: var(--color-primary); transition: all 0.3s ease; border: 1px solid rgba(var(--color-rgb-primary), 0.2); cursor: pointer; }
+        .dark .toggle-btn { background: rgba(var(--color-rgb-bright), 0.12); color: var(--color-primary-bright); border-color: rgba(var(--color-rgb-bright), 0.25); }
+        .toggle-btn:hover { background: var(--color-primary); color: white; transform: scale(1.08); }
+        .dark .toggle-btn:hover { background: var(--color-primary-bright); color: #0A0D12; transform: scale(1.08); }
+        .toggle-btn.active { background: var(--color-primary); color: white; }
+        .dark .toggle-btn.active { background: var(--color-primary-bright); color: #0A0D12; }
+        @media (max-width: 1279px) { .desktop-toggle-group { display: none !important; } }
+        
+        .mobile-menu { background: white; border-top: 1px solid rgba(var(--color-rgb-primary), 0.15); max-height: 0; overflow: hidden; transition: max-height 0.5s ease; }
+        .dark .mobile-menu { background: #0A0D12; border-color: rgba(var(--color-rgb-bright), 0.2); }
+        .mobile-menu.open { max-height: 85vh; overflow-y: auto; }
+        .mobile-menu-item { display: block; padding: 1.1rem 1.75rem; font-weight: 600; color: var(--color-text-dark); border-bottom: 1px solid rgba(var(--color-rgb-primary), 0.1); transition: all 0.2s ease; font-family: 'Plus Jakarta Sans', sans-serif; text-transform: uppercase; letter-spacing: 0.03em; font-size: 0.9rem; }
+        .dark .mobile-menu-item { color: #E2E8F0; border-bottom-color: rgba(var(--color-rgb-bright), 0.15); }
+        .mobile-menu-item:hover { background-color: rgba(var(--color-rgb-primary), 0.06); color: var(--color-primary); }
+        .dark .mobile-menu-item:hover { background-color: rgba(var(--color-rgb-bright), 0.12); color: var(--color-primary-bright); }
+        .mobile-dropdown-content { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; background: rgba(var(--color-rgb-primary), 0.04); }
+        .dark .mobile-dropdown-content { background: rgba(20, 26, 36, 0.8); }
+        .mobile-dropdown-content.show { max-height: 300px; }
+        .mobile-dropdown-item { display: block; padding: 0.85rem 2.75rem; font-size: 0.92rem; color: var(--color-text-dark); transition: all 0.2s ease; border-bottom: 1px solid rgba(var(--color-rgb-primary), 0.08); font-family: 'Plus Jakarta Sans', sans-serif; }
+        .dark .mobile-dropdown-item { color: #CBD5E1; border-bottom-color: rgba(var(--color-rgb-bright), 0.1); }
+        .mobile-dropdown-item:hover { color: var(--color-primary); background-color: rgba(var(--color-rgb-primary), 0.1); }
+        .dark .mobile-dropdown-item:hover { background-color: rgba(var(--color-rgb-bright), 0.15); color: var(--color-primary-bright); }
+        .mobile-auth-btn { display: inline-block; padding: 0.85rem 1.75rem; font-weight: 600; border-radius: 50px; transition: all 0.3s ease; text-align: center; margin: 0.25rem; border: 1px solid transparent; font-family: 'Plus Jakarta Sans', sans-serif; text-transform: uppercase; letter-spacing: 0.04em; }
+        .mobile-auth-btn.login { background: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-primary) 100%); color: #ffffff !important; box-shadow: 0 4px 15px rgba(var(--color-rgb-primary), 0.3); border: none; }
+        .dark .mobile-auth-btn.login { background: linear-gradient(135deg, var(--color-primary-bright) 0%, var(--color-primary) 100%); color: #0A0D12 !important; border: none; }
+        .mobile-auth-btn.login:hover { opacity: 0.95; transform: translateY(-1px); }
+        .dark .mobile-auth-btn.login:hover { opacity: 0.95; transform: translateY(-1px); color: #0A0D12 !important; }
+        .desktop-nav-container { display: flex; align-items: center; gap: 2rem; }
+
+        /* Shared utility styles */
+        .service-icon { width: 84px; height: 84px; background: rgba(var(--color-rgb-primary), 0.12); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 1.25rem; font-size: 2.2rem; color: var(--color-primary); border: 1px solid rgba(var(--color-rgb-primary), 0.25); box-shadow: 0 10px 20px -5px rgba(var(--color-rgb-primary), 0.15); }
+        .dark .service-icon { background: rgba(var(--color-rgb-bright), 0.12); color: var(--color-primary-bright); border-color: rgba(var(--color-rgb-bright), 0.3); }
+        .badge { background: rgba(var(--color-rgb-primary), 0.15); color: var(--color-primary); padding: 0.35rem 1.2rem; border-radius: 50px; font-weight: 600; font-size: 0.82rem; letter-spacing: 0.05em; text-transform: uppercase; border: 1px solid rgba(var(--color-rgb-primary), 0.25); backdrop-filter: blur(8px); }
+        .dark .badge { background: rgba(var(--color-rgb-bright), 0.18); color: var(--color-primary-bright); border-color: rgba(var(--color-rgb-bright), 0.35); }
+        .premium-line { width: 90px; height: 3px; background: linear-gradient(90deg, var(--color-primary), var(--color-primary-light), transparent); margin: 24px 0; border-radius: 2px; }
+        .dark .premium-line { background: linear-gradient(90deg, var(--color-primary-bright), var(--color-primary-light), transparent); }
+        .btn-gift { background: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-primary) 100%); color: white; padding: 0.9rem 2.25rem; border-radius: 50px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; display: inline-flex; align-items: center; gap: 0.6rem; transition: all 0.3s; font-size: 0.95rem; font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif; box-shadow: 0 10px 25px -5px rgba(var(--color-rgb-primary), 0.35); }
+        .dark .btn-gift { background: linear-gradient(135deg, var(--color-primary-bright) 0%, var(--color-primary) 100%); color: #0A0D12; box-shadow: 0 10px 25px -5px rgba(var(--color-rgb-bright), 0.35); }
+        .btn-gift:hover { transform: translateY(-3px); box-shadow: 0 18px 35px -8px rgba(var(--color-rgb-primary), 0.5); }
+        .dark .btn-gift:hover { box-shadow: 0 18px 35px -8px rgba(var(--color-rgb-bright), 0.5); }
+        
+        footer { background: white; color: var(--color-text-dark); border-top: 1px solid rgba(var(--color-rgb-primary), 0.18); }
+        .dark footer { background: #0A0D12; color: #E2E8F0; border-color: rgba(var(--color-rgb-bright), 0.2); }
+        footer a:hover { color: var(--color-primary); }
+        .dark footer a:hover { color: var(--color-primary-bright); }
+        .social-icon { width: 44px; height: 44px; border-radius: 50%; background: rgba(var(--color-rgb-primary), 0.1); color: var(--color-primary); display: inline-flex; align-items: center; justify-content: center; transition: all 0.3s; border: 1px solid rgba(var(--color-rgb-primary), 0.2); }
+        .dark .social-icon { background: rgba(var(--color-rgb-bright), 0.12); color: var(--color-primary-bright); border-color: rgba(var(--color-rgb-bright), 0.25); }
+        .social-icon:hover { background: var(--color-primary); color: white; transform: translateY(-3px) scale(1.05); }
+        .dark .social-icon:hover { background: var(--color-primary-bright); color: #0A0D12; }
+
+        /* ========== ORDER PAGE UNIQUE STYLES ========== */
+        .orb { position: absolute; border-radius: 50%; filter: blur(60px); opacity: 0.35; pointer-events: none; }
+
+        /* Form inputs */
+        .order-input, .order-select, .order-textarea {
+            width: 100%;
+            padding: 0.95rem 1.15rem;
+            border-radius: 14px;
+            background: rgba(var(--color-rgb-primary), 0.05);
+            border: 1px solid rgba(var(--color-rgb-primary), 0.2);
+            color: var(--color-text-dark);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 0.92rem;
+            transition: all 0.3s ease;
+        }
+        .order-input:focus, .order-select:focus, .order-textarea:focus {
+            outline: none;
+            border-color: var(--color-primary);
+            background: rgba(var(--color-rgb-primary), 0.08);
+            box-shadow: 0 0 0 4px rgba(var(--color-rgb-primary), 0.12);
+        }
+        .order-input::placeholder, .order-textarea::placeholder { color: rgba(11, 15, 23, 0.4); }
+        .dark .order-input, .dark .order-select, .dark .order-textarea {
+            background: rgba(var(--color-rgb-bright), 0.06);
+            border-color: rgba(var(--color-rgb-bright), 0.2);
+            color: #E2E8F0;
+        }
+        .dark .order-input:focus, .dark .order-select:focus, .dark .order-textarea:focus {
+            border-color: var(--color-primary-bright);
+            background: rgba(var(--color-rgb-bright), 0.1);
+            box-shadow: 0 0 0 4px rgba(var(--color-rgb-bright), 0.15);
+        }
+        .dark .order-input::placeholder, .dark .order-textarea::placeholder { color: rgba(226, 232, 240, 0.4); }
+        .order-select { appearance: none; cursor: pointer; background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23C5A059' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e"); background-repeat: no-repeat; background-position: right 1rem center; background-size: 1rem; padding-right: 2.75rem; }
+        .dark .order-select { background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23E6C687' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e"); }
+
+        .order-label {
+            display: block;
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--color-primary);
+            margin-bottom: 0.5rem;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .dark .order-label { color: var(--color-primary-bright); }
+
+        /* Progress Steps */
+        .progress-step {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 14px 18px;
+            border-radius: 16px;
+            background: transparent;
+            border: 1.5px solid rgba(var(--color-rgb-primary), 0.15);
+            cursor: pointer;
+            transition: all 0.35s ease;
+        }
+        .dark .progress-step { border-color: rgba(var(--color-rgb-bright), 0.15); }
+        .progress-step.active {
+            background: rgba(var(--color-rgb-primary), 0.08);
+            border-color: var(--color-primary);
+        }
+        .dark .progress-step.active {
+            background: rgba(var(--color-rgb-bright), 0.08);
+            border-color: var(--color-primary-bright);
+        }
+        .progress-step.done {
+            background: rgba(var(--color-rgb-primary), 0.05);
+            border-color: rgba(var(--color-rgb-primary), 0.4);
+        }
+        .dark .progress-step.done {
+            background: rgba(var(--color-rgb-bright), 0.05);
+            border-color: rgba(var(--color-rgb-bright), 0.4);
+        }
+        .progress-step-num {
+            width: 36px; height: 36px;
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-weight: 700;
+            font-size: 0.85rem;
+            flex-shrink: 0;
+            background: rgba(var(--color-rgb-primary), 0.12);
+            color: var(--color-primary);
+            transition: all 0.3s ease;
+        }
+        .dark .progress-step-num { background: rgba(var(--color-rgb-bright), 0.15); color: var(--color-primary-bright); }
+        .progress-step.active .progress-step-num { background: var(--color-primary); color: white; }
+        .dark .progress-step.active .progress-step-num { background: var(--color-primary-bright); color: #0A0D12; }
+        .progress-step.done .progress-step-num { background: var(--color-primary); color: white; }
+        .dark .progress-step.done .progress-step-num { background: var(--color-primary-bright); color: #0A0D12; }
+
+        /* Order summary sticky */
+        .order-summary-sticky { position: sticky; top: 100px; }
+
+        /* Package / tier cards */
+        .tier-card {
+            padding: 1.5rem;
+            border-radius: 20px;
+            border: 2px solid rgba(var(--color-rgb-primary), 0.15);
+            background: transparent;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
+            height: 100%;
+        }
+        .dark .tier-card { border-color: rgba(var(--color-rgb-bright), 0.15); }
+        .tier-card:hover { border-color: rgba(var(--color-rgb-primary), 0.4); transform: translateY(-4px); }
+        .dark .tier-card:hover { border-color: rgba(var(--color-rgb-bright), 0.4); }
+        .tier-card.active {
+            border-color: var(--color-primary);
+            background: rgba(var(--color-rgb-primary), 0.05);
+            box-shadow: 0 12px 30px rgba(var(--color-rgb-primary), 0.15);
+        }
+        .dark .tier-card.active {
+            border-color: var(--color-primary-bright);
+            background: rgba(var(--color-rgb-bright), 0.06);
+            box-shadow: 0 12px 30px rgba(var(--color-rgb-bright), 0.15);
+        }
+        .tier-card.active::before {
+            content: '\f00c';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            top: 14px;
+            right: 14px;
+            width: 26px; height: 26px;
+            border-radius: 50%;
+            background: var(--color-primary);
+            color: white;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 12px;
+        }
+        .dark .tier-card.active::before { background: var(--color-primary-bright); color: #0A0D12; }
+
+        /* Payment option cards */
+        .payment-card {
+            padding: 1.25rem;
+            border-radius: 16px;
+            border: 2px solid rgba(var(--color-rgb-primary), 0.15);
+            background: transparent;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .dark .payment-card { border-color: rgba(var(--color-rgb-bright), 0.15); }
+        .payment-card:hover { border-color: rgba(var(--color-rgb-primary), 0.4); }
+        .dark .payment-card:hover { border-color: rgba(var(--color-rgb-bright), 0.4); }
+        .payment-card.active {
+            border-color: var(--color-primary);
+            background: rgba(var(--color-rgb-primary), 0.06);
+        }
+        .dark .payment-card.active {
+            border-color: var(--color-primary-bright);
+            background: rgba(var(--color-rgb-bright), 0.08);
+        }
+
+        /* Success modal */
+        .success-modal {
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            background: rgba(11, 15, 23, 0.75);
+            backdrop-filter: blur(8px);
+            padding: 1.5rem;
+        }
+        .success-modal.show { display: flex; animation: fadeIn 0.3s ease-out; }
+
+        /* Timeline dot for step nav */
+        @keyframes checkPop {
+            0% { transform: scale(0.8); }
+            50% { transform: scale(1.15); }
+            100% { transform: scale(1); }
+        }
+        .check-pop { animation: checkPop 0.5s ease-out; }
+
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-bg-warm dark:bg-dark-bg text-neutral-dark dark:text-gray-200 transition-colors duration-400">
+
+    <!-- ========== HEADER (copied from reference) ========== -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/90 dark:bg-[#0A0D12]/90 backdrop-blur-md border-b border-neutral-light/80 dark:border-gray-800/80 transition-colors duration-400">
+        <div class="container mx-auto px-6">
+            <div class="flex items-center justify-between h-22 py-4">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center space-x-3 group flex-nowrap" dir="ltr">
+                    <div class="w-11 h-11 bg-gradient-to-br from-gift-slate-light to-gift-slate rounded-2xl flex items-center justify-center flex-shrink-0 transform group-hover:rotate-12 transition-transform duration-300 shadow-lg border border-gift-slate/20">
+                        <i class="fas fa-elevator text-white dark:text-dark-bg text-xl"></i>
+                    </div>
+                    <div class="flex items-center whitespace-nowrap">
+                        <span class="text-2xl font-display font-extrabold tracking-tight text-neutral-dark dark:text-white">Home </span>
+                        <span class="text-2xl font-display font-extrabold tracking-tight gold-gradient-text ml-0.5">Elevator</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden xl:flex items-center">
+                    <div class="desktop-nav-container">
+                        <div class="flex items-center gap-3 lg:gap-4 xl:gap-5">
+                            <div class="dropdown">
+                                <button class="nav-item flex items-center gap-1.5">
+                                    Home <i class="fas fa-chevron-down text-[10px]"></i>
+                                </button>
+                                <div class="dropdown-menu">
+                                    <a href="index.html" class="dropdown-item">Home 1</a>
+                                    <a href="home2.html" class="dropdown-item">Home 2</a>
+                                </div>
+                            </div>
+                            <a href="about.html" class="nav-item">About</a>
+                            <a href="products.html" class="nav-item">Products</a>
+                            <a href="customization.html" class="nav-item">Customization</a>
+                            <a href="order.html" class="nav-item" style="color: var(--color-primary); font-weight: 700;">Order</a>
+                            <a href="contact.html" class="nav-item">Contact</a>
+                            <div class="dropdown">
+                                <button class="nav-item flex items-center gap-1.5">
+                                    Dashboard <i class="fas fa-chevron-down text-[10px]"></i>
+                                </button>
+                                <div class="dropdown-menu">
+                                    <a href="admin.html" class="dropdown-item">Admin</a>
+                                    <a href="client.html" class="dropdown-item">Client</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3 ml-2">
+                            <a href="login.html" class="auth-btn login">Sign In</a>
+                        </div>
+                    </div>
+                    <div class="flex gap-2.5 ml-5 desktop-toggle-group">
+                        <button id="theme-toggle" class="toggle-btn" title="Toggle Dark/Light Mode"><i class="fas fa-moon"></i><i class="fas fa-sun hidden"></i></button>
+                        <button id="rtl-toggle" class="toggle-btn" title="Toggle RTL/LTR">⇄</button>
+                    </div>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-toggle" class="xl:hidden text-neutral-dark dark:text-gray-300 p-2 focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="mobile-menu xl:hidden">
+                <div class="mobile-dropdown">
+                    <button class="mobile-dropdown-btn flex items-center justify-between w-full mobile-menu-item">
+                        <span>Home</span> <i class="fas fa-chevron-down text-xs"></i>
+                    </button>
+                    <div class="mobile-dropdown-content">
+                        <a href="index.html" class="mobile-dropdown-item">Home 1</a>
+                        <a href="home2.html" class="mobile-dropdown-item">Home 2</a>
+                    </div>
+                </div>
+                <a href="about.html" class="mobile-menu-item">About</a>
+                <a href="products.html" class="mobile-menu-item">Products</a>
+                <a href="customization.html" class="mobile-menu-item">Customization</a>
+                <a href="order.html" class="mobile-menu-item" style="color: var(--color-primary); font-weight: 700;">Order</a>
+                <a href="contact.html" class="mobile-menu-item">Contact</a>
+                <div class="mobile-dropdown">
+                    <button class="mobile-dropdown-btn flex items-center justify-between w-full mobile-menu-item">
+                        <span>Dashboard</span> <i class="fas fa-chevron-down text-xs"></i>
+                    </button>
+                    <div class="mobile-dropdown-content">
+                        <a href="admin.html" class="mobile-dropdown-item">Admin</a>
+                        <a href="client.html" class="mobile-dropdown-item">Client</a>
+                    </div>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-3 p-6">
+                    <a href="login.html" class="mobile-auth-btn login flex-1 text-center">Sign In</a>
+                </div>
+
+                <div class="flex justify-center gap-3 p-6 border-t border-gray-200 dark:border-gray-800">
+                    <button id="theme-toggle-mobile" class="toggle-btn"><i class="fas fa-moon"></i><i class="fas fa-sun hidden"></i></button>
+                    <button id="rtl-toggle-mobile" class="toggle-btn">⇄</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ==================================================== -->
+    <!-- ORDER SECTION 1: HERO (Split with trust badge + inline guarantee strip) -->
+    <!-- ==================================================== -->
+    <section class="pt-24 pb-12 sm:pt-28 sm:pb-16 lg:pt-32 lg:pb-20 relative overflow-hidden">
+        <div class="orb w-96 h-96 bg-gift-slate/25 dark:bg-gift-slate-bright/20 -top-32 -right-32"></div>
+        <div class="orb w-72 h-72 bg-gift-accent/15 -bottom-20 -left-20"></div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <!-- Breadcrumb -->
+            <div class="flex items-center gap-2 mb-6 sm:mb-8 text-xs font-bold uppercase tracking-widest text-neutral-dark/60 dark:text-gray-400">
+                <a href="index.html" class="hover:text-gift-slate dark:hover:text-gift-slate-bright transition">Home</a>
+                <i class="fas fa-chevron-right text-[8px]"></i>
+                <span class="text-gift-slate dark:text-gift-slate-bright">Order & Quote</span>
+            </div>
+
+            <div class="grid lg:grid-cols-12 gap-10 items-center">
+                <!-- Left -->
+                <div class="lg:col-span-7">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/80 dark:bg-dark-card/60 border border-gift-slate/20 dark:border-gift-slate-bright/25 shadow-sm mb-5 backdrop-blur-md">
+                        <i class="fas fa-file-invoice text-gift-slate dark:text-gift-slate-bright text-xs"></i>
+                        <span class="text-[11px] font-bold tracking-[0.2em] uppercase text-neutral-dark dark:text-white">Request Quote · Place Order</span>
+                    </div>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-extrabold text-neutral-dark dark:text-white leading-[1.05] mb-5">
+                        Ready to <span class="gold-gradient-text">begin?</span>
+                    </h1>
+                    <div class="premium-line !my-5"></div>
+                    <p class="text-lg text-neutral-dark/80 dark:text-gray-300 max-w-xl leading-relaxed font-premium italic mb-8">
+                        Complete the form below and receive a personalized, itemized quote within 24 hours. No commitment — just a clear next step.
+                    </p>
+
+                    <!-- Trust strip -->
+                    <div class="flex flex-wrap items-center gap-6 max-w-lg">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-xl bg-gift-slate/10 dark:bg-gift-slate-bright/15 flex items-center justify-center text-gift-slate dark:text-gift-slate-bright">
+                                <i class="fas fa-shield-halved"></i>
+                            </div>
+                            <div>
+                                <div class="text-xs font-bold text-neutral-dark dark:text-white">Secure</div>
+                                <div class="text-[10px] uppercase tracking-wider opacity-60">256-bit encrypted</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-xl bg-gift-slate/10 dark:bg-gift-slate-bright/15 flex items-center justify-center text-gift-slate dark:text-gift-slate-bright">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div>
+                                <div class="text-xs font-bold text-neutral-dark dark:text-white">24-hour</div>
+                                <div class="text-[10px] uppercase tracking-wider opacity-60">quote turnaround</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-xl bg-gift-slate/10 dark:bg-gift-slate-bright/15 flex items-center justify-center text-gift-slate dark:text-gift-slate-bright">
+                                <i class="fas fa-ban"></i>
+                            </div>
+                            <div>
+                                <div class="text-xs font-bold text-neutral-dark dark:text-white">Zero</div>
+                                <div class="text-[10px] uppercase tracking-wider opacity-60">obligation</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Quote estimate preview card -->
+                <div class="lg:col-span-5">
+                    <div class="rounded-3xl bg-white dark:bg-dark-card p-7 shadow-2xl border border-gift-slate/15 dark:border-gift-slate-bright/20">
+                        <div class="flex items-center gap-3 mb-5">
+                            <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-gift-slate-light to-gift-slate dark:from-gift-slate-bright dark:to-gift-slate-dark flex items-center justify-center shadow-lg">
+                                <i class="fas fa-calculator text-white text-lg"></i>
+                            </div>
+                            <div>
+                                <div class="text-[10px] uppercase font-bold tracking-widest text-gift-slate dark:text-gift-slate-bright">Instant Estimate</div>
+                                <div class="font-display font-bold text-neutral-dark dark:text-white">Typical project range</div>
+                            </div>
+                        </div>
+                        <div class="space-y-3 mb-5">
+                            <div class="flex justify-between items-center py-2 border-b border-gift-slate/10 dark:border-gray-800">
+                                <span class="text-sm opacity-75">Stairlift</span>
+                                <strong class="text-neutral-dark dark:text-white">$2,400 – $7,200</strong>
+                            </div>
+                            <div class="flex justify-between items-center py-2 border-b border-gift-slate/10 dark:border-gray-800">
+                                <span class="text-sm opacity-75">Home Elevator</span>
+                                <strong class="text-neutral-dark dark:text-white">$14,900 – $45,000</strong>
+                            </div>
+                            <div class="flex justify-between items-center py-2 border-b border-gift-slate/10 dark:border-gray-800">
+                                <span class="text-sm opacity-75">Commercial Lift</span>
+                                <strong class="text-neutral-dark dark:text-white">Custom quoted</strong>
+                            </div>
+                            <div class="flex justify-between items-center py-2">
+                                <span class="text-sm opacity-75">Platform Lift</span>
+                                <strong class="text-neutral-dark dark:text-white">$6,900 – $15,000</strong>
+                            </div>
+                        </div>
+                        <div class="rounded-2xl bg-gift-slate/8 dark:bg-gift-slate-bright/10 p-3.5 text-xs opacity-80 leading-relaxed">
+                            <i class="fas fa-info-circle text-gift-slate dark:text-gift-slate-bright mr-1"></i>
+                            Final price depends on dimensions, materials, and site conditions. Your personalized quote will reflect every detail.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================================================== -->
+    <!-- ORDER SECTION 2: MAIN ORDER FORM (Split: form + sticky summary) -->
+    <!-- ==================================================== -->
+    <section class="py-12 sm:py-16 lg:py-20 bg-white dark:bg-dark-card border-y border-neutral-light/50 dark:border-gray-800/60">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-12 gap-10 max-w-7xl mx-auto">
+
+                <!-- LEFT: Form with progress steps -->
+                <div class="lg:col-span-8">
+                    <!-- Progress steps -->
+                    <div class="grid sm:grid-cols-3 gap-3 mb-10">
+                        <div class="progress-step active" data-step="1">
+                            <div class="progress-step-num">1</div>
+                            <div>
+                                <div class="text-xs font-bold uppercase tracking-wider text-neutral-dark dark:text-white">Your Info</div>
+                                <div class="text-[11px] opacity-60">Contact & property</div>
+                            </div>
+                        </div>
+                        <div class="progress-step" data-step="2">
+                            <div class="progress-step-num">2</div>
+                            <div>
+                                <div class="text-xs font-bold uppercase tracking-wider text-neutral-dark dark:text-white">Product</div>
+                                <div class="text-[11px] opacity-60">Lift & package</div>
+                            </div>
+                        </div>
+                        <div class="progress-step" data-step="3">
+                            <div class="progress-step-num">3</div>
+                            <div>
+                                <div class="text-xs font-bold uppercase tracking-wider text-neutral-dark dark:text-white">Schedule</div>
+                                <div class="text-[11px] opacity-60">Payment & timing</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <form id="order-form" class="space-y-10">
+
+                        <!-- ===== STEP 1: Your Info ===== -->
+                        <div id="step-1" class="space-y-6">
+                            <div>
+                                <h3 class="font-display font-bold text-2xl text-neutral-dark dark:text-white mb-2">Tell us about you</h3>
+                                <p class="text-sm opacity-70 mb-6">We use this to personalize your quote and schedule your free site visit.</p>
+                            </div>
+
+                            <div class="grid sm:grid-cols-2 gap-5">
+                                <div>
+                                    <label for="first-name" class="order-label">First Name *</label>
+                                    <input type="text" id="first-name" name="first-name" required placeholder="Jane" class="order-input">
+                                </div>
+                                <div>
+                                    <label for="last-name" class="order-label">Last Name *</label>
+                                    <input type="text" id="last-name" name="last-name" required placeholder="Doe" class="order-input">
+                                </div>
+                            </div>
+
+                            <div class="grid sm:grid-cols-2 gap-5">
+                                <div>
+                                    <label for="email" class="order-label">Email Address *</label>
+                                    <input type="email" id="email" name="email" required placeholder="jane@example.com" class="order-input">
+                                </div>
+                                <div>
+                                    <label for="phone" class="order-label">Phone Number *</label>
+                                    <input type="tel" id="phone" name="phone" required placeholder="+1 (555) 000-0000" class="order-input">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label for="address" class="order-label">Installation Address *</label>
+                                <input type="text" id="address" name="address" required placeholder="123 Main Street" class="order-input">
+                            </div>
+
+                            <div class="grid sm:grid-cols-3 gap-5">
+                                <div>
+                                    <label for="city" class="order-label">City *</label>
+                                    <input type="text" id="city" name="city" required placeholder="New York" class="order-input">
+                                </div>
+                                <div>
+                                    <label for="state" class="order-label">State / Region *</label>
+                                    <input type="text" id="state" name="state" required placeholder="NY" class="order-input">
+                                </div>
+                                <div>
+                                    <label for="zip" class="order-label">ZIP / Postal *</label>
+                                    <input type="text" id="zip" name="zip" required placeholder="10001" class="order-input">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label for="property-type" class="order-label">Property Type *</label>
+                                <select id="property-type" name="property-type" required class="order-select">
+                                    <option value="">Select property type…</option>
+                                    <option value="single-family">Single-family home</option>
+                                    <option value="multi-family">Multi-family residence</option>
+                                    <option value="commercial">Commercial building</option>
+                                    <option value="public">Public / institutional</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+
+                            <div class="flex justify-end">
+                                <button type="button" data-next="2" class="btn-gift next-btn">
+                                    Continue <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- ===== STEP 2: Product & Package ===== -->
+                        <div id="step-2" class="space-y-6 hidden">
+                            <div>
+                                <h3 class="font-display font-bold text-2xl text-neutral-dark dark:text-white mb-2">Choose your lift</h3>
+                                <p class="text-sm opacity-70 mb-6">Pick a product line and package tier. You can refine everything with our designer later.</p>
+                            </div>
+
+                            <div>
+                                <label for="product-select" class="order-label">Product Line *</label>
+                                <select id="product-select" name="product-select" required class="order-select">
+                                    <option value="">Select a product…</option>
+                                    <optgroup label="Stairlifts">
+                                        <option value="stairlift-straight" data-price="2400">Straight Rail Stairlift Classic — $2,400</option>
+                                        <option value="stairlift-curved" data-price="5900">Curved Custom Stairlift Elite — $5,900</option>
+                                        <option value="stairlift-outdoor" data-price="4200">Outdoor Weatherproof Stairlift — $4,200</option>
+                                    </optgroup>
+                                    <optgroup label="Home Elevators">
+                                        <option value="elevator-panoramic" data-price="24900">Panoramic Villa Elevator — $24,900</option>
+                                        <option value="elevator-compact" data-price="14900">Compact Shaftless Home Lift — $14,900</option>
+                                        <option value="elevator-smart" data-price="32900">Smart Home Elevator Connect — $32,900</option>
+                                    </optgroup>
+                                    <optgroup label="Commercial Lifts">
+                                        <option value="commercial-mrl" data-price="0">Commercial MRL Elevator Pro — Custom</option>
+                                        <option value="commercial-service" data-price="0">Service Elevator Heavy Duty — Custom</option>
+                                    </optgroup>
+                                    <optgroup label="Platform Lifts">
+                                        <option value="platform-vertical" data-price="7800">Vertical Platform Lift StagePro — $7,800</option>
+                                        <option value="platform-inclined" data-price="6900">Inclined Platform StairPro — $6,900</option>
+                                    </optgroup>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label class="order-label">Package Tier *</label>
+                                <div class="grid sm:grid-cols-3 gap-4 mt-2">
+                                    <div class="tier-card active" data-tier="essential" data-mult="1">
+                                        <div class="text-[10px] uppercase font-bold tracking-widest text-gift-slate dark:text-gift-slate-bright mb-2">Essential</div>
+                                        <div class="font-display font-bold text-xl text-neutral-dark dark:text-white mb-1">Standard</div>
+                                        <div class="text-xs opacity-70 mb-3">Base model with core features</div>
+                                        <div class="text-sm font-bold text-gift-slate dark:text-gift-slate-bright">Included</div>
+                                    </div>
+                                    <div class="tier-card" data-tier="premium" data-mult="1.15">
+                                        <div class="text-[10px] uppercase font-bold tracking-widest text-gift-slate dark:text-gift-slate-bright mb-2">Premium</div>
+                                        <div class="font-display font-bold text-xl text-neutral-dark dark:text-white mb-1">+15%</div>
+                                        <div class="text-xs opacity-70 mb-3">Upgraded finishes + premium controls</div>
+                                        <div class="text-sm font-bold text-gift-slate dark:text-gift-slate-bright">Popular</div>
+                                    </div>
+                                    <div class="tier-card" data-tier="signature" data-mult="1.35">
+                                        <div class="text-[10px] uppercase font-bold tracking-widest text-gift-slate dark:text-gift-slate-bright mb-2">Signature</div>
+                                        <div class="font-display font-bold text-xl text-neutral-dark dark:text-white mb-1">+35%</div>
+                                        <div class="text-xs opacity-70 mb-3">Full bespoke cabin with designer finishes</div>
+                                        <div class="text-sm font-bold text-gift-slate dark:text-gift-slate-bright">Luxury</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label for="quantity" class="order-label">Quantity *</label>
+                                <input type="number" id="quantity" name="quantity" min="1" value="1" required class="order-input">
+                                <div class="text-xs opacity-60 mt-1.5">How many units? (Multi-unit projects may qualify for volume pricing.)</div>
+                            </div>
+
+                            <div>
+                                <label for="notes" class="order-label">Special Notes</label>
+                                <textarea id="notes" name="notes" rows="3" placeholder="Any custom requests, deadlines, or site details…" class="order-textarea resize-none"></textarea>
+                            </div>
+
+                            <div class="flex justify-between">
+                                <button type="button" data-prev="1" class="prev-btn inline-flex items-center gap-2 px-6 py-3 rounded-full font-bold text-xs uppercase tracking-wider border border-gift-slate/30 dark:border-gift-slate-bright/30 text-gift-slate dark:text-gift-slate-bright hover:bg-gift-slate/10 dark:hover:bg-gift-slate-bright/10 transition">
+                                    <i class="fas fa-arrow-left"></i> Back
+                                </button>
+                                <button type="button" data-next="3" class="btn-gift next-btn">
+                                    Continue <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- ===== STEP 3: Payment & Schedule ===== -->
+                        <div id="step-3" class="space-y-6 hidden">
+                            <div>
+                                <h3 class="font-display font-bold text-2xl text-neutral-dark dark:text-white mb-2">Payment & scheduling</h3>
+                                <p class="text-sm opacity-70 mb-6">Choose your payment preference and preferred installation timing.</p>
+                            </div>
+
+                            <div>
+                                <label class="order-label">Payment Preference *</label>
+                                <div class="grid sm:grid-cols-3 gap-4 mt-2">
+                                    <div class="payment-card active" data-payment="finance">
+                                        <div class="flex items-center gap-2 mb-2">
+                                            <i class="fas fa-percent text-gift-slate dark:text-gift-slate-bright"></i>
+                                            <div class="font-bold text-sm text-neutral-dark dark:text-white">Financing</div>
+                                        </div>
+                                        <div class="text-xs opacity-70">0% for 12 months</div>
+                                    </div>
+                                    <div class="payment-card" data-payment="deposit">
+                                        <div class="flex items-center gap-2 mb-2">
+                                            <i class="fas fa-hand-holding-usd text-gift-slate dark:text-gift-slate-bright"></i>
+                                            <div class="font-bold text-sm text-neutral-dark dark:text-white">Deposit</div>
+                                        </div>
+                                        <div class="text-xs opacity-70">30% upfront</div>
+                                    </div>
+                                    <div class="payment-card" data-payment="full">
+                                        <div class="flex items-center gap-2 mb-2">
+                                            <i class="fas fa-money-bill-wave text-gift-slate dark:text-gift-slate-bright"></i>
+                                            <div class="font-bold text-sm text-neutral-dark dark:text-white">Pay in Full</div>
+                                        </div>
+                                        <div class="text-xs opacity-70">Includes 5% discount</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label for="timeline" class="order-label">Preferred Installation Timeline *</label>
+                                <select id="timeline" name="timeline" required class="order-select">
+                                    <option value="">Select timeline…</option>
+                                    <option value="asap">As soon as possible</option>
+                                    <option value="1-2mo">Within 1–2 months</option>
+                                    <option value="3-6mo">3–6 months</option>
+                                    <option value="flexible">Flexible / still planning</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label for="how-heard" class="order-label">How did you hear about us?</label>
+                                <select id="how-heard" name="how-heard" class="order-select">
+                                    <option value="">Select…</option>
+                                    <option value="google">Google Search</option>
+                                    <option value="referral">Friend / Family Referral</option>
+                                    <option value="architect">Architect / Contractor</option>
+                                    <option value="social">Social Media</option>
+                                    <option value="event">Event / Expo</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+
+                            <div class="rounded-2xl bg-gift-slate/8 dark:bg-gift-slate-bright/10 p-5 border border-gift-slate/20 dark:border-gift-slate-bright/20">
+                                <label class="flex items-start gap-3 cursor-pointer">
+                                    <input type="checkbox" required class="mt-0.5 w-4 h-4 accent-[var(--color-primary)]">
+                                    <span class="text-sm opacity-85 leading-relaxed">I agree to the <a href="#" class="text-gift-slate dark:text-gift-slate-bright underline font-bold">terms & conditions</a> and consent to be contacted by Home Elevator regarding this order request.</span>
+                                </label>
+                            </div>
+
+                            <div class="flex justify-between">
+                                <button type="button" data-prev="2" class="prev-btn inline-flex items-center gap-2 px-6 py-3 rounded-full font-bold text-xs uppercase tracking-wider border border-gift-slate/30 dark:border-gift-slate-bright/30 text-gift-slate dark:text-gift-slate-bright hover:bg-gift-slate/10 dark:hover:bg-gift-slate-bright/10 transition">
+                                    <i class="fas fa-arrow-left"></i> Back
+                                </button>
+                                <button type="submit" class="btn-gift">
+                                    <i class="fas fa-paper-plane"></i> Submit Order Request
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- RIGHT: Sticky Order Summary -->
+                <div class="lg:col-span-4">
+                    <div class="order-summary-sticky space-y-5">
+
+                        <!-- Live summary card -->
+                        <div class="rounded-3xl bg-bg-warm dark:bg-dark-bg border border-gift-slate/15 dark:border-gift-slate-bright/20 p-6 shadow-xl">
+                            <div class="flex items-center justify-between mb-5">
+                                <div class="flex items-center gap-2">
+                                    <i class="fas fa-clipboard-list text-gift-slate dark:text-gift-slate-bright"></i>
+                                    <span class="font-display font-bold text-neutral-dark dark:text-white">Your Selection</span>
+                                </div>
+                                <span class="badge text-[10px]">Live</span>
+                            </div>
+
+                            <!-- Preview image -->
+                            <div class="rounded-2xl overflow-hidden mb-5 border border-gift-slate/15 dark:border-gift-slate-bright/20">
+                                <img id="summary-image" src="Assets/h2.png" alt="Selected product" class="w-full h-40 object-cover transition-all duration-500">
+                            </div>
+
+                            <!-- Summary details -->
+                            <div class="space-y-2.5 mb-5 text-sm">
+                                <div class="flex justify-between">
+                                    <span class="opacity-70">Product</span>
+                                    <strong id="sum-product" class="text-neutral-dark dark:text-white text-right max-w-[60%]">Not selected</strong>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="opacity-70">Package</span>
+                                    <strong id="sum-package" class="text-neutral-dark dark:text-white">Standard</strong>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="opacity-70">Quantity</span>
+                                    <strong id="sum-qty" class="text-neutral-dark dark:text-white">1</strong>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="opacity-70">Payment</span>
+                                    <strong id="sum-payment" class="text-neutral-dark dark:text-white">Financing</strong>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="opacity-70">Timeline</span>
+                                    <strong id="sum-timeline" class="text-neutral-dark dark:text-white">—</strong>
+                                </div>
+                            </div>
+
+                            <!-- Divider -->
+                            <div class="h-px bg-gradient-to-r from-transparent via-gift-slate/30 to-transparent mb-5"></div>
+
+                            <!-- Estimated total -->
+                            <div class="mb-5">
+                                <div class="text-[10px] uppercase font-bold tracking-widest opacity-60 mb-1">Estimated Total</div>
+                                <div class="text-3xl font-display font-extrabold text-gift-slate dark:text-gift-slate-bright">$<span id="sum-total">0</span></div>
+                                <div class="text-[10px] opacity-60 mt-1">Final price confirmed after site survey</div>
+                            </div>
+
+                            <!-- Step indicator -->
+                            <div class="flex items-center gap-2 text-xs font-bold uppercase tracking-wider opacity-70">
+                                <i class="fas fa-info-circle text-gift-slate dark:text-gift-slate-bright"></i>
+                                <span>Complete <span id="sum-step">Step 1 of 3</span></span>
+                            </div>
+                        </div>
+
+                        <!-- Why order with us -->
+                        <div class="rounded-3xl bg-white dark:bg-dark-card border border-gift-slate/15 dark:border-gift-slate-bright/20 p-6 shadow-md">
+                            <h3 class="font-display font-bold text-base mb-4 text-neutral-dark dark:text-white flex items-center gap-2">
+                                <i class="fas fa-shield-halved text-gift-slate dark:text-gift-slate-bright"></i> Our Promises
+                            </h3>
+                            <ul class="space-y-3 text-sm">
+                                <li class="flex items-start gap-3"><i class="fas fa-check-circle text-gift-slate dark:text-gift-slate-bright mt-0.5"></i><span class="opacity-85">Free site survey & custom quote</span></li>
+                                <li class="flex items-start gap-3"><i class="fas fa-check-circle text-gift-slate dark:text-gift-slate-bright mt-0.5"></i><span class="opacity-85">No obligation to purchase</span></li>
+                                <li class="flex items-start gap-3"><i class="fas fa-check-circle text-gift-slate dark:text-gift-slate-bright mt-0.5"></i><span class="opacity-85">Financing from 0% APR</span></li>
+                                <li class="flex items-start gap-3"><i class="fas fa-check-circle text-gift-slate dark:text-gift-slate-bright mt-0.5"></i><span class="opacity-85">5–10 year warranty coverage</span></li>
+                                <li class="flex items-start gap-3"><i class="fas fa-check-circle text-gift-slate dark:text-gift-slate-bright mt-0.5"></i><span class="opacity-85">24/7 after-sales support line</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================================================== -->
+    <!-- ORDER SECTION 3: WHAT HAPPENS NEXT (Three-step process) -->
+    <!-- ==================================================== -->
+    <section class="py-12 sm:py-16 lg:py-20 bg-bg-warm dark:bg-dark-bg">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-10 sm:mb-14 max-w-3xl mx-auto">
+                <span class="text-gift-slate dark:text-gift-slate-bright font-bold text-xs tracking-[0.3em] font-alt uppercase">After You Submit</span>
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-display font-bold mt-3 text-neutral-dark dark:text-white leading-tight">
+                    What happens <span class="gold-gradient-text">next?</span>
+                </h2>
+                <p class="text-base opacity-75 mt-4">Three simple steps from your submission to installation day.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                <!-- Step 1 -->
+                <div class="relative rounded-3xl bg-white dark:bg-dark-card p-8 shadow-lg border border-gift-slate/15 dark:border-gift-slate-bright/20 hover:shadow-2xl hover:-translate-y-1 transition duration-500">
+                    <div class="absolute -top-5 left-8 w-12 h-12 rounded-2xl bg-gradient-to-br from-gift-slate-light to-gift-slate dark:from-gift-slate-bright dark:to-gift-slate-dark flex items-center justify-center text-white font-display font-extrabold text-lg shadow-lg">1</div>
+                    <div class="pt-6">
+                        <div class="w-14 h-14 rounded-2xl bg-gift-slate/10 dark:bg-gift-slate-bright/15 flex items-center justify-center text-gift-slate dark:text-gift-slate-bright text-2xl mb-4">
+                            <i class="fas fa-envelope-open-text"></i>
+                        </div>
+                        <h3 class="font-display font-bold text-xl mb-2 text-neutral-dark dark:text-white">We Confirm Receipt</h3>
+                        <p class="text-sm opacity-75 leading-relaxed">Within 2 hours you'll receive an email confirming your order request and giving you a reference number.</p>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="relative rounded-3xl bg-white dark:bg-dark-card p-8 shadow-lg border border-gift-slate/15 dark:border-gift-slate-bright/20 hover:shadow-2xl hover:-translate-y-1 transition duration-500">
+                    <div class="absolute -top-5 left-8 w-12 h-12 rounded-2xl bg-gradient-to-br from-gift-slate-light to-gift-slate dark:from-gift-slate-bright dark:to-gift-slate-dark flex items-center justify-center text-white font-display font-extrabold text-lg shadow-lg">2</div>
+                    <div class="pt-6">
+                        <div class="w-14 h-14 rounded-2xl bg-gift-slate/10 dark:bg-gift-slate-bright/15 flex items-center justify-center text-gift-slate dark:text-gift-slate-bright text-2xl mb-4">
+                            <i class="fas fa-calculator"></i>
+                        </div>
+                        <h3 class="font-display font-bold text-xl mb-2 text-neutral-dark dark:text-white">Personalized Quote</h3>
+                        <p class="text-sm opacity-75 leading-relaxed">A designer prepares your itemized quote and, if needed, schedules a free site visit to measure and inspect.</p>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="relative rounded-3xl bg-white dark:bg-dark-card p-8 shadow-lg border border-gift-slate/15 dark:border-gift-slate-bright/20 hover:shadow-2xl hover:-translate-y-1 transition duration-500">
+                    <div class="absolute -top-5 left-8 w-12 h-12 rounded-2xl bg-gradient-to-br from-gift-slate-light to-gift-slate dark:from-gift-slate-bright dark:to-gift-slate-dark flex items-center justify-center text-white font-display font-extrabold text-lg shadow-lg">3</div>
+                    <div class="pt-6">
+                        <div class="w-14 h-14 rounded-2xl bg-gift-slate/10 dark:bg-gift-slate-bright/15 flex items-center justify-center text-gift-slate dark:text-gift-slate-bright text-2xl mb-4">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3 class="font-display font-bold text-xl mb-2 text-neutral-dark dark:text-white">Approve & Schedule</h3>
+                        <p class="text-sm opacity-75 leading-relaxed">You review the quote at your own pace. When ready, sign and we schedule your installation date.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================================================== -->
+    <!-- ORDER SECTION 4: WHY ORDER DIRECT (Bold dark band) -->
+    <!-- ==================================================== -->
+    <section class="py-12 sm:py-16 lg:py-20 bg-neutral-dark dark:bg-dark-card text-white relative overflow-hidden">
+        <div class="orb w-96 h-96 bg-gift-slate/30 -top-32 -right-32"></div>
+        <div class="orb w-72 h-72 bg-gift-accent/15 -bottom-20 left-10"></div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-3xl mb-8 sm:mb-12">
+                <span class="text-gift-slate-bright font-bold text-xs tracking-[0.3em] font-alt uppercase">Direct Advantage</span>
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-display font-bold mt-4 leading-tight">
+                    Why order <span class="gold-gradient-text">direct from us</span>
+                </h2>
+                <p class="text-base opacity-75 mt-4 max-w-xl">We own the entire process — design, engineering, fabrication, and installation — so there's no middleman markup and no finger-pointing when things go wrong.</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Advantage 1 -->
+                <div class="rounded-2xl bg-white/5 border border-white/10 p-7 hover:border-gift-slate/60 hover:bg-white/10 transition duration-500">
+                    <div class="w-14 h-14 rounded-2xl bg-gift-slate/20 flex items-center justify-center mb-5 text-gift-slate-bright text-2xl">
+                        <i class="fas fa-tags"></i>
+                    </div>
+                    <div class="font-display font-extrabold text-3xl mb-1">–25%</div>
+                    <div class="font-display font-bold text-base mb-2">Lower Cost</div>
+                    <p class="text-sm text-white/70 leading-relaxed">No distributor or dealer markup. Factory-direct pricing.</p>
+                </div>
+
+                <!-- Advantage 2 -->
+                <div class="rounded-2xl bg-white/5 border border-white/10 p-7 hover:border-gift-slate/60 hover:bg-white/10 transition duration-500">
+                    <div class="w-14 h-14 rounded-2xl bg-gift-slate/20 flex items-center justify-center mb-5 text-gift-slate-bright text-2xl">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <div class="font-display font-extrabold text-3xl mb-1">1:1</div>
+                    <div class="font-display font-bold text-base mb-2">Designer Access</div>
+                    <p class="text-sm text-white/70 leading-relaxed">Direct line to the designers and engineers building your lift.</p>
+                </div>
+
+                <!-- Advantage 3 -->
+                <div class="rounded-2xl bg-white/5 border border-white/10 p-7 hover:border-gift-slate/60 hover:bg-white/10 transition duration-500">
+                    <div class="w-14 h-14 rounded-2xl bg-gift-slate/20 flex items-center justify-center mb-5 text-gift-slate-bright text-2xl">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <div class="font-display font-extrabold text-3xl mb-1">100%</div>
+                    <div class="font-display font-bold text-base mb-2">In-House Team</div>
+                    <p class="text-sm text-white/70 leading-relaxed">Our technicians, our trucks, our accountability.</p>
+                </div>
+
+                <!-- Advantage 4 -->
+                <div class="rounded-2xl bg-white/5 border border-white/10 p-7 hover:border-gift-slate/60 hover:bg-white/10 transition duration-500">
+                    <div class="w-14 h-14 rounded-2xl bg-gift-slate/20 flex items-center justify-center mb-5 text-gift-slate-bright text-2xl">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <div class="font-display font-extrabold text-3xl mb-1">24/7</div>
+                    <div class="font-display font-bold text-base mb-2">Owned Support</div>
+                    <p class="text-sm text-white/70 leading-relaxed">Emergency line staffed by our own team, not a call center.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================================================== -->
+    <!-- ORDER SECTION 5: FINANCING OPTIONS (Calculator-style cards) -->
+    <!-- ==================================================== -->
+    <section class="py-12 sm:py-16 lg:py-20 bg-white dark:bg-dark-card border-y border-neutral-light/50 dark:border-gray-800/60">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-10 sm:mb-14 max-w-3xl mx-auto">
+                <span class="text-gift-slate dark:text-gift-slate-bright font-bold text-xs tracking-[0.3em] font-alt uppercase">Flexible Payment</span>
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-display font-bold mt-3 text-neutral-dark dark:text-white leading-tight">
+                    Financing <span class="gold-gradient-text">made simple</span>
+                </h2>
+                <p class="text-base opacity-75 mt-4">Choose the payment plan that fits your budget. All options are credit-approval based and transparent.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                <!-- Financing 1 -->
+                <div class="rounded-3xl bg-bg-warm dark:bg-dark-bg p-8 border border-gift-slate/15 dark:border-gift-slate-bright/20 hover:shadow-2xl hover:-translate-y-1 transition duration-500">
+                    <div class="text-[10px] uppercase tracking-[0.25em] font-bold text-gift-slate dark:text-gift-slate-bright mb-3">Most Popular</div>
+                    <h3 class="font-display font-bold text-xl mb-2 text-neutral-dark dark:text-white">0% APR — 12 Months</h3>
+                    <p class="text-sm opacity-75 mb-6">Zero interest for the first 12 months. Perfect for upgrades and quick installs.</p>
+                    <div class="border-t border-gift-slate/15 dark:border-gift-slate-bright/15 pt-5 space-y-3 text-sm">
+                        <div class="flex justify-between"><span class="opacity-70">Down payment</span> <strong class="text-neutral-dark dark:text-white">$0</strong></div>
+                        <div class="flex justify-between"><span class="opacity-70">APR</span> <strong class="text-neutral-dark dark:text-white">0%</strong></div>
+                        <div class="flex justify-between"><span class="opacity-70">Term</span> <strong class="text-neutral-dark dark:text-white">12 months</strong></div>
+                    </div>
+                </div>
+
+                <!-- Financing 2 -->
+                <div class="rounded-3xl bg-bg-warm dark:bg-dark-bg p-8 border-2 border-gift-slate dark:border-gift-slate-bright hover:shadow-2xl hover:-translate-y-1 transition duration-500 relative">
+                    <span class="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-gift-slate dark:bg-gift-slate-bright text-white dark:text-dark-bg text-[10px] font-bold uppercase tracking-widest">Best Value</span>
+                    <div class="text-[10px] uppercase tracking-[0.25em] font-bold text-gift-slate dark:text-gift-slate-bright mb-3">Extended Plan</div>
+                    <h3 class="font-display font-bold text-xl mb-2 text-neutral-dark dark:text-white">Low APR — 60 Months</h3>
+                    <p class="text-sm opacity-75 mb-6">Spread payments over 5 years with predictable monthly cost.</p>
+                    <div class="border-t border-gift-slate/15 dark:border-gift-slate-bright/15 pt-5 space-y-3 text-sm">
+                        <div class="flex justify-between"><span class="opacity-70">Down payment</span> <strong class="text-neutral-dark dark:text-white">10%</strong></div>
+                        <div class="flex justify-between"><span class="opacity-70">APR</span> <strong class="text-neutral-dark dark:text-white">6.99%</strong></div>
+                        <div class="flex justify-between"><span class="opacity-70">Term</span> <strong class="text-neutral-dark dark:text-white">60 months</strong></div>
+                    </div>
+                </div>
+
+                <!-- Financing 3 -->
+                <div class="rounded-3xl bg-bg-warm dark:bg-dark-bg p-8 border border-gift-slate/15 dark:border-gift-slate-bright/20 hover:shadow-2xl hover:-translate-y-1 transition duration-500">
+                    <div class="text-[10px] uppercase tracking-[0.25em] font-bold text-gift-slate dark:text-gift-slate-bright mb-3">Best Price</div>
+                    <h3 class="font-display font-bold text-xl mb-2 text-neutral-dark dark:text-white">Pay in Full — 5% Off</h3>
+                    <p class="text-sm opacity-75 mb-6">Pay upfront and save 5% on the total project cost.</p>
+                    <div class="border-t border-gift-slate/15 dark:border-gift-slate-bright/15 pt-5 space-y-3 text-sm">
+                        <div class="flex justify-between"><span class="opacity-70">Down payment</span> <strong class="text-neutral-dark dark:text-white">100%</strong></div>
+                        <div class="flex justify-between"><span class="opacity-70">Discount</span> <strong class="text-gift-slate dark:text-gift-slate-bright">–5%</strong></div>
+                        <div class="flex justify-between"><span class="opacity-70">Term</span> <strong class="text-neutral-dark dark:text-white">N/A</strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================================================== -->
+    <!-- ORDER SECTION 6: SUPPORT + FINAL CTA -->
+    <!-- ==================================================== -->
+    <section class="py-12 sm:py-16 lg:py-20 bg-bg-warm dark:bg-dark-bg">
+        <div class="container mx-auto px-6">
+            <!-- Contact support row -->
+            <div class="max-w-6xl mx-auto grid lg:grid-cols-3 gap-6 mb-10 sm:mb-14">
+                <a href="tel:+18005550199" class="group bg-white dark:bg-dark-card rounded-3xl p-7 shadow-lg border border-gift-slate/15 dark:border-gift-slate-bright/20 hover:shadow-2xl hover:-translate-y-1 transition duration-500">
+                    <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-gift-slate-light to-gift-slate dark:from-gift-slate-bright dark:to-gift-slate-dark flex items-center justify-center mb-5 shadow-lg">
+                        <i class="fas fa-phone text-white text-xl"></i>
+                    </div>
+                    <h3 class="font-display font-bold text-lg text-neutral-dark dark:text-white mb-1">Prefer to talk?</h3>
+                    <p class="text-sm opacity-70 mb-3">Call our order desk directly</p>
+                    <div class="text-gift-slate dark:text-gift-slate-bright font-extrabold text-lg">+1 (800) 555-0199</div>
+                </a>
+
+                <a href="https://wa.me/18005550199" target="_blank" rel="noopener noreferrer" class="group bg-white dark:bg-dark-card rounded-3xl p-7 shadow-lg border border-gift-slate/15 dark:border-gift-slate-bright/20 hover:shadow-2xl hover:-translate-y-1 transition duration-500">
+                    <div class="w-14 h-14 rounded-2xl bg-[#25D366] flex items-center justify-center mb-5 shadow-lg">
+                        <i class="fab fa-whatsapp text-white text-2xl"></i>
+                    </div>
+                    <h3 class="font-display font-bold text-lg text-neutral-dark dark:text-white mb-1">WhatsApp Order Desk</h3>
+                    <p class="text-sm opacity-70 mb-3">Instant messaging support</p>
+                    <div class="text-gift-slate dark:text-gift-slate-bright font-extrabold text-lg">+1 800 555-0199</div>
+                </a>
+
+                <a href="mailto:orders@accessforge.com" class="group bg-white dark:bg-dark-card rounded-3xl p-7 shadow-lg border border-gift-slate/15 dark:border-gift-slate-bright/20 hover:shadow-2xl hover:-translate-y-1 transition duration-500">
+                    <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-gift-slate-light to-gift-slate dark:from-gift-slate-bright dark:to-gift-slate-dark flex items-center justify-center mb-5 shadow-lg">
+                        <i class="fas fa-envelope text-white text-xl"></i>
+                    </div>
+                    <h3 class="font-display font-bold text-lg text-neutral-dark dark:text-white mb-1">Email Our Team</h3>
+                    <p class="text-sm opacity-70 mb-3">Reply within 2 business hours</p>
+                    <div class="text-gift-slate dark:text-gift-slate-bright font-extrabold text-sm break-all">orders@accessforge.com</div>
+                </a>
+            </div>
+
+            <!-- Final CTA -->
+            <div class="max-w-5xl mx-auto rounded-3xl bg-gradient-to-br from-gift-slate-dark via-gift-slate to-gift-slate-dark dark:from-dark-surface dark:via-dark-card dark:to-dark-surface text-white p-10 lg:p-14 shadow-2xl relative overflow-hidden">
+                <div class="orb w-72 h-72 bg-white/10 -top-20 -right-20"></div>
+                <div class="relative z-10 text-center">
+                    <span class="text-white/80 font-bold text-xs tracking-[0.3em] uppercase">Questions Before Ordering?</span>
+                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-display font-bold mt-4 mb-4 leading-tight">
+                        We're here to <span class="gold-gradient-text">help</span>
+                    </h2>
+                    <p class="text-base opacity-85 max-w-2xl mx-auto mb-8">Speak with a real mobility expert — no pressure, no scripts. We'll help you choose the right system for your space, budget, and needs.</p>
+                    <div class="flex flex-wrap gap-4 justify-center">
+                        <a href="contact.html" class="bg-white text-neutral-dark dark:bg-gift-slate-bright dark:text-dark-bg px-8 py-4 rounded-full font-bold text-sm uppercase tracking-wider hover:shadow-2xl hover:-translate-y-0.5 transition flex items-center gap-2">
+                            <i class="fas fa-comments"></i> Talk to Expert
+                        </a>
+                        <a href="products.html" class="border-2 border-white/40 dark:border-gift-slate-bright/50 text-white dark:text-gift-slate-bright px-8 py-4 rounded-full font-bold text-sm uppercase tracking-wider hover:bg-white/10 dark:hover:bg-gift-slate-bright/10 transition flex items-center gap-2">
+                            <i class="fas fa-th-large"></i> Browse Products
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SUCCESS MODAL ========== -->
+    <div id="success-modal" class="success-modal">
+        <div class="bg-white dark:bg-dark-card rounded-3xl p-8 lg:p-10 max-w-md w-full shadow-2xl border border-gift-slate/20 dark:border-gift-slate-bright/25 text-center relative">
+            <button id="close-modal" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-gift-slate/10 dark:bg-gift-slate-bright/15 text-gift-slate dark:text-gift-slate-bright hover:bg-gift-slate hover:text-white transition flex items-center justify-center">
+                <i class="fas fa-times text-sm"></i>
+            </button>
+            <div class="w-20 h-20 mx-auto rounded-full bg-gradient-to-br from-gift-slate-light to-gift-slate dark:from-gift-slate-bright dark:to-gift-slate-dark flex items-center justify-center mb-6 shadow-xl check-pop">
+                <i class="fas fa-check text-white text-3xl"></i>
+            </div>
+            <h3 class="font-display font-extrabold text-2xl text-neutral-dark dark:text-white mb-3">Order request received!</h3>
+            <p class="text-sm opacity-75 leading-relaxed mb-5">Thanks for choosing Home Elevator. Our design team will email you a personalized quote within 24 hours — check your inbox.</p>
+            <div class="rounded-2xl bg-gift-slate/8 dark:bg-gift-slate-bright/10 p-4 mb-6">
+                <div class="text-[10px] uppercase tracking-widest font-bold text-gift-slate dark:text-gift-slate-bright mb-1">Reference Number</div>
+                <div id="ref-number" class="font-display font-extrabold text-lg text-neutral-dark dark:text-white">HE-XXXXXX</div>
+            </div>
+            <button id="modal-done" class="btn-gift w-full justify-center">Done</button>
+        </div>
+    </div>
+
+    <!-- ========== FOOTER (copied from reference) ========== -->
+    <footer class="py-20 transition-colors duration-400">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <div class="text-center md:text-start">
+                    <div class="flex items-center justify-center md:justify-start gap-3 mb-6">
+                        <a href="index.html" class="flex items-center space-x-3 group flex-nowrap" dir="ltr">
+                            <div class="w-11 h-11 bg-gradient-to-br from-gift-slate-light to-gift-slate rounded-2xl flex items-center justify-center flex-shrink-0 transform group-hover:rotate-12 transition-transform duration-300 shadow-lg border border-gift-slate/20">
+                                <i class="fas fa-elevator text-white dark:text-dark-bg text-xl"></i>
+                            </div>
+                            <div class="flex items-center whitespace-nowrap">
+                                <span class="text-2xl font-display font-extrabold tracking-tight text-neutral-dark dark:text-white">Home</span>
+                                <span class="text-2xl font-display font-extrabold tracking-tight gold-gradient-text ml-0.5">Elevator</span>
+                            </div>
+                        </a>
+                    </div>
+                    <p class="text-base opacity-80 mb-6 leading-relaxed font-sans">Elevator & stairlift installation experts. Safety, dignity, and architectural excellence.</p>
+                    <div class="flex justify-center md:justify-start gap-4">
+                        <a href="#" class="social-icon text-base"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon text-base"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon text-base"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+                <div class="text-center md:text-start">
+                    <h3 class="text-neutral-dark dark:text-white text-xl font-display font-bold mb-6">Quick Links</h3>
+                    <ul class="space-y-4 text-base font-sans">
+                        <li><a href="index.html" class="hover:text-gift-slate dark:hover:text-gift-slate-bright transition">Home</a></li>
+                        <li><a href="about.html" class="hover:text-gift-slate dark:hover:text-gift-slate-bright transition">About Us</a></li>
+                        <li><a href="products.html" class="hover:text-gift-slate dark:hover:text-gift-slate-bright transition">Products</a></li>
+                        <li><a href="customization.html" class="hover:text-gift-slate dark:hover:text-gift-slate-bright transition">Customization</a></li>
+                        <li><a href="order.html" class="hover:text-gift-slate dark:hover:text-gift-slate-bright transition">Order</a></li>
+                        <li><a href="contact.html" class="hover:text-gift-slate dark:hover:text-gift-slate-bright transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="text-center md:text-start">
+                    <h3 class="text-neutral-dark dark:text-white text-xl font-display font-bold mb-6">Solutions</h3>
+                    <ul class="space-y-4 text-base font-sans">
+                        <li><a href="#" class="hover:text-gift-slate dark:hover:text-gift-slate-bright transition">Stairlifts</a></li>
+                        <li><a href="#" class="hover:text-gift-slate dark:hover:text-gift-slate-bright transition">Home Elevators</a></li>
+                        <li><a href="#" class="hover:text-gift-slate dark:hover:text-gift-slate-bright transition">Commercial Lifts</a></li>
+                        <li><a href="#" class="hover:text-gift-slate dark:hover:text-gift-slate-bright transition">Platform Lifts</a></li>
+                        <li><a href="#" class="hover:text-gift-slate dark:hover:text-gift-slate-bright transition">Maintenance</a></li>
+                    </ul>
+                </div>
+                <div class="text-center md:text-start">
+                    <h3 class="text-neutral-dark dark:text-white text-xl font-display font-bold mb-6">Contact Concierge</h3>
+                    <ul class="space-y-4 text-base mb-8 font-sans">
+                        <li class="flex items-center justify-center md:justify-start gap-3"><i class="fas fa-map-marker-alt text-gift-slate dark:text-gift-slate-bright w-5 text-lg"></i><span class="text-base" dir="ltr">5th Ave Luxury Tower, NYC 10001</span></li>
+                        <li class="flex items-center justify-center md:justify-start gap-3"><i class="fas fa-phone text-gift-slate dark:text-gift-slate-bright w-5 text-lg"></i><span class="text-base" dir="ltr">+1 (800) 555-0199</span></li>
+                        <li class="flex items-center justify-center md:justify-start gap-3"><i class="fas fa-envelope text-gift-slate dark:text-gift-slate-bright w-5 text-lg"></i><span class="text-base" dir="ltr">concierge@homeelevator.com</span></li>
+                        <li class="flex items-center justify-center md:justify-start gap-3"><i class="fas fa-clock text-gift-slate dark:text-gift-slate-bright w-5 text-lg"></i><span class="text-base" dir="ltr">Mon-Fri: 9AM - 6PM EST</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gift-slate/15 dark:border-gift-slate-bright/15 mt-14 pt-8 text-center">
+                <p class="text-base opacity-90 font-sans" dir="ltr">© 2026 Home Elevator & Stairlift. All rights reserved.</p>
+                <p class="text-sm opacity-75 mt-2 font-premium italic">Accessibility • Safety • Architectural Integration</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.documentElement.setAttribute('data-theme', 'gold-obsidian');
+
+            // ===== Theme Toggle =====
+            const themeToggle = document.getElementById('theme-toggle');
+            const themeIcon = themeToggle?.querySelector('.fa-moon');
+            const themeIconSun = themeToggle?.querySelector('.fa-sun');
+            const mobileThemeToggle = document.getElementById('theme-toggle-mobile');
+            const mobileThemeIcon = mobileThemeToggle?.querySelector('.fa-moon');
+            const mobileThemeIconSun = mobileThemeToggle?.querySelector('.fa-sun');
+
+            function toggleTheme() {
+                document.documentElement.classList.toggle('dark');
+                if (document.documentElement.classList.contains('dark')) {
+                    if (themeIcon) themeIcon.classList.add('hidden');
+                    if (themeIconSun) themeIconSun.classList.remove('hidden');
+                    if (themeToggle) themeToggle.classList.add('active');
+                    if (mobileThemeIcon) mobileThemeIcon.classList.add('hidden');
+                    if (mobileThemeIconSun) mobileThemeIconSun.classList.remove('hidden');
+                    if (mobileThemeToggle) mobileThemeToggle.classList.add('active');
+                    localStorage.setItem('theme', 'dark');
+                } else {
+                    if (themeIcon) themeIcon.classList.remove('hidden');
+                    if (themeIconSun) themeIconSun.classList.add('hidden');
+                    if (themeToggle) themeToggle.classList.remove('active');
+                    if (mobileThemeIcon) mobileThemeIcon.classList.remove('hidden');
+                    if (mobileThemeIconSun) mobileThemeIconSun.classList.add('hidden');
+                    if (mobileThemeToggle) mobileThemeToggle.classList.remove('active');
+                    localStorage.setItem('theme', 'light');
+                }
+            }
+
+            if (themeToggle) themeToggle.addEventListener('click', toggleTheme);
+            if (mobileThemeToggle) mobileThemeToggle.addEventListener('click', toggleTheme);
+
+            if (localStorage.getItem('theme') === 'dark') {
+                document.documentElement.classList.add('dark');
+                if (themeIcon) themeIcon.classList.add('hidden');
+                if (themeIconSun) themeIconSun.classList.remove('hidden');
+                if (themeToggle) themeToggle.classList.add('active');
+                if (mobileThemeIcon) mobileThemeIcon.classList.add('hidden');
+                if (mobileThemeIconSun) mobileThemeIconSun.classList.remove('hidden');
+                if (mobileThemeToggle) mobileThemeToggle.classList.add('active');
+            }
+
+            // ===== RTL Toggle =====
+            const rtlToggle = document.getElementById('rtl-toggle');
+            const mobileRtlToggle = document.getElementById('rtl-toggle-mobile');
+
+            function toggleRTL() {
+                if (document.documentElement.dir === 'rtl') {
+                    document.documentElement.dir = 'ltr';
+                    document.documentElement.lang = 'en';
+                    if (rtlToggle) { rtlToggle.textContent = '⇄'; rtlToggle.classList.remove('active'); }
+                    if (mobileRtlToggle) { mobileRtlToggle.textContent = '⇄'; mobileRtlToggle.classList.remove('active'); }
+                    localStorage.setItem('dir', 'ltr');
+                } else {
+                    document.documentElement.dir = 'rtl';
+                    document.documentElement.lang = 'ar';
+                    if (rtlToggle) { rtlToggle.textContent = '⇄'; rtlToggle.classList.add('active'); }
+                    if (mobileRtlToggle) { mobileRtlToggle.textContent = '⇄'; mobileRtlToggle.classList.add('active'); }
+                    localStorage.setItem('dir', 'rtl');
+                }
+            }
+
+            if (rtlToggle) rtlToggle.addEventListener('click', toggleRTL);
+            if (mobileRtlToggle) mobileRtlToggle.addEventListener('click', toggleRTL);
+
+            if (localStorage.getItem('dir') === 'rtl') {
+                document.documentElement.dir = 'rtl';
+                document.documentElement.lang = 'ar';
+                if (rtlToggle) { rtlToggle.textContent = '⇄'; rtlToggle.classList.add('active'); }
+                if (mobileRtlToggle) { mobileRtlToggle.textContent = '⇄'; mobileRtlToggle.classList.add('active'); }
+            }
+
+            // ===== Mobile Menu =====
+            const mobileToggle = document.getElementById('mobile-toggle');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileToggleIcon = document.querySelector('#mobile-toggle i');
+
+            if (mobileToggle) {
+                mobileToggle.addEventListener('click', () => {
+                    const isOpening = !mobileMenu.classList.contains('open');
+                    if (isOpening) {
+                        mobileMenu.classList.add('open');
+                        mobileToggleIcon.classList.remove('fa-bars');
+                        mobileToggleIcon.classList.add('fa-times');
+                        document.body.style.overflow = 'hidden';
+                    } else {
+                        mobileMenu.classList.remove('open');
+                        mobileToggleIcon.classList.remove('fa-times');
+                        mobileToggleIcon.classList.add('fa-bars');
+                        document.body.style.overflow = '';
+                        document.querySelectorAll('.mobile-dropdown-content').forEach(c => c.classList.remove('show'));
+                    }
+                });
+            }
+
+            document.querySelectorAll('.mobile-dropdown-btn').forEach(button => {
+                button.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const dropdown = e.target.closest('.mobile-dropdown');
+                    const content = dropdown.querySelector('.mobile-dropdown-content');
+                    const icon = dropdown.querySelector('.fa-chevron-down');
+                    const isOpening = !content.classList.contains('show');
+                    content.classList.toggle('show');
+                    icon.style.transform = content.classList.contains('show') ? 'rotate(180deg)' : 'rotate(0deg)';
+                    if (isOpening) {
+                        document.querySelectorAll('.mobile-dropdown-content').forEach(other => {
+                            if (other !== content) {
+                                other.classList.remove('show');
+                                const otherIcon = other.parentElement.querySelector('.fa-chevron-down');
+                                if (otherIcon) otherIcon.style.transform = 'rotate(0deg)';
+                            }
+                        });
+                    }
+                });
+            });
+
+            // ===== ORDER FORM LOGIC =====
+            const formState = {
+                step: 1,
+                product: null,
+                productPrice: 0,
+                tier: 'essential',
+                tierMult: 1,
+                tierLabel: 'Standard',
+                quantity: 1,
+                payment: 'finance',
+                paymentLabel: 'Financing',
+                timeline: ''
+            };
+
+            const productImageMap = {
+                'stairlift-straight': 'Assets/h2.png',
+                'stairlift-curved': 'Assets/h6.png',
+                'stairlift-outdoor': 'Assets/h8.png',
+                'elevator-panoramic': 'Assets/h3.png',
+                'elevator-compact': 'Assets/h7.png',
+                'elevator-smart': 'Assets/h5.png',
+                'commercial-mrl': 'Assets/h5.png',
+                'commercial-service': 'Assets/h8.png',
+                'platform-vertical': 'Assets/h4.png',
+                'platform-inclined': 'Assets/h1.png'
+            };
+
+            function showStep(stepNum) {
+                // Hide all
+                document.querySelectorAll('#step-1, #step-2, #step-3').forEach(s => s.classList.add('hidden'));
+                // Show selected
+                const target = document.getElementById('step-' + stepNum);
+                if (target) target.classList.remove('hidden');
+
+                // Update progress steps
+                document.querySelectorAll('.progress-step').forEach(el => {
+                    const n = parseInt(el.getAttribute('data-step'));
+                    el.classList.remove('active', 'done');
+                    if (n === stepNum) el.classList.add('active');
+                    else if (n < stepNum) el.classList.add('done');
+                });
+
+                // Update summary
+                const sumStep = document.getElementById('sum-step');
+                if (sumStep) sumStep.textContent = 'Step ' + stepNum + ' of 3';
+
+                // Scroll to top of form
+                const formSection = document.querySelector('#order-form');
+                if (formSection) {
+                    const offset = window.innerWidth < 1280 ? 40 : 100;
+                    window.scrollTo({
+                        top: formSection.getBoundingClientRect().top + window.pageYOffset - offset,
+                        behavior: 'smooth'
+                    });
+                }
+
+                formState.step = stepNum;
+            }
+
+            function updateSummary() {
+                const sumProduct = document.getElementById('sum-product');
+                const sumPackage = document.getElementById('sum-package');
+                const sumQty = document.getElementById('sum-qty');
+                const sumPayment = document.getElementById('sum-payment');
+                const sumTimeline = document.getElementById('sum-timeline');
+                const sumTotal = document.getElementById('sum-total');
+                const summaryImage = document.getElementById('summary-image');
+
+                // Product
+                if (formState.product) {
+                    if (sumProduct) sumProduct.textContent = formState.product;
+                    const img = productImageMap[formState.productKey] || 'Assets/h1.png';
+                    if (summaryImage) summaryImage.src = img;
+                } else {
+                    if (sumProduct) sumProduct.textContent = 'Not selected';
+                }
+
+                // Package
+                if (sumPackage) sumPackage.textContent = formState.tierLabel;
+
+                // Quantity
+                if (sumQty) sumQty.textContent = formState.quantity;
+
+                // Payment
+                if (sumPayment) sumPayment.textContent = formState.paymentLabel;
+
+                // Timeline
+                if (sumTimeline) {
+                    const timelineLabels = {
+                        'asap': 'ASAP',
+                        '1-2mo': '1–2 months',
+                        '3-6mo': '3–6 months',
+                        'flexible': 'Flexible'
+                    };
+                    sumTimeline.textContent = formState.timeline ? timelineLabels[formState.timeline] : '—';
+                }
+
+                // Total
+                let total = formState.productPrice * formState.tierMult * formState.quantity;
+                if (formState.payment === 'full' && total > 0) total *= 0.95; // 5% off pay-in-full
+                if (sumTotal) sumTotal.textContent = Math.round(total).toLocaleString();
+            }
+
+            // Navigation buttons
+            document.querySelectorAll('.next-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const next = parseInt(btn.getAttribute('data-next'));
+                    showStep(next);
+                });
+            });
+            document.querySelectorAll('.prev-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const prev = parseInt(btn.getAttribute('data-prev'));
+                    showStep(prev);
+                });
+            });
+
+            // Progress step click
+            document.querySelectorAll('.progress-step').forEach(el => {
+                el.addEventListener('click', () => {
+                    const n = parseInt(el.getAttribute('data-step'));
+                    showStep(n);
+                });
+            });
+
+            // Product select
+            const productSelect = document.getElementById('product-select');
+            if (productSelect) {
+                productSelect.addEventListener('change', (e) => {
+                    const opt = e.target.selectedOptions[0];
+                    if (opt && opt.value) {
+                        formState.productKey = opt.value;
+                        formState.product = opt.text.split(' — ')[0];
+                        formState.productPrice = parseFloat(opt.getAttribute('data-price')) || 0;
+                    } else {
+                        formState.productKey = null;
+                        formState.product = null;
+                        formState.productPrice = 0;
+                    }
+                    updateSummary();
+                });
+            }
+
+            // Tier cards
+            document.querySelectorAll('.tier-card').forEach(card => {
+                card.addEventListener('click', () => {
+                    document.querySelectorAll('.tier-card').forEach(c => c.classList.remove('active'));
+                    card.classList.add('active');
+                    formState.tier = card.getAttribute('data-tier');
+                    formState.tierMult = parseFloat(card.getAttribute('data-mult'));
+                    const tierMap = { 'essential': 'Standard', 'premium': 'Premium (+15%)', 'signature': 'Signature (+35%)' };
+                    formState.tierLabel = tierMap[formState.tier] || 'Standard';
+                    updateSummary();
+                });
+            });
+
+            // Quantity
+            const qtyInput = document.getElementById('quantity');
+            if (qtyInput) {
+                qtyInput.addEventListener('input', (e) => {
+                    const val = parseInt(e.target.value) || 1;
+                    formState.quantity = Math.max(1, val);
+                    updateSummary();
+                });
+            }
+
+            // Payment cards
+            document.querySelectorAll('.payment-card').forEach(card => {
+                card.addEventListener('click', () => {
+                    document.querySelectorAll('.payment-card').forEach(c => c.classList.remove('active'));
+                    card.classList.add('active');
+                    formState.payment = card.getAttribute('data-payment');
+                    const map = { 'finance': 'Financing', 'deposit': 'Deposit', 'full': 'Pay in Full' };
+                    formState.paymentLabel = map[formState.payment] || 'Financing';
+                    updateSummary();
+                });
+            });
+
+            // Timeline
+            const timelineSelect = document.getElementById('timeline');
+            if (timelineSelect) {
+                timelineSelect.addEventListener('change', (e) => {
+                    formState.timeline = e.target.value;
+                    updateSummary();
+                });
+            }
+
+            // Form submission
+            const orderForm = document.getElementById('order-form');
+            const successModal = document.getElementById('success-modal');
+            const refNumber = document.getElementById('ref-number');
+            const closeModal = document.getElementById('close-modal');
+            const modalDone = document.getElementById('modal-done');
+
+            if (orderForm) {
+                orderForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    // Generate reference number
+                    const ref = 'HE-' + Math.random().toString(36).substring(2, 8).toUpperCase();
+                    if (refNumber) refNumber.textContent = ref;
+                    if (successModal) successModal.classList.add('show');
+                    document.body.style.overflow = 'hidden';
+                });
+            }
+
+            function closeSuccess() {
+                if (successModal) successModal.classList.remove('show');
+                document.body.style.overflow = '';
+            }
+            if (closeModal) closeModal.addEventListener('click', closeSuccess);
+            if (modalDone) modalDone.addEventListener('click', closeSuccess);
+            if (successModal) {
+                successModal.addEventListener('click', (e) => {
+                    if (e.target === successModal) closeSuccess();
+                });
+            }
+
+            // Initialize
+            updateSummary();
+            showStep(1);
+        });
+    </script>
+</body>
+</html>

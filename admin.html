@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth" data-theme="gold-obsidian">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard | Home Elevator — Accessibility Installers</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%23DFBA67'/%3E%3Cstop offset='100%25' stop-color='%23C5A059'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Cg transform='translate(14, 15.2) scale(0.07)'%3E%3Cpath fill='%23ffffff' d='M292.7-4.7l64 64c6.2 6.2 16.4 6.2 22.6 0l64-64c4.6-4.6 5.9-11.5 3.5-17.4S438.5-32 432-32L304-32c-6.5 0-12.3 3.9-14.8 9.9s-1.1 12.9 3.5 17.4zm-160-22.6l-64 64c-4.6 4.6-5.9 11.5-3.5 17.4S73.5 64 80 64l128 0c6.5 0 12.3-3.9 14.8-9.9s1.1-12.9-3.5-17.4l-64-64c-6.2-6.2-16.4-6.2-22.6 0zM64 128c-35.3 0-64 28.7-64 64L0 448c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-256c0-35.3-28.7-64-64-64L64 128zm96 96a48 48 0 1 1 0 96 48 48 0 1 1 0-96zM80 400c0-26.5 21.5-48 48-48l64 0c26.5 0 48 21.5 48 48l0 16c0 17.7-14.3 32-32 32l-96 0c-17.7 0-32-14.3-32-32l0-16zm192 0c0-26.5 21.5-48 48-48l64 0c26.5 0 48 21.5 48 48l0 16c0 17.7-14.3 32-32 32l-96 0c-17.7 0-32-14.3-32-32l0-16zm32-128a48 48 0 1 1 96 0 48 48 0 1 1 -96 0z'/%3E%3C/g%3E%3C/svg%3E">
+
+    <!-- Tailwind CSS -->
+    <script src="tailwind.js"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        'gift-slate': 'var(--color-primary)',
+                        'gift-slate-light': 'var(--color-primary-light)',
+                        'gift-slate-dark': 'var(--color-primary-dark)',
+                        'gift-slate-bright': 'var(--color-primary-bright)',
+                        'gift-accent': 'var(--color-accent)',
+                        'bg-warm': 'var(--color-bg-warm)',
+                        'neutral-dark': 'var(--color-text-dark)',
+                        'neutral-light': '#E8EDF2',
+                        'dark-bg': '#0A0D12',
+                        'dark-card': '#141A24',
+                        'dark-surface': '#1C2432',
+                    },
+                    fontFamily: {
+                        'sans': ['Plus Jakarta Sans', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+                        'display': ['Outfit', 'Plus Jakarta Sans', 'sans-serif'],
+                        'premium': ['Outfit', 'sans-serif'],
+                        'alt': ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    animation: {
+                        'slide-up': 'slideUp 0.5s ease-out',
+                        'fade-in': 'fadeIn 0.3s ease-out',
+                        'pulse-glow': 'pulseGlow 3s infinite',
+                        'float-slow': 'floatSlow 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        slideUp: { '0%': { transform: 'translateY(30px)', opacity: '0' }, '100%': { transform: 'translateY(0)', opacity: '1' } },
+                        fadeIn: { '0%': { opacity: '0' }, '100%': { opacity: '1' } },
+                        pulseGlow: { '0%, 100%': { opacity: '0.6' }, '50%': { opacity: '1' } },
+                        floatSlow: { '0%,100%': { transform: 'translateY(0px)' }, '50%': { transform: 'translateY(-8px)' } },
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root, [data-theme="gold-obsidian"] {
+            --color-primary: #C5A059;
+            --color-primary-light: #DFBA67;
+            --color-primary-dark: #9E7D3B;
+            --color-primary-bright: #E6C687;
+            --color-accent: #D4AF37;
+            --color-bg-warm: #FAF8F5;
+            --color-text-dark: #0B0F17;
+            --color-rgb-primary: 197, 160, 89;
+            --color-rgb-bright: 230, 198, 135;
+        }
+
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: var(--color-bg-warm); color: var(--color-text-dark); transition: background-color 0.4s ease, color 0.4s ease; }
+        .dark body { background-color: #0A0D12; color: #E2E8F0; }
+        h1,h2,h3,h4,h5,h6 { font-family: 'Outfit', sans-serif; font-weight: 700; letter-spacing: -0.025em; }
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #E6C687 0%, #C5A059 50%, #9E7D3B 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .dark .text-gift-slate { color: var(--color-primary-bright) !important; }
+        .dark .border-gift-slate { border-color: var(--color-primary-bright) !important; }
+        .dark .bg-gift-slate { background-color: var(--color-primary-bright) !important; }
+        body::-webkit-scrollbar { display: none; }
+        body { -ms-overflow-style: none; scrollbar-width: none; }
+
+        .sidebar {
+            position: fixed;
+            left: 0; top: 0; height: 100vh;
+            width: 280px;
+            background: #FFFFFF;
+            border-right: 1px solid rgba(var(--color-rgb-primary), 0.12);
+            transition: transform 0.3s ease;
+            z-index: 100;
+            overflow-y: auto;
+        }
+        .dark .sidebar { background: #0A0D12; border-right-color: rgba(var(--color-rgb-bright), 0.15); }
+        @media (max-width: 768px) { .sidebar { transform: translateX(-100%); } .sidebar.open { transform: translateX(0); } }
+        .sidebar-overlay { position: fixed; top:0;left:0;right:0;bottom:0; background: rgba(0,0,0,0.5); z-index:99; display:none; }
+        .sidebar-overlay.open { display:block; }
+
+        .sidebar-item {
+            display: flex; align-items: center; gap: 0.75rem;
+            padding: 0.85rem 1.5rem; margin: 0.25rem 0.75rem;
+            border-radius: 12px; color: var(--color-text-dark);
+            transition: all 0.2s; cursor: pointer;
+        }
+        .dark .sidebar-item { color: #E2E8F0; }
+        .sidebar-item:hover { background: rgba(var(--color-rgb-primary), 0.08); color: var(--color-primary); }
+        .dark .sidebar-item:hover { background: rgba(var(--color-rgb-bright), 0.12); color: var(--color-primary-bright); }
+        .sidebar-item.active { background: var(--color-primary); color: #FFFFFF; }
+        .dark .sidebar-item.active { background: var(--color-primary-bright); color: #0A0D12; }
+        .sidebar-item i { width: 24px; font-size: 1.1rem; }
+
+        .main-content { margin-left: 280px; padding: 1.5rem; min-height: 100vh; }
+        @media (max-width: 768px) { .main-content { margin-left: 0; padding-top: 70px; } }
+
+        .mobile-header {
+            display: none; position: fixed; top:0;left:0;right:0;
+            background: #FFFFFF; padding: 0.75rem 1rem;
+            border-bottom: 1px solid rgba(var(--color-rgb-primary), 0.12);
+            z-index: 50; align-items: center; justify-content: space-between;
+        }
+        .dark .mobile-header { background: #0A0D12; border-bottom-color: rgba(var(--color-rgb-bright), 0.15); }
+        @media (max-width: 768px) { .mobile-header { display: flex; } }
+
+        .toggle-btn {
+            width: 36px; height: 36px; border-radius: 10px;
+            background: rgba(var(--color-rgb-primary), 0.08);
+            color: var(--color-text-dark); display: inline-flex;
+            align-items: center; justify-content: center; cursor: pointer;
+            transition: all 0.2s; border: none;
+        }
+        .dark .toggle-btn { background: rgba(var(--color-rgb-bright), 0.12); color: #E2E8F0; }
+        .toggle-btn:hover { background: var(--color-primary); color: #FFFFFF; }
+        .dark .toggle-btn:hover { background: var(--color-primary-bright); color: #0A0D12; }
+
+        .card-design {
+            background: #FFFFFF; border-radius: 28px;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(var(--color-rgb-primary), 0.12);
+            box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+        }
+        .dark .card-design { background: #141A24; border-color: rgba(var(--color-rgb-bright), 0.15); }
+        .card-design:hover { border-color: var(--color-primary); }
+
+        .btn-primary-design {
+            background: var(--color-primary); color: #FFFFFF;
+            font-weight: 700; border-radius: 60px; transition: all 0.3s;
+            box-shadow: 0 4px 12px rgba(var(--color-rgb-primary), 0.3);
+            white-space: nowrap; border: none;
+            display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+        }
+        .btn-primary-design:hover { background: var(--color-primary-dark); transform: translateY(-2px); box-shadow: 0 8px 20px rgba(var(--color-rgb-primary), 0.4); color: #FFFFFF; }
+        .dark .btn-primary-design { background: var(--color-primary-bright); color: #0A0D12; }
+        .dark .btn-primary-design:hover { background: var(--color-primary); color: #FFFFFF; }
+
+        .btn-outline-design {
+            border: 1.5px solid var(--color-primary); color: var(--color-primary);
+            background: transparent; border-radius: 60px; font-weight: 600;
+            transition: all 0.3s; white-space: nowrap;
+            display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+        }
+        .btn-outline-design:hover { background: var(--color-primary); color: #FFFFFF; transform: translateY(-2px); }
+        .dark .btn-outline-design { border-color: var(--color-primary-bright); color: var(--color-primary-bright); }
+        .dark .btn-outline-design:hover { background: var(--color-primary-bright); color: #0A0D12; }
+
+        .stat-card {
+            background: #FFFFFF; border-radius: 20px; padding: 1.2rem;
+            border: 1px solid rgba(var(--color-rgb-primary), 0.12);
+            transition: all 0.3s;
+        }
+        .dark .stat-card { background: #141A24; border-color: rgba(var(--color-rgb-bright), 0.15); }
+        .stat-card:hover { transform: translateY(-3px); border-color: var(--color-primary); }
+
+        .status-badge {
+            display: inline-flex; align-items: center; padding: 0.25rem 0.75rem;
+            border-radius: 40px; font-size: 0.7rem; font-weight: 700;
+        }
+        .status-confirmed { background: #E3F2FD; color: #0D47A1; }
+        .status-customization { background: #FFF3E0; color: #E65100; }
+        .status-production { background: #F3E5F5; color: #6A1B9A; }
+        .status-dispatch { background: #E8F5E9; color: #1B5E20; }
+        .status-completed { background: #E8F5E9; color: #1B5E20; }
+        .status-pending { background: #FFF3E0; color: #E65100; }
+        .status-paid { background: #E8F5E9; color: #1B5E20; }
+        .status-overdue { background: #FFEBEE; color: #C62828; }
+        .status-active { background: #E8F5E9; color: #1B5E20; }
+        .dark .status-confirmed { background: #0D47A1; color: #90CAF9; }
+        .dark .status-customization { background: #E65100; color: #FFCC80; }
+        .dark .status-production { background: #4A148C; color: #CE93D8; }
+        .dark .status-dispatch { background: #1B5E20; color: #A5D6A7; }
+        .dark .status-completed { background: #1B5E20; color: #A5D6A7; }
+        .dark .status-pending { background: #E65100; color: #FFCC80; }
+        .dark .status-paid { background: #1B5E20; color: #A5D6A7; }
+        .dark .status-overdue { background: #B71C1C; color: #EF9A9A; }
+        .dark .status-active { background: #1B5E20; color: #A5D6A7; }
+
+        .form-input {
+            width: 100%; padding: 0.75rem 1rem;
+            border-radius: 16px; border: 1.5px solid rgba(var(--color-rgb-primary), 0.2);
+            background: #FFFFFF; transition: all 0.3s;
+            color: var(--color-text-dark); font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .dark .form-input { background: #0A0D12; border-color: rgba(var(--color-rgb-bright), 0.2); color: #E2E8F0; }
+        .form-input:focus { outline: none; border-color: var(--color-primary); box-shadow: 0 0 0 4px rgba(var(--color-rgb-primary), 0.15); }
+        .form-label { display: block; font-weight: 600; font-size: 0.9rem; margin-bottom: 0.4rem; color: var(--color-text-dark); }
+        .dark .form-label { color: #E2E8F0; }
+
+        .progress-bar { height: 8px; background: rgba(var(--color-rgb-primary), 0.12); border-radius: 10px; overflow: hidden; }
+        .dark .progress-bar { background: rgba(var(--color-rgb-bright), 0.15); }
+        .progress-fill { height: 100%; background: var(--color-primary); border-radius: 10px; transition: width 0.6s ease; }
+        .dark .progress-fill { background: var(--color-primary-bright); }
+
+        .page-content.hidden { display: none; }
+        .client-card { transition: all 0.3s; cursor: pointer; }
+        .client-card:hover { transform: translateY(-2px); border-color: var(--color-primary); }
+
+        [dir="rtl"] .sidebar { left: auto; right: 0; border-right: none; border-left: 1px solid rgba(var(--color-rgb-primary), 0.12); }
+        [dir="rtl"] .main-content { margin-left: 0; margin-right: 280px; }
+        [dir="rtl"] .sidebar-item i { margin-right: 0; margin-left: 0.75rem; }
+        @media (max-width: 768px) {
+            [dir="rtl"] .sidebar { transform: translateX(100%); }
+            [dir="rtl"] .sidebar.open { transform: translateX(0); }
+            [dir="rtl"] .main-content { margin-right: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Mobile Header -->
+    <div class="mobile-header">
+        <div class="flex items-center gap-3">
+            <button id="menuToggle" class="toggle-btn"><i class="fas fa-bars"></i></button>
+            <a href="index.html" class="flex items-center space-x-2 group flex-nowrap shrink-0" dir="ltr" title="Home Elevator">
+                <div class="w-8 h-8 bg-gradient-to-br from-gift-slate-light to-gift-slate rounded-xl flex items-center justify-center flex-shrink-0 transform group-hover:rotate-12 transition-transform duration-300 shadow border border-gift-slate/20">
+                    <i class="fas fa-elevator text-white dark:text-dark-bg text-sm"></i>
+                </div>
+                <div class="flex items-center whitespace-nowrap">
+                    <span class="text-lg font-display font-extrabold tracking-tight text-neutral-dark dark:text-white">Home</span>
+                    <span class="text-lg font-display font-extrabold tracking-tight gold-gradient-text ml-0.5">Elevator</span>
+                </div>
+            </a>
+        </div>
+        <div class="flex gap-2">
+            <button id="theme-toggle-mobile" class="toggle-btn"><i class="fas fa-moon dark:hidden"></i><i class="fas fa-sun hidden dark:inline"></i></button>
+            <button id="rtl-toggle-mobile" class="toggle-btn"><i class="fas fa-exchange-alt"></i></button>
+        </div>
+    </div>
+
+    <div id="sidebarOverlay" class="sidebar-overlay"></div>
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <div class="p-5 border-b border-[rgba(var(--color-rgb-primary),0.12)] dark:border-[rgba(var(--color-rgb-bright),0.15)]">
+            <a href="index.html" class="flex items-center space-x-3 group flex-nowrap" dir="ltr" title="Home Elevator">
+                <div class="w-11 h-11 bg-gradient-to-br from-gift-slate-light to-gift-slate rounded-2xl flex items-center justify-center flex-shrink-0 transform group-hover:rotate-12 transition-transform duration-300 shadow-lg border border-gift-slate/20">
+                    <i class="fas fa-elevator text-white dark:text-dark-bg text-xl"></i>
+                </div>
+                <div>
+                    <div class="flex items-center whitespace-nowrap">
+                        <span class="text-xl font-display font-extrabold tracking-tight text-neutral-dark dark:text-white">Home</span>
+                        <span class="text-xl font-display font-extrabold tracking-tight gold-gradient-text ml-0.5">Elevator</span>
+                    </div>
+                    <p class="text-xs text-neutral-dark/60 dark:text-gray-400">Admin Portal</p>
+                </div>
+            </a>
+        </div>
+        <nav class="py-4">
+            <div class="sidebar-item active" data-page="dashboard"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></div>
+            <div class="sidebar-item" data-page="installations"><i class="fas fa-tools"></i><span>Installations</span></div>
+            <div class="sidebar-item" data-page="clients"><i class="fas fa-users"></i><span>Clients</span></div>
+            <div class="sidebar-item" data-page="production"><i class="fas fa-cogs"></i><span>Production</span></div>
+            <div class="sidebar-item" data-page="maintenance"><i class="fas fa-calendar-check"></i><span>Maintenance</span></div>
+            <div class="sidebar-item" data-page="warranty"><i class="fas fa-shield-halved"></i><span>Warranty</span></div>
+            <div class="sidebar-item" data-page="billing"><i class="fas fa-receipt"></i><span>Billing</span></div>
+            <div class="sidebar-item" data-page="messages"><i class="fas fa-comments"></i><span>Messages</span></div>
+        </nav>
+        <div class="absolute bottom-0 left-0 right-0 p-4 border-t border-[rgba(var(--color-rgb-primary),0.12)] dark:border-[rgba(var(--color-rgb-bright),0.15)]">
+            <a href="login.html" class="flex items-center justify-center gap-2 w-full p-2.5 rounded-xl bg-[rgba(var(--color-rgb-primary),0.08)] hover:bg-gift-slate transition font-semibold text-sm text-neutral-dark dark:text-gray-200 hover:text-white">
+                <i class="fas fa-sign-out-alt"></i><span>Logout</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="card-design p-4 md:p-6 flex justify-between items-center flex-wrap gap-3 mb-6">
+            <div>
+                <h1 class="text-2xl font-display font-bold" id="page-title">Admin Dashboard</h1>
+                <p class="text-sm text-neutral-dark/60 dark:text-gray-400" id="page-subtitle">Welcome back, Admin</p>
+            </div>
+            <div class="hidden lg:flex items-center gap-4">
+                <button id="theme-toggle" class="toggle-btn"><i class="fas fa-moon dark:hidden"></i><i class="fas fa-sun hidden dark:inline"></i></button>
+                <button id="rtl-toggle" class="toggle-btn"><i class="fas fa-exchange-alt"></i></button>
+                <div class="flex items-center gap-3 border-l border-[rgba(var(--color-rgb-primary),0.12)] dark:border-[rgba(var(--color-rgb-bright),0.15)] pl-4">
+                    <div class="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold bg-gradient-to-br from-gift-slate-light to-gift-slate shrink-0">AD</div>
+                    <div class="text-left hidden lg:block">
+                        <p class="text-sm font-bold text-neutral-dark dark:text-white leading-tight">Admin</p>
+                        <p class="text-[10px] text-neutral-dark/60 dark:text-gray-400">Operations Manager</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ========== DASHBOARD ========== -->
+        <div id="page-dashboard" class="page-content">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+                <div class="stat-card">
+                    <div class="flex justify-between">
+                        <div><p class="text-xs text-neutral-dark/60 dark:text-gray-400 mb-1">Total Installs</p><p class="text-2xl font-bold text-neutral-dark dark:text-white">1,242</p></div>
+                        <div class="w-10 h-10 bg-[rgba(var(--color-rgb-primary),0.08)] rounded-full flex items-center justify-center"><i class="fas fa-elevator text-gift-slate"></i></div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="flex justify-between">
+                        <div><p class="text-xs text-neutral-dark/60 dark:text-gray-400 mb-1">In Production</p><p class="text-2xl font-bold text-neutral-dark dark:text-white">18</p></div>
+                        <div class="w-10 h-10 bg-[rgba(var(--color-rgb-primary),0.08)] rounded-full flex items-center justify-center"><i class="fas fa-cogs text-gift-slate"></i></div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="flex justify-between">
+                        <div><p class="text-xs text-neutral-dark/60 dark:text-gray-400 mb-1">Scheduled Visits</p><p class="text-2xl font-bold text-neutral-dark dark:text-white">9</p></div>
+                        <div class="w-10 h-10 bg-[rgba(var(--color-rgb-primary),0.08)] rounded-full flex items-center justify-center"><i class="fas fa-calendar-check text-gift-slate"></i></div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="flex justify-between">
+                        <div><p class="text-xs text-neutral-dark/60 dark:text-gray-400 mb-1">Monthly Revenue</p><p class="text-2xl font-bold text-neutral-dark dark:text-white">$48,250</p></div>
+                        <div class="w-10 h-10 bg-[rgba(var(--color-rgb-primary),0.08)] rounded-full flex items-center justify-center"><i class="fas fa-dollar-sign text-gift-slate"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <div class="card-design p-6">
+                    <h3 class="font-display font-bold text-lg mb-4">Recent Installations</h3>
+                    <div class="space-y-3">
+                        <div class="flex gap-3 pb-3 border-b border-[rgba(var(--color-rgb-primary),0.08)] dark:border-[rgba(var(--color-rgb-bright),0.1)]">
+                            <i class="fas fa-elevator text-gift-slate mt-1"></i>
+                            <div class="flex-1"><p class="text-sm font-medium">#HE-2024-042 · Panoramic Villa Elevator</p><p class="text-xs text-neutral-dark/60 dark:text-gray-400">Client: Margaret Johnson · Installed</p></div>
+                            <span class="status-badge status-completed text-xs">Completed</span>
+                        </div>
+                        <div class="flex gap-3 pb-3 border-b border-[rgba(var(--color-rgb-primary),0.08)] dark:border-[rgba(var(--color-rgb-bright),0.1)]">
+                            <i class="fas fa-stairs text-gift-slate mt-1"></i>
+                            <div class="flex-1"><p class="text-sm font-medium">#HE-2026-038 · Curved Stairlift</p><p class="text-xs text-neutral-dark/60 dark:text-gray-400">Client: Sarah Kim · Dispatched</p></div>
+                            <span class="status-badge status-dispatch text-xs">Dispatched</span>
+                        </div>
+                        <div class="flex gap-3">
+                            <i class="fas fa-wheelchair text-gift-slate mt-1"></i>
+                            <div class="flex-1"><p class="text-sm font-medium">#HE-2026-031 · Vertical Platform Lift</p><p class="text-xs text-neutral-dark/60 dark:text-gray-400">Client: Tom Rodriguez · Confirmed</p></div>
+                            <span class="status-badge status-confirmed text-xs">Confirmed</span>
+                        </div>
+                    </div>
+                    <button data-nav="installations" class="btn-outline-design w-full mt-4 py-2 text-sm">View All Installations</button>
+                </div>
+                <div class="card-design p-6">
+                    <h3 class="font-display font-bold text-lg mb-4">Quick Actions</h3>
+                    <div class="space-y-3">
+                        <button data-nav="installations" class="w-full text-left px-4 py-3 bg-[rgba(var(--color-rgb-primary),0.08)] dark:bg-[rgba(var(--color-rgb-bright),0.1)] text-neutral-dark dark:text-white rounded-xl hover:bg-[rgba(var(--color-rgb-primary),0.2)] transition flex items-center gap-3">
+                            <i class="fas fa-plus-circle text-gift-slate"></i><span>Create New Installation Order</span>
+                        </button>
+                        <button data-nav="production" class="w-full text-left px-4 py-3 bg-[rgba(var(--color-rgb-primary),0.08)] dark:bg-[rgba(var(--color-rgb-bright),0.1)] text-neutral-dark dark:text-white rounded-xl hover:bg-[rgba(var(--color-rgb-primary),0.2)] transition flex items-center gap-3">
+                            <i class="fas fa-cogs text-gift-slate"></i><span>Update Production Status</span>
+                        </button>
+                        <button data-nav="billing" class="w-full text-left px-4 py-3 bg-[rgba(var(--color-rgb-primary),0.08)] dark:bg-[rgba(var(--color-rgb-bright),0.1)] text-neutral-dark dark:text-white rounded-xl hover:bg-[rgba(var(--color-rgb-primary),0.2)] transition flex items-center gap-3">
+                            <i class="fas fa-file-invoice text-gift-slate"></i><span>Generate Invoices</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ========== INSTALLATIONS ========== -->
+        <div id="page-installations" class="page-content hidden">
+            <div class="card-design p-6">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="font-display font-bold text-2xl">All Installations</h3>
+                    <button class="btn-primary-design px-4 py-1.5 text-sm"><i class="fas fa-plus"></i> New Order</button>
+                </div>
+                <p class="text-sm text-neutral-dark/60 dark:text-gray-400 mb-6">Manage all accessibility installation orders and track their progress.</p>
+                <div class="space-y-4">
+                    <div class="p-5 bg-[rgba(var(--color-rgb-primary),0.04)] dark:bg-[rgba(var(--color-rgb-bright),0.05)] rounded-2xl border border-[rgba(var(--color-rgb-primary),0.08)]">
+                        <div class="flex flex-wrap justify-between items-start gap-3">
+                            <div>
+                                <p class="font-bold text-lg">#HE-2026-042 · Panoramic Villa Elevator</p>
+                                <p class="text-sm text-neutral-dark/60 dark:text-gray-400">Client: Margaret Johnson · VE-2400 · Champagne Gold</p>
+                                <div class="flex items-center gap-3 mt-2">
+                                    <span class="status-badge status-customization">Customization</span>
+                                    <span class="text-xs text-neutral-dark/60 dark:text-gray-400">Updated: Oct 6, 2026</span>
+                                </div>
+                            </div>
+                            <div class="flex gap-2">
+                                <button class="btn-outline-design text-xs px-4 py-1.5"><i class="fas fa-edit mr-1"></i>Update</button>
+                                <button class="btn-primary-design text-xs px-4 py-1.5"><i class="fas fa-eye mr-1"></i>Track</button>
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            <div class="grid grid-cols-4 text-[10px] sm:text-xs text-neutral-dark/60 dark:text-gray-400 mb-1.5 font-medium">
+                                <span class="text-left truncate">Confirmed</span>
+                                <span class="text-center truncate">Customization</span>
+                                <span class="text-center truncate">Production</span>
+                                <span class="text-right truncate">Dispatch</span>
+                            </div>
+                            <div class="progress-bar"><div class="progress-fill" style="width:40%"></div></div>
+                        </div>
+                    </div>
+                    <div class="p-5 bg-[rgba(var(--color-rgb-primary),0.04)] dark:bg-[rgba(var(--color-rgb-bright),0.05)] rounded-2xl border border-[rgba(var(--color-rgb-primary),0.08)]">
+                        <div class="flex flex-wrap justify-between items-start gap-3">
+                            <div>
+                                <p class="font-bold text-lg">#HE-2026-038 · Curved Stairlift</p>
+                                <p class="text-sm text-neutral-dark/60 dark:text-gray-400">Client: Sarah Kim · CS-150 · Custom rail</p>
+                                <div class="flex items-center gap-3 mt-2">
+                                    <span class="status-badge status-dispatch">Dispatched</span>
+                                    <span class="text-xs text-neutral-dark/60 dark:text-gray-400">Updated: Oct 5, 2026</span>
+                                </div>
+                            </div>
+                            <div class="flex gap-2">
+                                <button class="btn-outline-design text-xs px-4 py-1.5"><i class="fas fa-edit mr-1"></i>Update</button>
+                                <button class="btn-primary-design text-xs px-4 py-1.5"><i class="fas fa-truck mr-1"></i>Track</button>
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            <div class="grid grid-cols-4 text-[10px] sm:text-xs text-neutral-dark/60 dark:text-gray-400 mb-1.5 font-medium">
+                                <span class="text-left truncate">Confirmed</span>
+                                <span class="text-center truncate">Customization</span>
+                                <span class="text-center truncate">Production</span>
+                                <span class="text-right truncate">Dispatch</span>
+                            </div>
+                            <div class="progress-bar"><div class="progress-fill" style="width:100%"></div></div>
+                        </div>
+                    </div>
+                    <div class="p-5 bg-[rgba(var(--color-rgb-primary),0.04)] dark:bg-[rgba(var(--color-rgb-bright),0.05)] rounded-2xl border border-[rgba(var(--color-rgb-primary),0.08)]">
+                        <div class="flex flex-wrap justify-between items-start gap-3">
+                            <div>
+                                <p class="font-bold text-lg">#HE-2026-031 · Vertical Platform Lift</p>
+                                <p class="text-sm text-neutral-dark/60 dark:text-gray-400">Client: Tom Rodriguez · VP-300 · Wheelchair access</p>
+                                <div class="flex items-center gap-3 mt-2">
+                                    <span class="status-badge status-confirmed">Confirmed</span>
+                                    <span class="text-xs text-neutral-dark/60 dark:text-gray-400">Updated: Oct 4, 2026</span>
+                                </div>
+                            </div>
+                            <div class="flex gap-2">
+                                <button class="btn-outline-design text-xs px-4 py-1.5"><i class="fas fa-edit mr-1"></i>Update</button>
+                                <button class="btn-primary-design text-xs px-4 py-1.5"><i class="fas fa-eye mr-1"></i>Track</button>
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            <div class="grid grid-cols-4 text-[10px] sm:text-xs text-neutral-dark/60 dark:text-gray-400 mb-1.5 font-medium">
+                                <span class="text-left truncate">Confirmed</span>
+                                <span class="text-center truncate">Customization</span>
+                                <span class="text-center truncate">Production</span>
+                                <span class="text-right truncate">Dispatch</span>
+                            </div>
+                            <div class="progress-bar"><div class="progress-fill" style="width:20%"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ========== CLIENTS ========== -->
+        <div id="page-clients" class="page-content hidden">
+            <div class="card-design p-6">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="font-display font-bold text-2xl">Clients</h3>
+                    <button class="btn-primary-design px-4 py-1.5 text-sm"><i class="fas fa-plus"></i> Add Client</button>
+                </div>
+                <p class="text-sm text-neutral-dark/60 dark:text-gray-400 mb-6">Manage all clients and their installation history.</p>
+                <div class="space-y-3">
+                    <div class="client-card card-design p-4 flex flex-wrap items-center justify-between gap-3">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold bg-gradient-to-br from-gift-slate-light to-gift-slate shrink-0">MJ</div>
+                            <div>
+                                <p class="font-bold">Margaret Johnson</p>
+                                <p class="text-xs text-neutral-dark/60 dark:text-gray-400">Premium Client · 3 installations</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4 flex-nowrap">
+                            <span class="status-badge status-active">Active</span>
+                            <span class="text-sm text-neutral-dark/60">$29,250</span>
+                            <button class="text-sm font-semibold text-gift-slate hover:text-gift-slate-dark">View →</button>
+                        </div>
+                    </div>
+                    <div class="client-card card-design p-4 flex flex-wrap items-center justify-between gap-3">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-gift-accent flex items-center justify-center text-white font-bold">SK</div>
+                            <div>
+                                <p class="font-bold">Sarah Kim</p>
+                                <p class="text-xs text-neutral-dark/60 dark:text-gray-400">Standard Client · 2 installations</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4 flex-nowrap">
+                            <span class="status-badge status-pending">Scheduled</span>
+                            <span class="text-sm text-neutral-dark/60">$15,400</span>
+                            <button class="text-sm font-semibold text-gift-slate hover:text-gift-slate-dark">View →</button>
+                        </div>
+                    </div>
+                    <div class="client-card card-design p-4 flex flex-wrap items-center justify-between gap-3">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-gift-slate-dark flex items-center justify-center text-white font-bold">TR</div>
+                            <div>
+                                <p class="font-bold">Tom Rodriguez</p>
+                                <p class="text-xs text-neutral-dark/60 dark:text-gray-400">Premium Client · 4 installations</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4 flex-nowrap">
+                            <span class="status-badge status-completed">Completed</span>
+                            <span class="text-sm text-neutral-dark/60">$42,200</span>
+                            <button class="text-sm font-semibold text-gift-slate hover:text-gift-slate-dark">View →</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ========== PRODUCTION ========== -->
+        <div id="page-production" class="page-content hidden">
+            <div class="card-design p-6">
+                <h3 class="font-display font-bold text-2xl mb-4">Production Status</h3>
+                <p class="text-sm text-neutral-dark/60 dark:text-gray-400 mb-6">Update and track production stages for all active installations.</p>
+                <div class="space-y-4">
+                    <div class="p-5 bg-[rgba(var(--color-rgb-primary),0.04)] dark:bg-[rgba(var(--color-rgb-bright),0.05)] rounded-2xl border border-[rgba(var(--color-rgb-primary),0.08)]">
+                        <div class="flex flex-wrap justify-between items-center gap-3">
+                            <div>
+                                <p class="font-bold">#HE-2026-042 · Panoramic Villa Elevator</p>
+                                <p class="text-sm text-neutral-dark/60">Client: Margaret Johnson · Customization in progress</p>
+                            </div>
+                            <div class="flex gap-2">
+                                <select class="form-input text-sm py-1.5 px-3 w-auto">
+                                    <option>Customization</option>
+                                    <option>Production</option>
+                                    <option>Quality Check</option>
+                                    <option>Dispatch</option>
+                                </select>
+                                <button class="btn-primary-design text-sm px-4 py-1.5">Update</button>
+                            </div>
+                        </div>
+                        <div class="mt-3"><div class="progress-bar"><div class="progress-fill" style="width:40%"></div></div></div>
+                    </div>
+                    <div class="p-5 bg-[rgba(var(--color-rgb-primary),0.04)] dark:bg-[rgba(var(--color-rgb-bright),0.05)] rounded-2xl border border-[rgba(var(--color-rgb-primary),0.08)]">
+                        <div class="flex flex-wrap justify-between items-center gap-3">
+                            <div>
+                                <p class="font-bold">#HE-2026-031 · Vertical Platform Lift</p>
+                                <p class="text-sm text-neutral-dark/60">Client: Tom Rodriguez · Production started</p>
+                            </div>
+                            <div class="flex gap-2">
+                                <select class="form-input text-sm py-1.5 px-3 w-auto">
+                                    <option>Confirmed</option>
+                                    <option selected>Production</option>
+                                    <option>Quality Check</option>
+                                    <option>Dispatch</option>
+                                </select>
+                                <button class="btn-primary-design text-sm px-4 py-1.5">Update</button>
+                            </div>
+                        </div>
+                        <div class="mt-3"><div class="progress-bar"><div class="progress-fill" style="width:20%"></div></div></div>
+                    </div>
+                    <div class="p-5 bg-[rgba(var(--color-rgb-primary),0.04)] dark:bg-[rgba(var(--color-rgb-bright),0.05)] rounded-2xl border border-[rgba(var(--color-rgb-primary),0.08)]">
+                        <div class="flex flex-wrap justify-between items-center gap-3">
+                            <div>
+                                <p class="font-bold">#HE-2026-038 · Curved Stairlift</p>
+                                <p class="text-sm text-neutral-dark/60">Client: Sarah Kim · Ready for dispatch</p>
+                            </div>
+                            <div class="flex gap-2">
+                                <select class="form-input text-sm py-1.5 px-3 w-auto">
+                                    <option>Customization</option>
+                                    <option>Production</option>
+                                    <option>Quality Check</option>
+                                    <option selected>Dispatch</option>
+                                </select>
+                                <button class="btn-primary-design text-sm px-4 py-1.5">Update</button>
+                            </div>
+                        </div>
+                        <div class="mt-3"><div class="progress-bar"><div class="progress-fill" style="width:100%"></div></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ========== MAINTENANCE ========== -->
+        <div id="page-maintenance" class="page-content hidden">
+            <div class="card-design p-6">
+                <h3 class="font-display font-bold text-2xl mb-4">Maintenance Schedule</h3>
+                <p class="text-sm text-neutral-dark/60 dark:text-gray-400 mb-6">Upcoming maintenance visits across all active installations.</p>
+                <div class="space-y-3">
+                    <div class="p-4 bg-[rgba(var(--color-rgb-primary),0.04)] dark:bg-[rgba(var(--color-rgb-bright),0.05)] rounded-xl border border-[rgba(var(--color-rgb-primary),0.08)]">
+                        <div class="flex flex-wrap justify-between items-center gap-2">
+                            <div>
+                                <p class="font-bold">Margaret Johnson · Panoramic Villa Elevator</p>
+                                <p class="text-sm text-neutral-dark/60 dark:text-gray-400">Routine maintenance · Dec 15, 2026 · 10:00 AM</p>
+                            </div>
+                            <span class="status-badge status-confirmed text-xs">Confirmed</span>
+                        </div>
+                    </div>
+                    <div class="p-4 bg-[rgba(var(--color-rgb-primary),0.04)] dark:bg-[rgba(var(--color-rgb-bright),0.05)] rounded-xl border border-[rgba(var(--color-rgb-primary),0.08)]">
+                        <div class="flex flex-wrap justify-between items-center gap-2">
+                            <div>
+                                <p class="font-bold">Sarah Kim · Curved Stairlift</p>
+                                <p class="text-sm text-neutral-dark/60 dark:text-gray-400">Annual service · Dec 22, 2026 · 09:30 AM</p>
+                            </div>
+                            <span class="status-badge status-confirmed text-xs">Confirmed</span>
+                        </div>
+                    </div>
+                    <div class="p-4 bg-[rgba(var(--color-rgb-primary),0.04)] dark:bg-[rgba(var(--color-rgb-bright),0.05)] rounded-xl border border-[rgba(var(--color-rgb-primary),0.08)]">
+                        <div class="flex flex-wrap justify-between items-center gap-2">
+                            <div>
+                                <p class="font-bold">Tom Rodriguez · Vertical Platform Lift</p>
+                                <p class="text-sm text-neutral-dark/60 dark:text-gray-400">Routine maintenance · Jan 10, 2027 · 02:00 PM</p>
+                            </div>
+                            <span class="status-badge status-pending text-xs">Pending</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ========== WARRANTY ========== -->
+        <div id="page-warranty" class="page-content hidden">
+            <div class="card-design p-6">
+                <h3 class="font-display font-bold text-2xl mb-4">Warranty Management</h3>
+                <p class="text-sm text-neutral-dark/60 dark:text-gray-400 mb-6">View and manage warranty coverage for all installations.</p>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-sm">
+                        <thead>
+                            <tr class="border-b border-[rgba(var(--color-rgb-primary),0.08)] dark:border-[rgba(var(--color-rgb-bright),0.15)]">
+                                <th class="text-left py-2 px-3 font-semibold">Client</th>
+                                <th class="text-left py-2 px-3 font-semibold">Product</th>
+                                <th class="text-left py-2 px-3 font-semibold">Serial No.</th>
+                                <th class="text-left py-2 px-3 font-semibold">Started</th>
+                                <th class="text-left py-2 px-3 font-semibold">Expires</th>
+                                <th class="text-left py-2 px-3 font-semibold">Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-b border-[rgba(var(--color-rgb-primary),0.08)] dark:border-[rgba(var(--color-rgb-bright),0.15)]">
+                                <td class="py-2 px-3 font-medium">Margaret Johnson</td>
+                                <td class="py-2 px-3">Panoramic Villa Elevator</td>
+                                <td class="py-2 px-3 text-xs">VE-2400-18242</td>
+                                <td class="py-2 px-3">Mar 12, 2024</td>
+                                <td class="py-2 px-3">Mar 12, 2033</td>
+                                <td class="py-2 px-3"><span class="status-badge status-completed">Active</span></td>
+                            </tr>
+                            <tr class="border-b border-[rgba(var(--color-rgb-primary),0.08)] dark:border-[rgba(var(--color-rgb-bright),0.15)]">
+                                <td class="py-2 px-3 font-medium">Sarah Kim</td>
+                                <td class="py-2 px-3">Curved Stairlift</td>
+                                <td class="py-2 px-3 text-xs">CS-150-09218</td>
+                                <td class="py-2 px-3">Jun 5, 2025</td>
+                                <td class="py-2 px-3">Jun 5, 2032</td>
+                                <td class="py-2 px-3"><span class="status-badge status-completed">Active</span></td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 px-3 font-medium">Tom Rodriguez</td>
+                                <td class="py-2 px-3">Vertical Platform Lift</td>
+                                <td class="py-2 px-3 text-xs">VP-300-04733</td>
+                                <td class="py-2 px-3">Aug 20, 2026</td>
+                                <td class="py-2 px-3">Aug 20, 2031</td>
+                                <td class="py-2 px-3"><span class="status-badge status-completed">Active</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- ========== BILLING ========== -->
+        <div id="page-billing" class="page-content hidden">
+            <div class="card-design p-6">
+                <h3 class="font-display font-bold text-2xl mb-4">Billing Overview</h3>
+                <p class="text-sm text-neutral-dark/60 dark:text-gray-400 mb-6">View all transactions, generate invoices, and manage payments.</p>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-sm">
+                        <thead>
+                            <tr class="border-b border-[rgba(var(--color-rgb-primary),0.08)] dark:border-[rgba(var(--color-rgb-bright),0.15)]">
+                                <th class="text-left py-2 px-3 font-semibold">Client</th>
+                                <th class="text-left py-2 px-3 font-semibold">Order</th>
+                                <th class="text-left py-2 px-3 font-semibold">Amount</th>
+                                <th class="text-left py-2 px-3 font-semibold">Date</th>
+                                <th class="text-left py-2 px-3 font-semibold">Status</th>
+                                <th class="text-left py-2 px-3 font-semibold">Invoice</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-b border-[rgba(var(--color-rgb-primary),0.08)] dark:border-[rgba(var(--color-rgb-bright),0.15)]">
+                                <td class="py-2 px-3 font-medium">Margaret Johnson</td>
+                                <td class="py-2 px-3">#HE-2024-042</td>
+                                <td class="py-2 px-3 font-bold text-gift-slate">$24,900.00</td>
+                                <td class="py-2 px-3">Mar 12, 2024</td>
+                                <td class="py-2 px-3"><span class="status-badge status-paid">Paid</span></td>
+                                <td class="py-2 px-3"><button class="text-gift-slate hover:text-gift-slate-dark"><i class="fas fa-download"></i></button></td>
+                            </tr>
+                            <tr class="border-b border-[rgba(var(--color-rgb-primary),0.08)] dark:border-[rgba(var(--color-rgb-bright),0.15)]">
+                                <td class="py-2 px-3 font-medium">Sarah Kim</td>
+                                <td class="py-2 px-3">#HE-2026-038</td>
+                                <td class="py-2 px-3 font-bold text-gift-slate">$7,200.00</td>
+                                <td class="py-2 px-3">Oct 5, 2026</td>
+                                <td class="py-2 px-3"><span class="status-badge status-paid">Paid</span></td>
+                                <td class="py-2 px-3"><button class="text-gift-slate hover:text-gift-slate-dark"><i class="fas fa-download"></i></button></td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 px-3 font-medium">Tom Rodriguez</td>
+                                <td class="py-2 px-3">#HE-2026-031</td>
+                                <td class="py-2 px-3 font-bold text-gift-slate">$6,375.00</td>
+                                <td class="py-2 px-3">Oct 4, 2026</td>
+                                <td class="py-2 px-3"><span class="status-badge status-pending">Pending</span></td>
+                                <td class="py-2 px-3"><button class="text-gift-slate hover:text-gift-slate-dark"><i class="fas fa-download"></i></button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="mt-6 flex flex-wrap items-center gap-3">
+                    <button class="btn-primary-design px-5 py-2.5 text-sm inline-flex items-center gap-2"><i class="fas fa-file-invoice"></i> Generate Invoices</button>
+                    <button class="btn-outline-design px-5 py-2.5 text-sm inline-flex items-center gap-2"><i class="fas fa-download"></i> Export Reports</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- ========== MESSAGES ========== -->
+        <div id="page-messages" class="page-content hidden">
+            <div class="card-design p-6">
+                <h3 class="font-display font-bold text-2xl mb-4">Messages</h3>
+                <p class="text-sm text-neutral-dark/60 dark:text-gray-400 mb-6">Communicate with clients about their installations.</p>
+                <div class="space-y-4">
+                    <div class="p-4 bg-[rgba(var(--color-rgb-primary),0.05)] dark:bg-[rgba(var(--color-rgb-bright),0.08)] rounded-xl">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <p class="font-bold">Margaret Johnson <span class="text-xs font-normal text-neutral-dark/60">Client</span></p>
+                                <p class="text-sm mt-1">Can you check the cabin LED lighting during my next visit?</p>
+                            </div>
+                            <span class="text-xs text-neutral-dark/60">Today, 9:15 AM</span>
+                        </div>
+                        <div class="mt-2 flex gap-2">
+                            <button class="btn-primary-design px-4 py-1 text-sm">Reply</button>
+                        </div>
+                    </div>
+                    <div class="p-4 bg-[#FFFFFF] dark:bg-[#0A0D12] rounded-xl border border-[rgba(var(--color-rgb-primary),0.12)] dark:border-[rgba(var(--color-rgb-bright),0.15)]">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <p class="font-bold">Admin <span class="text-xs font-normal text-neutral-dark/60">You</span></p>
+                                <p class="text-sm mt-1">Absolutely! We've added an LED check to your service ticket. See you on the 15th.</p>
+                            </div>
+                            <span class="text-xs text-neutral-dark/60">Yesterday, 8:00 PM</span>
+                        </div>
+                    </div>
+                    <div class="p-4 bg-[rgba(var(--color-rgb-primary),0.05)] dark:bg-[rgba(var(--color-rgb-bright),0.08)] rounded-xl">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <p class="font-bold">Sarah Kim <span class="text-xs font-normal text-neutral-dark/60">Client</span></p>
+                                <p class="text-sm mt-1">When will my curved stairlift be delivered?</p>
+                            </div>
+                            <span class="text-xs text-neutral-dark/60">Yesterday, 2:00 PM</span>
+                        </div>
+                        <div class="mt-2 flex gap-2">
+                            <button class="btn-primary-design px-4 py-1 text-sm">Reply</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-6">
+                    <label class="form-label">Send a Message</label>
+                    <div class="flex gap-3">
+                        <input type="text" class="form-input flex-1" placeholder="Type your message..." />
+                        <button class="btn-primary-design px-6 py-2"><i class="fas fa-paper-plane"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // RTL Toggle
+            const rtlToggle = document.getElementById('rtl-toggle');
+            const rtlToggleMobile = document.getElementById('rtl-toggle-mobile');
+            function setRTL(isRTL) {
+                document.documentElement.setAttribute('dir', isRTL ? 'rtl' : 'ltr');
+                localStorage.setItem('dir', isRTL ? 'rtl' : 'ltr');
+            }
+            const savedDir = localStorage.getItem('dir');
+            setRTL(savedDir === 'rtl');
+            if (rtlToggle) rtlToggle.addEventListener('click', () => setRTL(document.documentElement.getAttribute('dir') !== 'rtl'));
+            if (rtlToggleMobile) rtlToggleMobile.addEventListener('click', () => setRTL(document.documentElement.getAttribute('dir') !== 'rtl'));
+
+            // Theme Toggle
+            const themeToggle = document.getElementById('theme-toggle');
+            const themeToggleMobile = document.getElementById('theme-toggle-mobile');
+            function setTheme(isDark) {
+                if (isDark) document.documentElement.classList.add('dark');
+                else document.documentElement.classList.remove('dark');
+                [themeToggle, themeToggleMobile].forEach(btn => {
+                    if (btn) {
+                        let moon = btn.querySelector('.fa-moon'), sun = btn.querySelector('.fa-sun');
+                        if (isDark) { moon?.classList.add('hidden'); sun?.classList.remove('hidden'); }
+                        else { moon?.classList.remove('hidden'); sun?.classList.add('hidden'); }
+                    }
+                });
+                localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            }
+            const savedTheme = localStorage.getItem('theme');
+            setTheme(savedTheme === 'dark');
+            if (themeToggle) themeToggle.addEventListener('click', () => setTheme(!document.documentElement.classList.contains('dark')));
+            if (themeToggleMobile) themeToggleMobile.addEventListener('click', () => setTheme(!document.documentElement.classList.contains('dark')));
+
+            // Mobile Sidebar
+            const menuToggle = document.getElementById('menuToggle');
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('sidebarOverlay');
+            function closeSidebar() { sidebar.classList.remove('open'); overlay.classList.remove('open'); }
+            function openSidebar() { sidebar.classList.add('open'); overlay.classList.add('open'); }
+            if (menuToggle) menuToggle.addEventListener('click', (e) => { e.stopPropagation(); sidebar.classList.contains('open') ? closeSidebar() : openSidebar(); });
+            if (overlay) overlay.addEventListener('click', closeSidebar);
+            window.addEventListener('resize', () => { if (window.innerWidth > 768 && sidebar.classList.contains('open')) closeSidebar(); });
+
+            // Navigation
+            const sidebarItems = document.querySelectorAll('.sidebar-item');
+            const pages = document.querySelectorAll('.page-content');
+            const pageTitle = document.getElementById('page-title');
+            const pageSubtitle = document.getElementById('page-subtitle');
+            const titles = {
+                dashboard: { title: 'Admin Dashboard', subtitle: 'Welcome back, Admin' },
+                installations: { title: 'Installations', subtitle: 'Manage all accessibility installations' },
+                clients: { title: 'Clients', subtitle: 'Manage client accounts' },
+                production: { title: 'Production', subtitle: 'Track production status' },
+                maintenance: { title: 'Maintenance', subtitle: 'Scheduled maintenance visits' },
+                warranty: { title: 'Warranty', subtitle: 'Manage warranty coverage' },
+                billing: { title: 'Billing', subtitle: 'View transactions and invoices' },
+                messages: { title: 'Messages', subtitle: 'Communicate with clients' }
+            };
+            function navigateTo(page) {
+                sidebarItems.forEach(i => i.classList.remove('active'));
+                document.querySelector(`.sidebar-item[data-page="${page}"]`)?.classList.add('active');
+                pages.forEach(p => p.classList.add('hidden'));
+                document.getElementById(`page-${page}`)?.classList.remove('hidden');
+                if (titles[page]) { pageTitle.textContent = titles[page].title; pageSubtitle.textContent = titles[page].subtitle; }
+                closeSidebar();
+            }
+            sidebarItems.forEach(item => { item.addEventListener('click', () => { navigateTo(item.getAttribute('data-page')); }); });
+            document.querySelectorAll('[data-nav]').forEach(btn => { btn.addEventListener('click', () => { navigateTo(btn.getAttribute('data-nav')); }); });
+        });
+    </script>
+</body>
+</html>

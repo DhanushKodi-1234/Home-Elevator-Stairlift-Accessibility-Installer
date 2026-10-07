@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth" data-theme="gold-obsidian">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Use | Home Elevator</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%23DFBA67'/%3E%3Cstop offset='100%25' stop-color='%23C5A059'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Cg transform='translate(14, 15.2) scale(0.07)'%3E%3Cpath fill='%23ffffff' d='M292.7-4.7l64 64c6.2 6.2 16.4 6.2 22.6 0l64-64c4.6-4.6 5.9-11.5 3.5-17.4S438.5-32 432-32L304-32c-6.5 0-12.3 3.9-14.8 9.9s-1.1 12.9 3.5 17.4zm-160-22.6l-64 64c-4.6 4.6-5.9 11.5-3.5 17.4S73.5 64 80 64l128 0c6.5 0 12.3-3.9 14.8-9.9s1.1-12.9-3.5-17.4l-64-64c-6.2-6.2-16.4-6.2-22.6 0zM64 128c-35.3 0-64 28.7-64 64L0 448c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-256c0-35.3-28.7-64-64-64L64 128zm96 96a48 48 0 1 1 0 96 48 48 0 1 1 0-96zM80 400c0-26.5 21.5-48 48-48l64 0c26.5 0 48 21.5 48 48l0 16c0 17.7-14.3 32-32 32l-96 0c-17.7 0-32-14.3-32-32l0-16zm192 0c0-26.5 21.5-48 48-48l64 0c26.5 0 48 21.5 48 48l0 16c0 17.7-14.3 32-32 32l-96 0c-17.7 0-32-14.3-32-32l0-16zm32-128a48 48 0 1 1 96 0 48 48 0 1 1 -96 0z'/%3E%3C/g%3E%3C/svg%3E">
+<script src="tailwind.js"></script>
+<script>
+tailwind.config = {
+  darkMode: 'class',
+  theme: { extend: {
+    colors: {
+      'gift-slate': 'var(--color-primary)',
+      'gift-slate-light': 'var(--color-primary-light)',
+      'gift-slate-dark': 'var(--color-primary-dark)',
+      'gift-slate-bright': 'var(--color-primary-bright)',
+      'gift-accent': 'var(--color-accent)',
+      'bg-warm': 'var(--color-bg-warm)',
+      'neutral-dark': 'var(--color-text-dark)',
+      'dark-bg': '#0A0D12',
+      'dark-card': '#141A24',
+    },
+    fontFamily: { sans: ['Plus Jakarta Sans','system-ui','sans-serif'], display: ['Outfit','sans-serif'] }
+  }}
+}
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+  :root, [data-theme="gold-obsidian"] {
+    --color-primary: #C5A059; --color-primary-light: #DFBA67;
+    --color-primary-dark: #9E7D3B; --color-primary-bright: #E6C687;
+    --color-accent: #D4AF37; --color-bg-warm: #FAF8F5;
+    --color-text-dark: #0B0F17;
+    --color-rgb-primary: 197, 160, 89;
+    --color-rgb-bright: 230, 198, 135;
+  }
+  body { font-family: 'Plus Jakarta Sans', system-ui, sans-serif; background: var(--color-bg-warm); color: var(--color-text-dark); transition: background-color 0.4s, color 0.4s; }
+  .dark body { background: #0A0D12; color: #E2E8F0; }
+  h1,h2,h3,h4 { font-family: 'Outfit', sans-serif; letter-spacing: -0.02em; }
+
+  .gold-gradient-text { background: linear-gradient(135deg, #E6C687 0%, #C5A059 50%, #9E7D3B 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+
+  .step-num { width: 54px; height: 54px; border-radius: 16px; display: flex; align-items: center; justify-content: center; font-family: 'Outfit'; font-weight: 800; font-size: 1.4rem; color: #fff; flex-shrink: 0; background: linear-gradient(135deg, var(--color-primary-light), var(--color-primary)); box-shadow: 0 10px 22px -6px rgba(var(--color-rgb-primary),0.5); }
+  .dark .step-num { background: linear-gradient(135deg, var(--color-primary-bright), var(--color-primary)); color: #0A0D12; }
+
+  .card { background: #fff; border-radius: 20px; padding: 2rem; border: 1px solid rgba(var(--color-rgb-primary), 0.15); transition: all 0.3s ease; }
+  .dark .card { background: #141A24; border-color: rgba(var(--color-rgb-bright), 0.15); }
+  .card:hover { transform: translateY(-4px); box-shadow: 0 20px 40px -15px rgba(0,0,0,0.1); }
+
+  .faq details { background: #fff; border: 1px solid rgba(var(--color-rgb-primary), 0.15); border-radius: 16px; padding: 1.25rem 1.5rem; cursor: pointer; transition: all 0.2s; }
+  .dark .faq details { background: #141A24; border-color: rgba(var(--color-rgb-bright), 0.15); }
+  .faq details:hover { border-color: var(--color-primary); }
+  .dark .faq details:hover { border-color: var(--color-primary-bright); }
+  .faq details[open] { border-color: var(--color-primary); background: rgba(var(--color-rgb-primary), 0.04); }
+  .dark .faq details[open] { border-color: var(--color-primary-bright); background: rgba(var(--color-rgb-bright), 0.05); }
+  .faq summary { display: flex; justify-content: space-between; align-items: center; font-weight: 700; font-size: 1rem; color: var(--color-text-dark); list-style: none; }
+  .dark .faq summary { color: #E2E8F0; }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq summary::after { content: '\f067'; font-family: 'Font Awesome 6 Free'; font-weight: 900; color: var(--color-primary); transition: transform 0.3s; }
+  .dark .faq summary::after { color: var(--color-primary-bright); }
+  .faq details[open] summary::after { transform: rotate(45deg); }
+  .faq p { font-size: 0.9rem; color: rgba(11, 15, 23, 0.7); margin-top: 0.75rem; line-height: 1.6; }
+  .dark .faq p { color: #CBD5E1; }
+
+  .orb { position: fixed; border-radius: 50%; filter: blur(80px); opacity: 0.3; pointer-events: none; z-index: 0; }
+
+  .icon-btn { width: 42px; height: 42px; border-radius: 50%; background: rgba(var(--color-rgb-primary), 0.12); border: 1px solid rgba(var(--color-rgb-primary), 0.25); display: flex; align-items: center; justify-content: center; color: var(--color-primary); font-weight: 700; cursor: pointer; transition: all 0.3s; }
+  .icon-btn:hover { background: var(--color-primary); color: white; transform: scale(1.08); }
+  .dark .icon-btn { background: rgba(var(--color-rgb-bright), 0.12); border-color: rgba(var(--color-rgb-bright), 0.25); color: var(--color-primary-bright); }
+  .dark .icon-btn:hover { background: var(--color-primary-bright); color: #0A0D12; }
+
+  body.rtl { direction: rtl; }
+
+  .cta-gold { background: linear-gradient(135deg, var(--color-primary-dark), var(--color-primary)); }
+  .dark .cta-gold { background: linear-gradient(135deg, var(--color-primary), var(--color-primary-bright)); }
+  .dark .cta-gold .cta-text { color: #0A0D12; }
+</style>
+</head>
+<body>
+
+<div class="orb" style="width: 400px; height: 400px; background: rgba(197,160,89,0.35); top: -120px; right: -120px;"></div>
+<div class="orb" style="width: 350px; height: 350px; background: rgba(212,175,55,0.25); bottom: -100px; left: -100px;"></div>
+
+<!-- NAVBAR -->
+<nav class="relative z-20 bg-white/90 dark:bg-dark-card/90 backdrop-blur border-b border-gift-slate/15 dark:border-gift-slate-bright/15 transition-colors">
+  <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+    <a href="index.html" class="flex items-center space-x-3 group flex-nowrap" dir="ltr">
+      <div class="w-11 h-11 bg-gradient-to-br from-gift-slate-light to-gift-slate rounded-2xl flex items-center justify-center flex-shrink-0 transform group-hover:rotate-12 transition-transform duration-300 shadow-lg border border-gift-slate/20">
+        <i class="fas fa-elevator text-white dark:text-dark-bg text-xl"></i>
+      </div>
+      <div class="flex items-center whitespace-nowrap">
+        <span class="text-2xl font-display font-extrabold tracking-tight text-neutral-dark dark:text-white">Home</span>
+        <span class="text-2xl font-display font-extrabold tracking-tight gold-gradient-text ml-0.5">Elevator</span>
+      </div>
+    </a>
+    <div class="hidden md:flex items-center gap-8 text-sm font-semibold text-neutral-dark/80 dark:text-gray-300">
+      <a href="index.html" class="hover:text-gift-slate dark:hover:text-gift-slate-bright transition">Home</a>
+      <a href="products.html" class="hover:text-gift-slate dark:hover:text-gift-slate-bright transition">Products</a>
+      <a href="use.html" class="text-gift-slate dark:text-gift-slate-bright">How to Use</a>
+      <a href="contact.html" class="hover:text-gift-slate dark:hover:text-gift-slate-bright transition">Contact</a>
+    </div>
+    <div class="flex items-center gap-2">
+      <button id="theme-toggle" class="icon-btn" title="Toggle Theme"><i class="fas fa-moon dark:hidden"></i><i class="fas fa-sun hidden dark:inline-block"></i></button>
+      <button id="rtl-toggle" class="icon-btn" title="Toggle RTL">⇄</button>
+      <a href="login.html" class="hidden sm:inline-block px-4 py-2 rounded-lg text-sm font-bold text-gift-slate dark:text-gift-slate-bright hover:bg-gift-slate/10 dark:hover:bg-gift-slate-bright/10 transition">Sign In</a>
+      <a href="signup.html" class="hidden sm:inline-block px-4 py-2 rounded-lg text-sm font-bold text-white dark:text-dark-bg bg-gradient-to-br from-gift-slate-light to-gift-slate dark:from-gift-slate-bright dark:to-gift-slate shadow">Sign Up</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="relative z-10 max-w-6xl mx-auto px-6 py-16 text-center">
+  <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gift-slate/10 dark:bg-gift-slate-bright/10 border border-gift-slate/25 dark:border-gift-slate-bright/25 text-gift-slate dark:text-gift-slate-bright text-xs font-bold tracking-widest uppercase mb-5">
+    <i class="fas fa-book-open"></i> Getting Started Guide
+  </div>
+  <h1 class="text-4xl sm:text-5xl md:text-6xl font-display font-extrabold text-neutral-dark dark:text-white leading-tight mb-5">
+    How to use <span class="gold-gradient-text">Home Elevator</span>
+  </h1>
+  <p class="text-lg text-neutral-dark/70 dark:text-gray-400 max-w-2xl mx-auto leading-relaxed">
+    From your first quote request to your daily ride — everything you need to know, in plain language.
+  </p>
+</section>
+
+<!-- 4 STEP -->
+<section class="relative z-10 max-w-6xl mx-auto px-6 pb-16">
+  <div class="grid md:grid-cols-2 gap-6">
+    <div class="card">
+      <div class="flex items-start gap-5 mb-4">
+        <div class="step-num">1</div>
+        <div>
+          <h3 class="font-display font-bold text-xl text-neutral-dark dark:text-white mb-1">Request Your Quote</h3>
+          <p class="text-sm text-neutral-dark/70 dark:text-gray-400 leading-relaxed">Fill in our order form or call us directly. No commitment — we'll simply learn about your space and needs.</p>
+        </div>
+      </div>
+      <ul class="space-y-2 text-sm text-neutral-dark/80 dark:text-gray-300 mt-4 pl-2">
+        <li class="flex gap-2"><i class="fas fa-check-circle text-gift-slate dark:text-gift-slate-bright mt-0.5"></i> Free site survey within 3 days</li>
+        <li class="flex gap-2"><i class="fas fa-check-circle text-gift-slate dark:text-gift-slate-bright mt-0.5"></i> Itemized quote in 24 hours</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="flex items-start gap-5 mb-4">
+        <div class="step-num">2</div>
+        <div>
+          <h3 class="font-display font-bold text-xl text-neutral-dark dark:text-white mb-1">Customize Your Lift</h3>
+          <p class="text-sm text-neutral-dark/70 dark:text-gray-400 leading-relaxed">Choose cabin materials, colors, lighting, and controls. Every option is 3D-rendered before we build.</p>
+        </div>
+      </div>
+      <ul class="space-y-2 text-sm text-neutral-dark/80 dark:text-gray-300 mt-4 pl-2">
+        <li class="flex gap-2"><i class="fas fa-check-circle text-gift-slate dark:text-gift-slate-bright mt-0.5"></i> Unlimited design revisions</li>
+        <li class="flex gap-2"><i class="fas fa-check-circle text-gift-slate dark:text-gift-slate-bright mt-0.5"></i> Material samples mailed to you</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="flex items-start gap-5 mb-4">
+        <div class="step-num">3</div>
+        <div>
+          <h3 class="font-display font-bold text-xl text-neutral-dark dark:text-white mb-1">Professional Install</h3>
+          <p class="text-sm text-neutral-dark/70 dark:text-gray-400 leading-relaxed">Our white-glove technicians install your system with minimal disruption. Clean, tested, certified.</p>
+        </div>
+      </div>
+      <ul class="space-y-2 text-sm text-neutral-dark/80 dark:text-gray-300 mt-4 pl-2">
+        <li class="flex gap-2"><i class="fas fa-check-circle text-gift-slate dark:text-gift-slate-bright mt-0.5"></i> 1–5 day typical installation</li>
+        <li class="flex gap-2"><i class="fas fa-check-circle text-gift-slate dark:text-gift-slate-bright mt-0.5"></i> Full safety & load testing</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="flex items-start gap-5 mb-4">
+        <div class="step-num">4</div>
+        <div>
+          <h3 class="font-display font-bold text-xl text-neutral-dark dark:text-white mb-1">Ride & Enjoy</h3>
+          <p class="text-sm text-neutral-dark/70 dark:text-gray-400 leading-relaxed">Handover training, remote app setup, lifetime support. We stay by your side for decades.</p>
+        </div>
+      </div>
+      <ul class="space-y-2 text-sm text-neutral-dark/80 dark:text-gray-300 mt-4 pl-2">
+        <li class="flex gap-2"><i class="fas fa-check-circle text-gift-slate dark:text-gift-slate-bright mt-0.5"></i> 24/7 emergency service line</li>
+        <li class="flex gap-2"><i class="fas fa-check-circle text-gift-slate dark:text-gift-slate-bright mt-0.5"></i> Annual maintenance plans available</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- DAILY TIPS -->
+<section class="relative z-10 max-w-6xl mx-auto px-6 py-16">
+  <div class="text-center mb-12">
+    <div class="text-xs font-bold tracking-[0.25em] uppercase text-gift-slate dark:text-gift-slate-bright mb-3">Daily Use</div>
+    <h2 class="text-3xl md:text-4xl font-display font-extrabold text-neutral-dark dark:text-white">Operating your lift is simple</h2>
+  </div>
+
+  <div class="grid md:grid-cols-3 gap-6">
+    <div class="card text-center">
+      <div class="w-16 h-16 mx-auto rounded-2xl bg-gift-slate/10 dark:bg-gift-slate-bright/15 flex items-center justify-center text-gift-slate dark:text-gift-slate-bright text-2xl mb-5">
+        <i class="fas fa-hand-pointer"></i>
+      </div>
+      <h3 class="font-display font-bold text-lg mb-2 text-neutral-dark dark:text-white">Call the Lift</h3>
+      <p class="text-sm text-neutral-dark/70 dark:text-gray-400 leading-relaxed">Press the call button or use the app — the lift arrives within seconds, silently.</p>
+    </div>
+
+    <div class="card text-center">
+      <div class="w-16 h-16 mx-auto rounded-2xl bg-gift-slate/10 dark:bg-gift-slate-bright/15 flex items-center justify-center text-gift-slate dark:text-gift-slate-bright text-2xl mb-5">
+        <i class="fas fa-door-open"></i>
+      </div>
+      <h3 class="font-display font-bold text-lg mb-2 text-neutral-dark dark:text-white">Enter & Select Floor</h3>
+      <p class="text-sm text-neutral-dark/70 dark:text-gray-400 leading-relaxed">Doors open automatically. Tap your destination on the touch panel inside.</p>
+    </div>
+
+    <div class="card text-center">
+      <div class="w-16 h-16 mx-auto rounded-2xl bg-gift-slate/10 dark:bg-gift-slate-bright/15 flex items-center justify-center text-gift-slate dark:text-gift-slate-bright text-2xl mb-5">
+        <i class="fas fa-shield-alt"></i>
+      </div>
+      <h3 class="font-display font-bold text-lg mb-2 text-neutral-dark dark:text-white">Safety Always</h3>
+      <p class="text-sm text-neutral-dark/70 dark:text-gray-400 leading-relaxed">Built-in sensors and battery backup keep you moving even during a power outage.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="relative z-10 max-w-4xl mx-auto px-6 py-16">
+  <div class="text-center mb-12">
+    <div class="text-xs font-bold tracking-[0.25em] uppercase text-gift-slate dark:text-gift-slate-bright mb-3">Common Questions</div>
+    <h2 class="text-3xl md:text-4xl font-display font-extrabold text-neutral-dark dark:text-white">Frequently Asked</h2>
+  </div>
+
+  <div class="faq space-y-3">
+    <details open>
+      <summary>How long does installation take?</summary>
+      <p>Most straight stairlifts install in 2–4 hours. Curved stairlifts take 1–2 days. Home elevators take 3–7 days depending on design scope.</p>
+    </details>
+    <details>
+      <summary>Do I need to modify my home structurally?</summary>
+      <p>Not usually. Most of our lifts are designed for retrofit installation with minimal structural change. Our engineers confirm this during the free site survey.</p>
+    </details>
+    <details>
+      <summary>What if the power goes out?</summary>
+      <p>Every lift ships with battery backup. In a power outage, your lift safely completes its current trip and remains available for at least 24 hours.</p>
+    </details>
+    <details>
+      <summary>Is financing available?</summary>
+      <p>Yes — we offer 0% APR for 12 months and extended 60-month financing. Your consultant will walk you through all options during the quote.</p>
+    </details>
+    <details>
+      <summary>What does the warranty cover?</summary>
+      <p>5–10 year comprehensive warranty on parts and labor, plus lifetime warranty on structural rails. Annual service plans are optional.</p>
+    </details>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="relative z-10 max-w-5xl mx-auto px-6 pb-20">
+  <div class="cta-gold rounded-3xl p-10 md:p-14 text-white text-center">
+    <h2 class="cta-text text-3xl md:text-4xl font-display font-extrabold mb-4">Ready to get started?</h2>
+    <p class="cta-text text-white/85 dark:text-dark-bg/80 max-w-xl mx-auto mb-8">Book your free site survey and we'll take it from there.</p>
+    <div class="flex flex-wrap gap-4 justify-center">
+      <a href="order.html" class="px-8 py-4 rounded-full bg-white text-gift-slate-dark font-bold text-sm uppercase tracking-wider hover:shadow-xl hover:-translate-y-0.5 transition dark:bg-dark-bg dark:text-gift-slate-bright">Request Quote</a>
+      <a href="contact.html" class="px-8 py-4 rounded-full border-2 border-white/60 text-white font-bold text-sm uppercase tracking-wider hover:bg-white/10 transition dark:border-dark-bg/60 dark:text-dark-bg dark:hover:bg-dark-bg/10">Talk to Expert</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="relative z-10 bg-white dark:bg-dark-card border-t border-gift-slate/15 dark:border-gift-slate-bright/15 transition-colors">
+  <div class="max-w-6xl mx-auto px-6 py-10 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-neutral-dark/60 dark:text-gray-400">
+    <a href="index.html" class="flex items-center space-x-3 group flex-nowrap" dir="ltr" title="Home Elevator">
+      <div class="w-11 h-11 bg-gradient-to-br from-gift-slate-light to-gift-slate rounded-2xl flex items-center justify-center flex-shrink-0 transform group-hover:rotate-12 transition-transform duration-300 shadow-lg border border-gift-slate/20">
+        <i class="fas fa-elevator text-white dark:text-dark-bg text-xl"></i>
+      </div>
+      <div class="flex items-center whitespace-nowrap">
+        <span class="text-2xl font-display font-extrabold tracking-tight text-neutral-dark dark:text-white">Home</span>
+        <span class="text-2xl font-display font-extrabold tracking-tight gold-gradient-text ml-0.5">Elevator</span>
+      </div>
+    </a>
+    <div class="text-center sm:text-right">
+      © 2026 Home Elevator Accessibility Systems. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function() {
+    const toggle = document.getElementById('theme-toggle');
+    const root = document.documentElement;
+    if (localStorage.getItem('he-theme') === 'dark') root.classList.add('dark');
+    toggle.addEventListener('click', () => {
+      root.classList.toggle('dark');
+      localStorage.setItem('he-theme', root.classList.contains('dark') ? 'dark' : 'light');
+    });
+  })();
+  (function() {
+    const toggle = document.getElementById('rtl-toggle');
+    if (localStorage.getItem('he-dir') === 'rtl') document.body.classList.add('rtl');
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('rtl');
+      localStorage.setItem('he-dir', document.body.classList.contains('rtl') ? 'rtl' : 'ltr');
+    });
+  })();
+</script>
+</body>
+</html>

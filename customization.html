@@ -1,0 +1,1470 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth" data-theme="gold-obsidian">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customization | Home Elevator — Design Your Perfect Lift</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%23DFBA67'/%3E%3Cstop offset='100%25' stop-color='%23C5A059'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Cg transform='translate(14, 15.2) scale(0.07)'%3E%3Cpath fill='%23ffffff' d='M292.7-4.7l64 64c6.2 6.2 16.4 6.2 22.6 0l64-64c4.6-4.6 5.9-11.5 3.5-17.4S438.5-32 432-32L304-32c-6.5 0-12.3 3.9-14.8 9.9s-1.1 12.9 3.5 17.4zm-160-22.6l-64 64c-4.6 4.6-5.9 11.5-3.5 17.4S73.5 64 80 64l128 0c6.5 0 12.3-3.9 14.8-9.9s1.1-12.9-3.5-17.4l-64-64c-6.2-6.2-16.4-6.2-22.6 0zM64 128c-35.3 0-64 28.7-64 64L0 448c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-256c0-35.3-28.7-64-64-64L64 128zm96 96a48 48 0 1 1 0 96 48 48 0 1 1 0-96zM80 400c0-26.5 21.5-48 48-48l64 0c26.5 0 48 21.5 48 48l0 16c0 17.7-14.3 32-32 32l-96 0c-17.7 0-32-14.3-32-32l0-16zm192 0c0-26.5 21.5-48 48-48l64 0c26.5 0 48 21.5 48 48l0 16c0 17.7-14.3 32-32 32l-96 0c-17.7 0-32-14.3-32-32l0-16zm32-128a48 48 0 1 1 96 0 48 48 0 1 1 -96 0z'/%3E%3C/g%3E%3C/svg%3E">
+    <meta name="description" content="Customize your elevator or stairlift — cabin finishes, rail shapes, control panels, lighting, and bespoke details tailored to your space.">
+    <!-- Tailwind CSS -->
+    <script src="tailwind.js"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        'gift-slate': 'var(--color-primary)',
+                        'gift-slate-light': 'var(--color-primary-light)',
+                        'gift-slate-dark': 'var(--color-primary-dark)',
+                        'gift-slate-bright': 'var(--color-primary-bright)',
+                        'gift-accent': 'var(--color-accent)',
+                        'bg-warm': 'var(--color-bg-warm)',
+                        'neutral-dark': 'var(--color-text-dark)',
+                        'neutral-light': '#E8EDF2',
+                        'dark-bg': '#0A0D12',
+                        'dark-card': '#141A24',
+                        'dark-surface': '#1C2432',
+                    },
+                    fontFamily: {
+                        'sans': ['Plus Jakarta Sans', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+                        'display': ['Outfit', 'Plus Jakarta Sans', 'sans-serif'],
+                        'premium': ['Outfit', 'sans-serif'],
+                        'alt': ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    animation: {
+                        'slide-up': 'slideUp 0.5s ease-out',
+                        'fade-in': 'fadeIn 0.3s ease-out',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        slideUp: { '0%': { transform: 'translateY(30px)', opacity: '0' }, '100%': { transform: 'translateY(0)', opacity: '1' } },
+                        fadeIn: { '0%': { opacity: '0' }, '100%': { opacity: '1' } },
+                        float: { '0%, 100%': { transform: 'translateY(0px)' }, '50%': { transform: 'translateY(-12px)' } }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root, [data-theme="gold-obsidian"] {
+            --color-primary: #C5A059;
+            --color-primary-light: #DFBA67;
+            --color-primary-dark: #9E7D3B;
+            --color-primary-bright: #E6C687;
+            --color-accent: #D4AF37;
+            --color-bg-warm: #FAF8F5;
+            --color-text-dark: #0B0F17;
+            --color-rgb-primary: 197, 160, 89;
+            --color-rgb-bright: 230, 198, 135;
+        }
+        [data-theme="royal-sapphire"] { --color-primary: #2563EB; --color-primary-light: #60A5FA; --color-primary-dark: #1E40AF; --color-primary-bright: #93C5FD; --color-accent: #F59E0B; --color-bg-warm: #F8FAFC; --color-text-dark: #0F172A; --color-rgb-primary: 37, 99, 235; --color-rgb-bright: 147, 197, 253; }
+        [data-theme="emerald-gold"] { --color-primary: #059669; --color-primary-light: #34D399; --color-primary-dark: #047857; --color-primary-bright: #6EE7B7; --color-accent: #D4AF37; --color-bg-warm: #F4FBF7; --color-text-dark: #064E3B; --color-rgb-primary: 5, 150, 105; --color-rgb-bright: 110, 231, 183; }
+        [data-theme="rose-copper"] { --color-primary: #BE185D; --color-primary-light: #F472B6; --color-primary-dark: #831843; --color-primary-bright: #FBCFE8; --color-accent: #E07A5F; --color-bg-warm: #FDF2F8; --color-text-dark: #500724; --color-rgb-primary: 190, 24, 93; --color-rgb-bright: 251, 207, 232; }
+
+        body { font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background-color: var(--color-bg-warm); color: var(--color-text-dark); transition: background-color 0.4s ease, color 0.4s ease; }
+        .dark body { background-color: #0A0D12; color: #E2E8F0; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif; font-weight: 700; letter-spacing: -0.025em; }
+        
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #E6C687 0%, #C5A059 50%, #9E7D3B 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .dark .text-gift-slate { color: var(--color-primary-bright) !important; }
+        .dark .bg-gift-slate { background-color: var(--color-primary-bright) !important; }
+        .dark .border-gift-slate { border-color: var(--color-primary-bright) !important; }
+        .dark .from-gift-slate { --tw-gradient-from: var(--color-primary-bright) !important; }
+        .dark .service-icon { background: rgba(var(--color-rgb-bright), 0.12) !important; color: var(--color-primary-bright) !important; border: 1px solid rgba(var(--color-rgb-bright), 0.25); }
+        .dark .badge { background: rgba(var(--color-rgb-bright), 0.15) !important; color: var(--color-primary-bright) !important; border: 1px solid rgba(var(--color-rgb-bright), 0.3); }
+        .dark .dropdown-item:hover { color: var(--color-primary-bright) !important; }
+        .dark .auth-btn.login:hover { border-color: transparent !important; color: #0A0D12 !important; }
+        .dark .nav-item:hover { color: var(--color-primary-bright) !important; }
+        .dark .nav-item::after { background: var(--color-primary-bright) !important; }
+        .dark .dropdown-item i { color: var(--color-primary-bright) !important; }
+        .dark .premium-line { background: linear-gradient(90deg, var(--color-primary-bright), rgba(var(--color-rgb-bright), 0.1)); }
+        .dark .hover\:text-gift-slate:hover { color: var(--color-primary-bright) !important; }
+
+        body::-webkit-scrollbar { display: none; }
+        body { -ms-overflow-style: none; scrollbar-width: none; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        
+        /* Premium Navigation */
+        .nav-item { position: relative; padding: 0.5rem 0; font-weight: 600; font-size: 0.85rem; letter-spacing: 0.02em; color: var(--color-text-dark); transition: color 0.3s ease; font-family: 'Plus Jakarta Sans', sans-serif; text-transform: uppercase; white-space: nowrap; }
+        .dark .nav-item { color: #E2E8F0; }
+        .nav-item:hover { color: var(--color-primary); }
+        .dark .nav-item:hover { color: var(--color-primary-bright); }
+        .nav-item::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 0; height: 2px; background: linear-gradient(90deg, var(--color-primary), var(--color-primary-light)); transition: width 0.3s ease; }
+        .dark .nav-item::after { background: linear-gradient(90deg, var(--color-primary-bright), var(--color-primary-light)); }
+        [dir="rtl"] .nav-item::after { left: auto; right: 0; }
+        .nav-item:hover::after { width: 100%; }
+        
+        .dropdown { position: relative; }
+        .dropdown-menu { position: absolute; top: 100%; left: 0; min-width: 230px; background: rgba(255,255,255,0.98); border-radius: 16px; padding: 0.85rem 0; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.18); opacity: 0; visibility: hidden; transform: translateY(12px); transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1); z-index: 1000; border: 1px solid rgba(var(--color-rgb-primary), 0.2); backdrop-filter: blur(12px); }
+        .dark .dropdown-menu { background: rgba(20, 26, 36, 0.98); border-color: rgba(var(--color-rgb-bright), 0.25); box-shadow: 0 25px 50px -12px rgba(0,0,0,0.6); }
+        .dropdown:hover .dropdown-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+        [dir="rtl"] .dropdown-menu { left: auto; right: 0; }
+        .dropdown-item { display: flex; align-items: center; padding: 0.8rem 1.6rem; color: var(--color-text-dark); transition: all 0.2s ease; white-space: nowrap; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.9rem; font-weight: 500; }
+        .dark .dropdown-item { color: #E2E8F0; }
+        .dropdown-item:hover { background: rgba(var(--color-rgb-primary), 0.1); color: var(--color-primary); padding-left: 1.85rem; }
+        .dark .dropdown-item:hover { background: rgba(var(--color-rgb-bright), 0.15); color: var(--color-primary-bright); }
+        .dropdown-item i { margin-right: 0.85rem; width: 20px; text-align: center; color: var(--color-primary); }
+        .dark .dropdown-item i { color: var(--color-primary-bright); }
+        
+        .auth-btn { padding: 0.6rem 1.75rem; border-radius: 50px; font-weight: 600; font-size: 0.88rem; letter-spacing: 0.04em; transition: all 0.3s ease; border: 1px solid transparent; white-space: nowrap; font-family: 'Plus Jakarta Sans', sans-serif; text-transform: uppercase; }
+        .auth-btn.login { background: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-primary) 100%); color: #ffffff !important; box-shadow: 0 4px 15px rgba(var(--color-rgb-primary), 0.35); border: none; }
+        .dark .auth-btn.login { background: linear-gradient(135deg, var(--color-primary-bright) 0%, var(--color-primary) 100%); color: #0A0D12 !important; box-shadow: 0 4px 15px rgba(var(--color-rgb-bright), 0.3); border: none; }
+        .auth-btn.login:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(var(--color-rgb-primary), 0.45); color: #ffffff !important; }
+        .dark .auth-btn.login:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(var(--color-rgb-bright), 0.45); color: #0A0D12 !important; }
+        
+        .toggle-btn { width: 38px; height: 38px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: rgba(var(--color-rgb-primary), 0.12); color: var(--color-primary); transition: all 0.3s ease; border: 1px solid rgba(var(--color-rgb-primary), 0.2); cursor: pointer; }
+        .dark .toggle-btn { background: rgba(var(--color-rgb-bright), 0.12); color: var(--color-primary-bright); border-color: rgba(var(--color-rgb-bright), 0.25); }
+        .toggle-btn:hover { background: var(--color-primary); color: white; transform: scale(1.08); }
+        .dark .toggle-btn:hover { background: var(--color-primary-bright); color: #0A0D12; transform: scale(1.08); }
+        .toggle-btn.active { background: var(--color-primary); color: white; }
+        .dark .toggle-btn.active { background: var(--color-primary-bright); color: #0A0D12; }
+        @media (max-width: 1279px) { .desktop-toggle-group { display: none !important; } }
+        
+        .mobile-menu { background: white; border-top: 1px solid rgba(var(--color-rgb-primary), 0.15); max-height: 0; overflow: hidden; transition: max-height 0.5s ease; }
+        .dark .mobile-menu { background: #0A0D12; border-color: rgba(var(--color-rgb-bright), 0.2); }
+        .mobile-menu.open { max-height: 85vh; overflow-y: auto; }
+        .mobile-menu-item { display: block; padding: 1.1rem 1.75rem; font-weight: 600; color: var(--color-text-dark); border-bottom: 1px solid rgba(var(--color-rgb-primary), 0.1); transition: all 0.2s ease; font-family: 'Plus Jakarta Sans', sans-serif; text-transform: uppercase; letter-spacing: 0.03em; font-size: 0.9rem; }
+        .dark .mobile-menu-item { color: #E2E8F0; border-bottom-color: rgba(var(--color-rgb-bright), 0.15); }
+        .mobile-menu-item:hover { background-color: rgba(var(--color-rgb-primary), 0.06); color: var(--color-primary); }
+        .dark .mobile-menu-item:hover { background-color: rgba(var(--color-rgb-bright), 0.12); color: var(--color-primary-bright); }
+        .mobile-dropdown-content { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; background: rgba(var(--color-rgb-primary), 0.04); }
+        .dark .mobile-dropdown-content { background: rgba(20, 26, 36, 0.8); }
+        .mobile-dropdown-content.show { max-height: 300px; }
+        .mobile-dropdown-item { display: block; padding: 0.85rem 2.75rem; font-size: 0.92rem; color: var(--color-text-dark); transition: all 0.2s ease; border-bottom: 1px solid rgba(var(--color-rgb-primary), 0.08); font-family: 'Plus Jakarta Sans', sans-serif; }
+        .dark .mobile-dropdown-item { color: #CBD5E1; border-bottom-color: rgba(var(--color-rgb-bright), 0.1); }
+        .mobile-dropdown-item:hover { color: var(--color-primary); background-color: rgba(var(--color-rgb-primary), 0.1); }
+        .dark .mobile-dropdown-item:hover { background-color: rgba(var(--color-rgb-bright), 0.15); color: var(--color-primary-bright); }
+        .mobile-auth-btn { display: inline-block; padding: 0.85rem 1.75rem; font-weight: 600; border-radius: 50px; transition: all 0.3s ease; text-align: center; margin: 0.25rem; border: 1px solid transparent; font-family: 'Plus Jakarta Sans', sans-serif; text-transform: uppercase; letter-spacing: 0.04em; }
+        .mobile-auth-btn.login { background: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-primary) 100%); color: #ffffff !important; box-shadow: 0 4px 15px rgba(var(--color-rgb-primary), 0.3); border: none; }
+        .dark .mobile-auth-btn.login { background: linear-gradient(135deg, var(--color-primary-bright) 0%, var(--color-primary) 100%); color: #0A0D12 !important; border: none; }
+        .mobile-auth-btn.login:hover { opacity: 0.95; transform: translateY(-1px); }
+        .dark .mobile-auth-btn.login:hover { opacity: 0.95; transform: translateY(-1px); color: #0A0D12 !important; }
+        .desktop-nav-container { display: flex; align-items: center; gap: 2rem; }
+
+        /* Shared utility styles */
+        .service-icon { width: 84px; height: 84px; background: rgba(var(--color-rgb-primary), 0.12); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 1.25rem; font-size: 2.2rem; color: var(--color-primary); border: 1px solid rgba(var(--color-rgb-primary), 0.25); box-shadow: 0 10px 20px -5px rgba(var(--color-rgb-primary), 0.15); }
+        .dark .service-icon { background: rgba(var(--color-rgb-bright), 0.12); color: var(--color-primary-bright); border-color: rgba(var(--color-rgb-bright), 0.3); }
+        .badge { background: rgba(var(--color-rgb-primary), 0.15); color: var(--color-primary); padding: 0.35rem 1.2rem; border-radius: 50px; font-weight: 600; font-size: 0.82rem; letter-spacing: 0.05em; text-transform: uppercase; border: 1px solid rgba(var(--color-rgb-primary), 0.25); backdrop-filter: blur(8px); }
+        .dark .badge { background: rgba(var(--color-rgb-bright), 0.18); color: var(--color-primary-bright); border-color: rgba(var(--color-rgb-bright), 0.35); }
+        .premium-line { width: 90px; height: 3px; background: linear-gradient(90deg, var(--color-primary), var(--color-primary-light), transparent); margin: 24px 0; border-radius: 2px; }
+        .dark .premium-line { background: linear-gradient(90deg, var(--color-primary-bright), var(--color-primary-light), transparent); }
+        .btn-gift { background: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-primary) 100%); color: white; padding: 0.9rem 2.25rem; border-radius: 50px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; display: inline-flex; align-items: center; gap: 0.6rem; transition: all 0.3s; font-size: 0.95rem; font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif; box-shadow: 0 10px 25px -5px rgba(var(--color-rgb-primary), 0.35); }
+        .dark .btn-gift { background: linear-gradient(135deg, var(--color-primary-bright) 0%, var(--color-primary) 100%); color: #0A0D12; box-shadow: 0 10px 25px -5px rgba(var(--color-rgb-bright), 0.35); }
+        .btn-gift:hover { transform: translateY(-3px); box-shadow: 0 18px 35px -8px rgba(var(--color-rgb-primary), 0.5); }
+        .dark .btn-gift:hover { box-shadow: 0 18px 35px -8px rgba(var(--color-rgb-bright), 0.5); }
+        
+        footer { background: white; color: var(--color-text-dark); border-top: 1px solid rgba(var(--color-rgb-primary), 0.18); }
+        .dark footer { background: #0A0D12; color: #E2E8F0; border-color: rgba(var(--color-rgb-bright), 0.2); }
+        footer a:hover { color: var(--color-primary); }
+        .dark footer a:hover { color: var(--color-primary-bright); }
+        .social-icon { width: 44px; height: 44px; border-radius: 50%; background: rgba(var(--color-rgb-primary), 0.1); color: var(--color-primary); display: inline-flex; align-items: center; justify-content: center; transition: all 0.3s; border: 1px solid rgba(var(--color-rgb-primary), 0.2); }
+        .dark .social-icon { background: rgba(var(--color-rgb-bright), 0.12); color: var(--color-primary-bright); border-color: rgba(var(--color-rgb-bright), 0.25); }
+        .social-icon:hover { background: var(--color-primary); color: white; transform: translateY(-3px) scale(1.05); }
+        .dark .social-icon:hover { background: var(--color-primary-bright); color: #0A0D12; }
+
+        /* ========== CUSTOMIZATION PAGE UNIQUE STYLES ========== */
+        .orb { position: absolute; border-radius: 50%; filter: blur(60px); opacity: 0.35; pointer-events: none; }
+
+        /* Swatch chips (color options) */
+        .swatch {
+            width: 56px; height: 56px;
+            border-radius: 16px;
+            cursor: pointer;
+            position: relative;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+        .swatch:hover { transform: translateY(-3px) scale(1.05); }
+        .swatch.active { border-color: var(--color-primary); box-shadow: 0 8px 20px rgba(var(--color-rgb-primary), 0.35); }
+        .dark .swatch.active { border-color: var(--color-primary-bright); box-shadow: 0 8px 20px rgba(var(--color-rgb-bright), 0.35); }
+        .swatch.active::after {
+            content: '\f00c';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 18px;
+            text-shadow: 0 2px 6px rgba(0,0,0,0.4);
+        }
+
+        /* Option cards (radio style) */
+        .option-card {
+            padding: 1.25rem;
+            border-radius: 16px;
+            border: 2px solid rgba(var(--color-rgb-primary), 0.2);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background: transparent;
+        }
+        .dark .option-card { border-color: rgba(var(--color-rgb-bright), 0.2); }
+        .option-card:hover { border-color: rgba(var(--color-rgb-primary), 0.5); background: rgba(var(--color-rgb-primary), 0.05); }
+        .dark .option-card:hover { border-color: rgba(var(--color-rgb-bright), 0.5); background: rgba(var(--color-rgb-bright), 0.06); }
+        .option-card.active {
+            border-color: var(--color-primary);
+            background: rgba(var(--color-rgb-primary), 0.08);
+            box-shadow: 0 4px 16px rgba(var(--color-rgb-primary), 0.15);
+        }
+        .dark .option-card.active {
+            border-color: var(--color-primary-bright);
+            background: rgba(var(--color-rgb-bright), 0.1);
+            box-shadow: 0 4px 16px rgba(var(--color-rgb-bright), 0.15);
+        }
+
+        /* Step navigator */
+        .step-dot {
+            width: 40px; height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.9rem;
+            border: 2px solid rgba(var(--color-rgb-primary), 0.3);
+            color: var(--color-primary);
+            background: transparent;
+            transition: all 0.3s ease;
+        }
+        .dark .step-dot { border-color: rgba(var(--color-rgb-bright), 0.3); color: var(--color-primary-bright); }
+        .step-dot.active { background: var(--color-primary); color: white; border-color: var(--color-primary); transform: scale(1.1); }
+        .dark .step-dot.active { background: var(--color-primary-bright); color: #0A0D12; border-color: var(--color-primary-bright); }
+        .step-dot.done { background: rgba(var(--color-rgb-primary), 0.15); border-color: var(--color-primary); }
+        .dark .step-dot.done { background: rgba(var(--color-rgb-bright), 0.2); border-color: var(--color-primary-bright); }
+        .step-connector { flex: 1; height: 2px; background: rgba(var(--color-rgb-primary), 0.2); }
+        .dark .step-connector { background: rgba(var(--color-rgb-bright), 0.2); }
+
+        /* Preview card */
+        .preview-card {
+            background: linear-gradient(135deg, rgba(var(--color-rgb-primary), 0.08), rgba(var(--color-rgb-primary), 0.02));
+            border: 1px solid rgba(var(--color-rgb-primary), 0.2);
+            border-radius: 24px;
+        }
+        .dark .preview-card {
+            background: linear-gradient(135deg, rgba(var(--color-rgb-bright), 0.08), rgba(var(--color-rgb-bright), 0.02));
+            border-color: rgba(var(--color-rgb-bright), 0.2);
+        }
+
+        /* Material cards */
+        .material-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 20px;
+            height: 240px;
+            cursor: pointer;
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .material-card:hover { transform: translateY(-6px); }
+        .material-card img { transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1); }
+        .material-card:hover img { transform: scale(1.1); }
+        .material-card::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, transparent 30%, rgba(0,0,0,0.85));
+            pointer-events: none;
+        }
+        .material-card .material-tag {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            padding: 6px 12px;
+            border-radius: 50px;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            background: rgba(255,255,255,0.9);
+            color: var(--color-text-dark);
+        }
+        .material-card .material-info {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            right: 20px;
+            color: white;
+            z-index: 2;
+        }
+
+        /* Pricing summary sticky */
+        .pricing-sticky {
+            position: sticky;
+            top: 100px;
+        }
+
+        /* Number badge overlay */
+        .step-num-badge {
+            position: absolute;
+            top: -12px;
+            left: 24px;
+            padding: 4px 12px;
+            border-radius: 50px;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            background: linear-gradient(135deg, var(--color-primary-light), var(--color-primary));
+            color: white;
+            box-shadow: 0 4px 12px rgba(var(--color-rgb-primary), 0.4);
+        }
+        .dark .step-num-badge {
+            background: linear-gradient(135deg, var(--color-primary-bright), var(--color-primary));
+            color: #0A0D12;
+        }
+
+        /* Zebra stripes for pattern previews */
+        .pattern-herringbone {
+            background-image: 
+                linear-gradient(45deg, rgba(0,0,0,0.08) 25%, transparent 25%, transparent 75%, rgba(0,0,0,0.08) 75%),
+                linear-gradient(-45deg, rgba(0,0,0,0.08) 25%, transparent 25%, transparent 75%, rgba(0,0,0,0.08) 75%);
+            background-size: 20px 20px;
+        }
+        .pattern-stripes {
+            background-image: repeating-linear-gradient(45deg, rgba(0,0,0,0.06), rgba(0,0,0,0.06) 8px, transparent 8px, transparent 16px);
+        }
+        .pattern-dots {
+            background-image: radial-gradient(rgba(0,0,0,0.08) 1.5px, transparent 1.5px);
+            background-size: 14px 14px;
+        }
+        .pattern-solid {
+            background-image: none;
+        }
+    </style>
+</head>
+<body class="bg-bg-warm dark:bg-dark-bg text-neutral-dark dark:text-gray-200 transition-colors duration-400">
+
+    <!-- ========== HEADER (copied from reference) ========== -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/90 dark:bg-[#0A0D12]/90 backdrop-blur-md border-b border-neutral-light/80 dark:border-gray-800/80 transition-colors duration-400">
+        <div class="container mx-auto px-6">
+            <div class="flex items-center justify-between h-22 py-4">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center space-x-3 group flex-nowrap" dir="ltr">
+                    <div class="w-11 h-11 bg-gradient-to-br from-gift-slate-light to-gift-slate rounded-2xl flex items-center justify-center flex-shrink-0 transform group-hover:rotate-12 transition-transform duration-300 shadow-lg border border-gift-slate/20">
+                        <i class="fas fa-elevator text-white dark:text-dark-bg text-xl"></i>
+                    </div>
+                    <div class="flex items-center whitespace-nowrap">
+                        <span class="text-2xl font-display font-extrabold tracking-tight text-neutral-dark dark:text-white">Home </span>
+                        <span class="text-2xl font-display font-extrabold tracking-tight gold-gradient-text ml-0.5">Elevator</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden xl:flex items-center">
+                    <div class="desktop-nav-container">
+                        <div class="flex items-center gap-3 lg:gap-4 xl:gap-5">
+                            <div class="dropdown">
+                                <button class="nav-item flex items-center gap-1.5">
+                                    Home <i class="fas fa-chevron-down text-[10px]"></i>
+                                </button>
+                                <div class="dropdown-menu">
+                                    <a href="index.html" class="dropdown-item">Home 1</a>
+                                    <a href="home2.html" class="dropdown-item">Home 2</a>
+                                </div>
+                            </div>
+                            <a href="about.html" class="nav-item">About</a>
+                            <a href="products.html" class="nav-item">Products</a>
+                            <a href="customization.html" class="nav-item" style="color: var(--color-primary); font-weight: 700;">Customization</a>
+                            <a href="order.html" class="nav-item">Order</a>
+                            <a href="contact.html" class="nav-item">Contact</a>
+                            <div class="dropdown">
+                                <button class="nav-item flex items-center gap-1.5">
+                                    Dashboard <i class="fas fa-chevron-down text-[10px]"></i>
+                                </button>
+                                <div class="dropdown-menu">
+                                    <a href="admin.html" class="dropdown-item">Admin</a>
+                                    <a href="client.html" class="dropdown-item">Client</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3 ml-2">
+                            <a href="login.html" class="auth-btn login">Sign In</a>
+                        </div>
+                    </div>
+                    <div class="flex gap-2.5 ml-5 desktop-toggle-group">
+                        <button id="theme-toggle" class="toggle-btn" title="Toggle Dark/Light Mode"><i class="fas fa-moon"></i><i class="fas fa-sun hidden"></i></button>
+                        <button id="rtl-toggle" class="toggle-btn" title="Toggle RTL/LTR">⇄</button>
+                    </div>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-toggle" class="xl:hidden text-neutral-dark dark:text-gray-300 p-2 focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="mobile-menu xl:hidden">
+                <div class="mobile-dropdown">
+                    <button class="mobile-dropdown-btn flex items-center justify-between w-full mobile-menu-item">
+                        <span>Home</span> <i class="fas fa-chevron-down text-xs"></i>
+                    </button>
+                    <div class="mobile-dropdown-content">
+                        <a href="index.html" class="mobile-dropdown-item">Home 1</a>
+                        <a href="home2.html" class="mobile-dropdown-item">Home 2</a>
+                    </div>
+                </div>
+                <a href="about.html" class="mobile-menu-item">About</a>
+                <a href="products.html" class="mobile-menu-item">Products</a>
+                <a href="customization.html" class="mobile-menu-item" style="color: var(--color-primary); font-weight: 700;">Customization</a>
+                <a href="order.html" class="mobile-menu-item">Order</a>
+                <a href="contact.html" class="mobile-menu-item">Contact</a>
+                <div class="mobile-dropdown">
+                    <button class="mobile-dropdown-btn flex items-center justify-between w-full mobile-menu-item">
+                        <span>Dashboard</span> <i class="fas fa-chevron-down text-xs"></i>
+                    </button>
+                    <div class="mobile-dropdown-content">
+                        <a href="admin.html" class="mobile-dropdown-item">Admin</a>
+                        <a href="client.html" class="mobile-dropdown-item">Client</a>
+                    </div>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-3 p-6">
+                    <a href="login.html" class="mobile-auth-btn login flex-1 text-center">Sign In</a>
+                </div>
+
+                <div class="flex justify-center gap-3 p-6 border-t border-gray-200 dark:border-gray-800">
+                    <button id="theme-toggle-mobile" class="toggle-btn"><i class="fas fa-moon"></i><i class="fas fa-sun hidden"></i></button>
+                    <button id="rtl-toggle-mobile" class="toggle-btn">⇄</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ==================================================== -->
+    <!-- CUSTOMIZATION SECTION 1: HERO (Editorial centered + step preview strip) -->
+    <!-- ==================================================== -->
+    <section class="pt-24 pb-8 sm:pt-28 sm:pb-12 lg:pt-32 lg:pb-16 relative overflow-hidden">
+        <!-- Luxury Elevator Interior Background Image with Overlay -->
+        <div class="absolute inset-0 z-0">
+            <img src="Assets/h1.png" alt="Luxury elevator cabin interior" class="w-full h-full object-cover object-center opacity-15 dark:opacity-20 scale-105 filter blur-[1px]">
+            <div class="absolute inset-0 bg-gradient-to-b from-bg-warm/70 via-bg-warm/90 to-bg-warm dark:from-dark-bg/75 dark:via-dark-bg/90 dark:to-dark-bg"></div>
+        </div>
+
+        <div class="orb w-96 h-96 bg-gift-slate/25 dark:bg-gift-slate-bright/20 -top-32 -right-32"></div>
+        <div class="orb w-72 h-72 bg-gift-accent/15 -bottom-20 -left-20"></div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center max-w-3xl mx-auto">
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/80 dark:bg-dark-card/60 border border-gift-slate/20 dark:border-gift-slate-bright/25 shadow-sm mb-6 backdrop-blur-md">
+                    <i class="fas fa-palette text-gift-slate dark:text-gift-slate-bright text-xs"></i>
+                    <span class="text-[11px] font-bold tracking-[0.2em] uppercase text-neutral-dark dark:text-white">Bespoke Configurator</span>
+                </div>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-extrabold text-neutral-dark dark:text-white leading-tight mb-4">
+                    Design Your <span class="gold-gradient-text">Perfect Lift</span>
+                </h1>
+                <p class="text-lg text-neutral-dark/80 dark:text-gray-300 max-w-2xl mx-auto font-premium italic leading-relaxed mb-8">
+                    Every home is unique. Every lift should be too. Configure colors, materials, patterns, lighting, and controls — then send your design directly to our team.
+                </p>
+
+                <!-- Step preview strip -->
+                <div class="flex items-center justify-center gap-3 md:gap-5 mt-6 sm:mt-8 max-w-2xl mx-auto">
+                    <div class="flex flex-col items-center gap-2">
+                        <div class="step-dot active">1</div>
+                        <span class="text-[10px] uppercase font-bold tracking-wider opacity-70">Style</span>
+                    </div>
+                    <div class="step-connector max-w-[80px]"></div>
+                    <div class="flex flex-col items-center gap-2">
+                        <div class="step-dot">2</div>
+                        <span class="text-[10px] uppercase font-bold tracking-wider opacity-70">Colors</span>
+                    </div>
+                    <div class="step-connector max-w-[80px]"></div>
+                    <div class="flex flex-col items-center gap-2">
+                        <div class="step-dot">3</div>
+                        <span class="text-[10px] uppercase font-bold tracking-wider opacity-70">Material</span>
+                    </div>
+                    <div class="step-connector max-w-[80px]"></div>
+                    <div class="flex flex-col items-center gap-2">
+                        <div class="step-dot">4</div>
+                        <span class="text-[10px] uppercase font-bold tracking-wider opacity-70">Details</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Breadcrumb -->
+            <div class="flex items-center justify-center gap-2 mt-4 sm:mt-6 text-xs font-bold uppercase tracking-widest text-neutral-dark/60 dark:text-gray-400">
+                <a href="index.html" class="hover:text-gift-slate dark:hover:text-gift-slate-bright transition">Home</a>
+                <i class="fas fa-chevron-right text-[8px]"></i>
+                <span class="text-gift-slate dark:text-gift-slate-bright">Customization</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================================================== -->
+    <!-- CUSTOMIZATION SECTION 2: LIVE CONFIGURATOR (Steps + preview) -->
+    <!-- ==================================================== -->
+    <section class="py-10 sm:py-12 lg:py-16 bg-white dark:bg-dark-card border-y border-neutral-light/50 dark:border-gray-800/60">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-12 gap-10 max-w-7xl mx-auto">
+
+                <!-- LEFT: Configurator Steps -->
+                <div class="lg:col-span-7 space-y-12">
+
+                    <!-- ===== STEP 1: Lift Type & Style ===== -->
+                    <div class="relative pt-6">
+                        <div class="step-num-badge">Step 01 · Type & Style</div>
+                        <h3 class="font-display font-bold text-2xl text-neutral-dark dark:text-white mb-2 mt-3">Choose your lift type</h3>
+                        <p class="text-sm opacity-75 mb-6">Pick the base system — we'll customize everything else around it.</p>
+
+                        <div class="grid sm:grid-cols-3 gap-4 mb-6">
+                            <div class="option-card active" data-group="type" data-value="stairlift">
+                                <div class="flex items-center gap-3 mb-2">
+                                    <i class="fas fa-stairs text-gift-slate dark:text-gift-slate-bright text-xl"></i>
+                                    <div class="font-bold text-sm text-neutral-dark dark:text-white">Stairlift</div>
+                                </div>
+                                <div class="text-xs opacity-70">Private staircase</div>
+                            </div>
+                            <div class="option-card" data-group="type" data-value="home-elevator">
+                                <div class="flex items-center gap-3 mb-2">
+                                    <i class="fas fa-home text-gift-slate dark:text-gift-slate-bright text-xl"></i>
+                                    <div class="font-bold text-sm text-neutral-dark dark:text-white">Home Elevator</div>
+                                </div>
+                                <div class="text-xs opacity-70">Multi-floor cabin</div>
+                            </div>
+                            <div class="option-card" data-group="type" data-value="platform">
+                                <div class="flex items-center gap-3 mb-2">
+                                    <i class="fas fa-wheelchair text-gift-slate dark:text-gift-slate-bright text-xl"></i>
+                                    <div class="font-bold text-sm text-neutral-dark dark:text-white">Platform Lift</div>
+                                </div>
+                                <div class="text-xs opacity-70">Short-rise access</div>
+                            </div>
+                        </div>
+
+                        <!-- Style variants (dependent on type) -->
+                        <h4 class="font-display font-bold text-base text-neutral-dark dark:text-white mb-3">Style variant</h4>
+                        <div class="grid sm:grid-cols-3 gap-4">
+                            <div class="option-card active" data-group="style" data-value="classic">
+                                <div class="font-bold text-sm text-neutral-dark dark:text-white mb-1">Classic</div>
+                                <div class="text-xs opacity-70">Timeless, understated</div>
+                            </div>
+                            <div class="option-card" data-group="style" data-value="modern">
+                                <div class="font-bold text-sm text-neutral-dark dark:text-white mb-1">Modern</div>
+                                <div class="text-xs opacity-70">Sleek, minimal lines</div>
+                            </div>
+                            <div class="option-card" data-group="style" data-value="luxury">
+                                <div class="font-bold text-sm text-neutral-dark dark:text-white mb-1">Luxury</div>
+                                <div class="text-xs opacity-70">Ornate, statement piece</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ===== STEP 2: Color Palette ===== -->
+                    <div class="relative pt-6">
+                        <div class="step-num-badge">Step 02 · Color Palette</div>
+                        <h3 class="font-display font-bold text-2xl text-neutral-dark dark:text-white mb-2 mt-3">Pick your primary color</h3>
+                        <p class="text-sm opacity-75 mb-6">Swatches shown on your cabin, rail, and accent trim.</p>
+
+                        <div class="flex flex-wrap gap-4 mb-4">
+                            <div class="swatch active" style="background: linear-gradient(135deg, #E6C687, #C5A059);" data-group="color" data-value="gold" title="Champagne Gold"></div>
+                            <div class="swatch" style="background: linear-gradient(135deg, #B8B8B8, #6B6B6B);" data-group="color" data-value="platinum" title="Platinum Silver"></div>
+                            <div class="swatch" style="background: linear-gradient(135deg, #4A4A4A, #1A1A1A);" data-group="color" data-value="obsidian" title="Obsidian Black"></div>
+                            <div class="swatch" style="background: linear-gradient(135deg, #FFFFFF, #E8E2D5);" data-group="color" data-value="ivory" title="Warm Ivory"></div>
+                            <div class="swatch" style="background: linear-gradient(135deg, #8B6F47, #4A3520);" data-group="color" data-value="walnut" title="Walnut Brown"></div>
+                            <div class="swatch" style="background: linear-gradient(135deg, #2E5A4F, #1A3830);" data-group="color" data-value="forest" title="Forest Green"></div>
+                            <div class="swatch" style="background: linear-gradient(135deg, #1E3A5F, #0F2138);" data-group="color" data-value="navy" title="Navy Blue"></div>
+                            <div class="swatch" style="background: linear-gradient(135deg, #7A2A3A, #4A1824);" data-group="color" data-value="burgundy" title="Burgundy"></div>
+                        </div>
+                        <div class="text-xs opacity-60 italic">Selected: <strong id="color-label" class="text-gift-slate dark:text-gift-slate-bright not-italic">Champagne Gold</strong></div>
+                    </div>
+
+                    <!-- ===== STEP 3: Material Finish ===== -->
+                    <div class="relative pt-6">
+                        <div class="step-num-badge">Step 03 · Material Finish</div>
+                        <h3 class="font-display font-bold text-2xl text-neutral-dark dark:text-white mb-2 mt-3">Select your surface finish</h3>
+                        <p class="text-sm opacity-75 mb-6">Choose the tactile quality of your cabin walls, floor, and handrail.</p>
+
+                        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                            <div class="option-card active text-center" data-group="material" data-value="solid">
+                                <div class="h-16 rounded-lg mb-3 bg-gradient-to-br from-[#C5A059] to-[#9E7D3B] pattern-solid"></div>
+                                <div class="font-bold text-sm text-neutral-dark dark:text-white">Solid Matte</div>
+                                <div class="text-[10px] opacity-60 mt-1">Smooth, refined</div>
+                            </div>
+                            <div class="option-card text-center" data-group="material" data-value="herringbone">
+                                <div class="h-16 rounded-lg mb-3 bg-gradient-to-br from-[#C5A059] to-[#9E7D3B] pattern-herringbone"></div>
+                                <div class="font-bold text-sm text-neutral-dark dark:text-white">Herringbone</div>
+                                <div class="text-[10px] opacity-60 mt-1">Classic parquet</div>
+                            </div>
+                            <div class="option-card text-center" data-group="material" data-value="stripes">
+                                <div class="h-16 rounded-lg mb-3 bg-gradient-to-br from-[#C5A059] to-[#9E7D3B] pattern-stripes"></div>
+                                <div class="font-bold text-sm text-neutral-dark dark:text-white">Diagonal Stripes</div>
+                                <div class="text-[10px] opacity-60 mt-1">Contemporary</div>
+                            </div>
+                            <div class="option-card text-center" data-group="material" data-value="dots">
+                                <div class="h-16 rounded-lg mb-3 bg-gradient-to-br from-[#C5A059] to-[#9E7D3B] pattern-dots"></div>
+                                <div class="font-bold text-sm text-neutral-dark dark:text-white">Micro Dots</div>
+                                <div class="text-[10px] opacity-60 mt-1">Playful texture</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ===== STEP 4: Finishing Details ===== -->
+                    <div class="relative pt-6">
+                        <div class="step-num-badge">Step 04 · Finishing Details</div>
+                        <h3 class="font-display font-bold text-2xl text-neutral-dark dark:text-white mb-2 mt-3">Add finishing touches</h3>
+                        <p class="text-sm opacity-75 mb-6">Small details that make your lift truly yours.</p>
+
+                        <div class="grid sm:grid-cols-2 gap-4 mb-5">
+                            <div class="option-card active" data-group="lighting" data-value="led-strip">
+                                <div class="flex items-center gap-3 mb-2">
+                                    <i class="fas fa-lightbulb text-gift-slate dark:text-gift-slate-bright text-lg"></i>
+                                    <div class="font-bold text-sm text-neutral-dark dark:text-white">LED Strip Lighting</div>
+                                </div>
+                                <div class="text-xs opacity-70">Warm ambient glow along cabin ceiling</div>
+                            </div>
+                            <div class="option-card" data-group="lighting" data-value="spot">
+                                <div class="flex items-center gap-3 mb-2">
+                                    <i class="fas fa-lightbulb text-gift-slate dark:text-gift-slate-bright text-lg"></i>
+                                    <div class="font-bold text-sm text-neutral-dark dark:text-white">Recessed Spotlights</div>
+                                </div>
+                                <div class="text-xs opacity-70">Directional, gallery-style illumination</div>
+                            </div>
+                        </div>
+
+                        <div class="grid sm:grid-cols-2 gap-4">
+                            <div class="option-card active" data-group="controls" data-value="touch">
+                                <div class="flex items-center gap-3 mb-2">
+                                    <i class="fas fa-hand-pointer text-gift-slate dark:text-gift-slate-bright text-lg"></i>
+                                    <div class="font-bold text-sm text-neutral-dark dark:text-white">Touch Panel</div>
+                                </div>
+                                <div class="text-xs opacity-70">Slim glass touchscreen with LED feedback</div>
+                            </div>
+                            <div class="option-card" data-group="controls" data-value="mechanical">
+                                <div class="flex items-center gap-3 mb-2">
+                                    <i class="fas fa-circle-notch text-gift-slate dark:text-gift-slate-bright text-lg"></i>
+                                    <div class="font-bold text-sm text-neutral-dark dark:text-white">Mechanical Buttons</div>
+                                </div>
+                                <div class="text-xs opacity-70">Tactile brass or stainless buttons</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RIGHT: Live Preview Panel (sticky) -->
+                <div class="lg:col-span-5">
+                    <div class="pricing-sticky">
+                        <div class="preview-card p-6 lg:p-7">
+                            <div class="flex items-center justify-between mb-5">
+                                <div class="flex items-center gap-2">
+                                    <i class="fas fa-eye text-gift-slate dark:text-gift-slate-bright"></i>
+                                    <span class="font-display font-bold text-neutral-dark dark:text-white">Live Preview</span>
+                                </div>
+                                <span class="badge text-[10px]">Updated Live</span>
+                            </div>
+
+                            <!-- Preview image -->
+                            <div class="rounded-2xl overflow-hidden mb-5 border border-gift-slate/15 dark:border-gift-slate-bright/20 shadow-lg">
+                                <img id="preview-image" src="Assets/h1.png" alt="Your lift preview" class="w-full h-64 object-cover transition-all duration-500">
+                            </div>
+
+                            <!-- Configuration summary -->
+                            <div class="space-y-3 mb-5">
+                                <div class="flex items-center justify-between text-sm">
+                                    <span class="opacity-70">Type</span>
+                                    <strong id="sum-type" class="text-neutral-dark dark:text-white">Stairlift</strong>
+                                </div>
+                                <div class="flex items-center justify-between text-sm">
+                                    <span class="opacity-70">Style</span>
+                                    <strong id="sum-style" class="text-neutral-dark dark:text-white">Classic</strong>
+                                </div>
+                                <div class="flex items-center justify-between text-sm">
+                                    <span class="opacity-70">Color</span>
+                                    <strong id="sum-color" class="text-neutral-dark dark:text-white">Champagne Gold</strong>
+                                </div>
+                                <div class="flex items-center justify-between text-sm">
+                                    <span class="opacity-70">Material</span>
+                                    <strong id="sum-material" class="text-neutral-dark dark:text-white">Solid Matte</strong>
+                                </div>
+                                <div class="flex items-center justify-between text-sm">
+                                    <span class="opacity-70">Lighting</span>
+                                    <strong id="sum-lighting" class="text-neutral-dark dark:text-white">LED Strip</strong>
+                                </div>
+                                <div class="flex items-center justify-between text-sm">
+                                    <span class="opacity-70">Controls</span>
+                                    <strong id="sum-controls" class="text-neutral-dark dark:text-white">Touch Panel</strong>
+                                </div>
+                            </div>
+
+                            <!-- Divider -->
+                            <div class="h-px bg-gradient-to-r from-transparent via-gift-slate/30 to-transparent mb-5"></div>
+
+                            <!-- Estimated upgrade price -->
+                            <div class="flex items-end justify-between mb-5">
+                                <div>
+                                    <div class="text-[10px] uppercase font-bold tracking-widest opacity-60 mb-1">Estimated Customization</div>
+                                    <div class="text-3xl font-display font-extrabold text-gift-slate dark:text-gift-slate-bright">+$<span id="sum-price">1,850</span></div>
+                                </div>
+                                <div class="text-[10px] opacity-60 text-right leading-tight">On top of<br>base price</div>
+                            </div>
+
+                            <!-- CTA buttons -->
+                            <div class="space-y-3">
+                                <a href="order.html" class="btn-gift w-full justify-center">
+                                    <i class="fas fa-file-invoice"></i> Request This Configuration
+                                </a>
+                                <button id="reset-config" class="w-full text-center text-xs font-bold uppercase tracking-widest text-neutral-dark/70 dark:text-gray-400 hover:text-gift-slate dark:hover:text-gift-slate-bright transition py-2">
+                                    <i class="fas fa-rotate-left mr-1"></i> Reset Configuration
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Small reassurance card -->
+                        <div class="mt-5 p-4 rounded-2xl bg-white/60 dark:bg-dark-bg/60 border border-gift-slate/15 dark:border-gift-slate-bright/20 flex items-start gap-3">
+                            <i class="fas fa-info-circle text-gift-slate dark:text-gift-slate-bright mt-0.5"></i>
+                            <p class="text-xs opacity-75 leading-relaxed">This is a design tool, not a checkout. Submitting your configuration starts a conversation with our design team — no obligation.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================================================== -->
+    <!-- CUSTOMIZATION SECTION 3: SIGNATURE MATERIALS (Masonry-style grid) -->
+    <!-- ==================================================== -->
+    <section class="py-12 sm:py-16 lg:py-20 bg-bg-warm dark:bg-dark-bg">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-10 sm:mb-14 max-w-3xl mx-auto">
+                <span class="text-gift-slate dark:text-gift-slate-bright font-bold text-xs tracking-[0.3em] font-alt uppercase">Materials Library</span>
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-display font-bold mt-3 text-neutral-dark dark:text-white leading-tight">
+                    Signature <span class="gold-gradient-text">finishes</span>
+                </h2>
+                <p class="text-base opacity-75 mt-4">From sustainably sourced walnut to hand-polished brass — explore the material palette used in our bespoke builds.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                <!-- Material 1 -->
+                <div class="material-card">
+                    <img src="Assets/h1.png" alt="Walnut wood finish" class="w-full h-full object-cover">
+                    <span class="material-tag">Wood</span>
+                    <div class="material-info">
+                        <div class="text-[10px] uppercase tracking-widest text-gift-slate-bright font-bold mb-1">Signature</div>
+                        <h3 class="font-display font-bold text-xl">American Walnut</h3>
+                        <p class="text-xs opacity-80 mt-1">FSC-certified, oil-rubbed, and hand-finished in our workshop.</p>
+                    </div>
+                </div>
+
+                <!-- Material 2 -->
+                <div class="material-card">
+                    <img src="Assets/h3.png" alt="Brushed brass finish" class="w-full h-full object-cover">
+                    <span class="material-tag">Metal</span>
+                    <div class="material-info">
+                        <div class="text-[10px] uppercase tracking-widest text-gift-slate-bright font-bold mb-1">Statement</div>
+                        <h3 class="font-display font-bold text-xl">Brushed Brass</h3>
+                        <p class="text-xs opacity-80 mt-1">Hand-polished, tarnish-resistant, and warm to the touch.</p>
+                    </div>
+                </div>
+
+                <!-- Material 3 -->
+                <div class="material-card">
+                    <img src="Assets/h4.png" alt="Matte black cabin" class="w-full h-full object-cover">
+                    <span class="material-tag">Metal</span>
+                    <div class="material-info">
+                        <div class="text-[10px] uppercase tracking-widest text-gift-slate-bright font-bold mb-1">Modern</div>
+                        <h3 class="font-display font-bold text-xl">Matte Obsidian</h3>
+                        <p class="text-xs opacity-80 mt-1">Powder-coated aluminium with fingerprint-resistant finish.</p>
+                    </div>
+                </div>
+
+                <!-- Material 4 -->
+                <div class="material-card">
+                    <img src="Assets/h5.png" alt="Glass cabin" class="w-full h-full object-cover">
+                    <span class="material-tag">Glass</span>
+                    <div class="material-info">
+                        <div class="text-[10px] uppercase tracking-widest text-gift-slate-bright font-bold mb-1">Panoramic</div>
+                        <h3 class="font-display font-bold text-xl">Tempered Glass</h3>
+                        <p class="text-xs opacity-80 mt-1">Triple-laminated safety glass with subtle bronze tint options.</p>
+                    </div>
+                </div>
+
+                <!-- Material 5 -->
+                <div class="material-card">
+                    <img src="Assets/h7.png" alt="Marble floor" class="w-full h-full object-cover">
+                    <span class="material-tag">Stone</span>
+                    <div class="material-info">
+                        <div class="text-[10px] uppercase tracking-widest text-gift-slate-bright font-bold mb-1">Luxury</div>
+                        <h3 class="font-display font-bold text-xl">Italian Marble</h3>
+                        <p class="text-xs opacity-80 mt-1">Calacatta, Carrara, or Nero Marquina — polished or honed.</p>
+                    </div>
+                </div>
+
+                <!-- Material 6 -->
+                <div class="material-card">
+                    <img src="Assets/h8.png" alt="Leather panel" class="w-full h-full object-cover">
+                    <span class="material-tag">Textile</span>
+                    <div class="material-info">
+                        <div class="text-[10px] uppercase tracking-widest text-gift-slate-bright font-bold mb-1">Bespoke</div>
+                        <h3 class="font-display font-bold text-xl">Hand-Stitched Leather</h3>
+                        <p class="text-xs opacity-80 mt-1">Full-grain leather panels with contrast or tonal stitching.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================================================== -->
+    <!-- CUSTOMIZATION SECTION 4: ZIGZAG PROCESS (Alternating steps) -->
+    <!-- ==================================================== -->
+    <section class="py-12 sm:py-16 lg:py-20 bg-white dark:bg-dark-card border-y border-neutral-light/50 dark:border-gray-800/60">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-10 sm:mb-16 max-w-3xl mx-auto">
+                <span class="text-gift-slate dark:text-gift-slate-bright font-bold text-xs tracking-[0.3em] font-alt uppercase">Design Journey</span>
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-display font-bold mt-3 text-neutral-dark dark:text-white leading-tight">
+                    From idea to <span class="gold-gradient-text">installed reality</span>
+                </h2>
+                <p class="text-base opacity-75 mt-4">Four collaborative phases — you'll speak with a real designer at every step.</p>
+            </div>
+
+            <!-- Row 1 -->
+            <div class="grid lg:grid-cols-2 gap-12 items-center mb-20 max-w-6xl mx-auto">
+                <div class="relative order-2 lg:order-1">
+                    <div class="rounded-3xl overflow-hidden shadow-2xl border border-gift-slate/15 dark:border-gift-slate-bright/20">
+                        <img src="Assets/h2.png" alt="Discovery call" class="w-full h-[380px] object-cover">
+                    </div>
+                    <div class="absolute -top-5 -left-5 w-20 h-20 rounded-2xl bg-gift-slate/15 dark:bg-gift-slate-bright/15 -z-10"></div>
+                    <div class="absolute -bottom-5 -right-5 bg-neutral-dark dark:bg-dark-surface text-white rounded-2xl px-6 py-4 shadow-2xl border border-gift-slate/30">
+                        <div class="text-[10px] uppercase tracking-widest font-bold opacity-70">Phase</div>
+                        <div class="text-3xl font-display font-extrabold text-gift-slate-bright">01</div>
+                    </div>
+                </div>
+                <div class="order-1 lg:order-2">
+                    <h3 class="text-3xl font-display font-bold mb-4 text-neutral-dark dark:text-white">Discovery Consultation</h3>
+                    <p class="text-base opacity-80 mb-6 leading-relaxed">We start with a 45-minute call or in-person visit. You share your vision, reference images, and space constraints — we listen.</p>
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-3"><i class="fas fa-check-circle text-gift-slate dark:text-gift-slate-bright mt-1"></i><span class="text-sm opacity-90">Vision & moodboard conversation</span></li>
+                        <li class="flex items-start gap-3"><i class="fas fa-check-circle text-gift-slate dark:text-gift-slate-bright mt-1"></i><span class="text-sm opacity-90">Space measurements and photos</span></li>
+                        <li class="flex items-start gap-3"><i class="fas fa-check-circle text-gift-slate dark:text-gift-slate-bright mt-1"></i><span class="text-sm opacity-90">Budget and timeline alignment</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Row 2 -->
+            <div class="grid lg:grid-cols-2 gap-12 items-center mb-20 max-w-6xl mx-auto">
+                <div>
+                    <h3 class="text-3xl font-display font-bold mb-4 text-neutral-dark dark:text-white">Digital Design & 3D Render</h3>
+                    <p class="text-base opacity-80 mb-6 leading-relaxed">Our design team produces photorealistic 3D renders of your configuration — colors, materials, lighting, and controls all previewed before we build.</p>
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-3"><i class="fas fa-check-circle text-gift-slate dark:text-gift-slate-bright mt-1"></i><span class="text-sm opacity-90">Photorealistic 3D render within 5 days</span></li>
+                        <li class="flex items-start gap-3"><i class="fas fa-check-circle text-gift-slate dark:text-gift-slate-bright mt-1"></i><span class="text-sm opacity-90">Unlimited revisions until it's perfect</span></li>
+                        <li class="flex items-start gap-3"><i class="fas fa-check-circle text-gift-slate dark:text-gift-slate-bright mt-1"></i><span class="text-sm opacity-90">Material samples mailed to your home</span></li>
+                    </ul>
+                </div>
+                <div class="relative">
+                    <div class="rounded-3xl overflow-hidden shadow-2xl border border-gift-slate/15 dark:border-gift-slate-bright/20">
+                        <img src="Assets/h3.png" alt="3D render" class="w-full h-[380px] object-cover">
+                    </div>
+                    <div class="absolute -top-5 -right-5 w-20 h-20 rounded-2xl bg-gift-slate/15 dark:bg-gift-slate-bright/15 -z-10"></div>
+                    <div class="absolute -bottom-5 -left-5 bg-neutral-dark dark:bg-dark-surface text-white rounded-2xl px-6 py-4 shadow-2xl border border-gift-slate/30">
+                        <div class="text-[10px] uppercase tracking-widest font-bold opacity-70">Phase</div>
+                        <div class="text-3xl font-display font-extrabold text-gift-slate-bright">02</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Row 3 -->
+            <div class="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+                <div class="relative order-2 lg:order-1">
+                    <div class="rounded-3xl overflow-hidden shadow-2xl border border-gift-slate/15 dark:border-gift-slate-bright/20">
+                        <img src="Assets/h5.png" alt="Craft and install" class="w-full h-[380px] object-cover">
+                    </div>
+                    <div class="absolute -top-5 -left-5 w-20 h-20 rounded-2xl bg-gift-slate/15 dark:bg-gift-slate-bright/15 -z-10"></div>
+                    <div class="absolute -bottom-5 -right-5 bg-neutral-dark dark:bg-dark-surface text-white rounded-2xl px-6 py-4 shadow-2xl border border-gift-slate/30">
+                        <div class="text-[10px] uppercase tracking-widest font-bold opacity-70">Phase</div>
+                        <div class="text-3xl font-display font-extrabold text-gift-slate-bright">03</div>
+                    </div>
+                </div>
+                <div class="order-1 lg:order-2">
+                    <h3 class="text-3xl font-display font-bold mb-4 text-neutral-dark dark:text-white">Craft, Deliver & Install</h3>
+                    <p class="text-base opacity-80 mb-6 leading-relaxed">Your bespoke cabin is built in our workshop, then our white-glove installation team fits it into your home with minimal disruption.</p>
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-3"><i class="fas fa-check-circle text-gift-slate dark:text-gift-slate-bright mt-1"></i><span class="text-sm opacity-90">Craft time: 4–8 weeks depending on scope</span></li>
+                        <li class="flex items-start gap-3"><i class="fas fa-check-circle text-gift-slate dark:text-gift-slate-bright mt-1"></i><span class="text-sm opacity-90">Installation in 1–5 days, no mess left behind</span></li>
+                        <li class="flex items-start gap-3"><i class="fas fa-check-circle text-gift-slate dark:text-gift-slate-bright mt-1"></i><span class="text-sm opacity-90">Full handover training + final inspection</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================================================== -->
+    <!-- CUSTOMIZATION SECTION 5: DESIGN INSPIRATION GALLERY (Horizontal scroll) -->
+    <!-- ==================================================== -->
+    <section class="py-12 sm:py-16 lg:py-20 bg-bg-warm dark:bg-dark-bg overflow-hidden">
+        <div class="container mx-auto px-6 mb-6 sm:mb-8">
+            <div class="flex flex-wrap justify-between items-end gap-4 sm:gap-6 max-w-6xl mx-auto">
+                <div class="max-w-xl">
+                    <span class="text-gift-slate dark:text-gift-slate-bright font-bold text-xs tracking-[0.3em] font-alt uppercase">Inspiration</span>
+                    <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display font-bold mt-2 sm:mt-3 leading-tight text-neutral-dark dark:text-white">
+                        Bespoke builds we <span class="gold-gradient-text">love</span>
+                    </h2>
+                    <p class="text-sm sm:text-base opacity-75 mt-2 sm:mt-4">Real configurations commissioned by real clients — swipe to explore.</p>
+                </div>
+                <div class="flex gap-2 sm:gap-3">
+                    <button id="insp-prev" aria-label="Previous bespoke build" class="w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-gift-slate/30 dark:border-gift-slate-bright/30 text-gift-slate dark:text-gift-slate-bright hover:bg-gift-slate hover:text-white dark:hover:bg-gift-slate-bright dark:hover:text-dark-bg transition flex items-center justify-center">
+                        <i class="fas fa-arrow-left text-sm sm:text-base"></i>
+                    </button>
+                    <button id="insp-next" aria-label="Next bespoke build" class="w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-gift-slate/30 dark:border-gift-slate-bright/30 text-gift-slate dark:text-gift-slate-bright hover:bg-gift-slate hover:text-white dark:hover:bg-gift-slate-bright dark:hover:text-dark-bg transition flex items-center justify-center">
+                        <i class="fas fa-arrow-right text-sm sm:text-base"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="insp-scroll" class="flex gap-4 sm:gap-6 overflow-x-auto no-scrollbar pb-6 px-[12vw] sm:px-6 lg:px-8 snap-x snap-mandatory scroll-smooth">
+            <!-- Card 1 -->
+            <div class="insp-card snap-center sm:snap-start flex-shrink-0 w-[76vw] sm:w-[380px] lg:w-[420px] rounded-2xl sm:rounded-3xl overflow-hidden shadow-lg hover:shadow-xl border border-gift-slate/15 dark:border-gift-slate-bright/20 bg-white dark:bg-dark-card transition-all duration-300">
+                <div class="h-48 sm:h-60 lg:h-72 overflow-hidden">
+                    <img src="Assets/h1.png" alt="Warm Walnut Retreat" class="w-full h-full object-cover">
+                </div>
+                <div class="p-4 sm:p-6">
+                    <div class="flex items-center gap-2 mb-2 sm:mb-3">
+                        <span class="badge text-[10px]">Home Elevator</span>
+                        <span class="text-[10px] uppercase tracking-widest opacity-60">2025</span>
+                    </div>
+                    <h3 class="font-display font-bold text-lg sm:text-xl mb-1.5 sm:mb-2 text-neutral-dark dark:text-white">Warm Walnut Retreat</h3>
+                    <p class="text-xs sm:text-sm opacity-75 mb-3 sm:mb-4 leading-relaxed">Full walnut cabin walls, oil-rubbed brass handrail, warm LED strip lighting — designed for a Pacific Northwest family home.</p>
+                    <div class="flex flex-wrap gap-1.5 sm:gap-2">
+                        <span class="text-[10px] px-2.5 py-1 rounded-full bg-gift-slate/10 dark:bg-gift-slate-bright/15 text-gift-slate dark:text-gift-slate-bright font-bold uppercase tracking-wider">Walnut</span>
+                        <span class="text-[10px] px-2.5 py-1 rounded-full bg-gift-slate/10 dark:bg-gift-slate-bright/15 text-gift-slate dark:text-gift-slate-bright font-bold uppercase tracking-wider">Brass</span>
+                        <span class="text-[10px] px-2.5 py-1 rounded-full bg-gift-slate/10 dark:bg-gift-slate-bright/15 text-gift-slate dark:text-gift-slate-bright font-bold uppercase tracking-wider">Luxury</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="insp-card snap-center sm:snap-start flex-shrink-0 w-[76vw] sm:w-[380px] lg:w-[420px] rounded-2xl sm:rounded-3xl overflow-hidden shadow-lg hover:shadow-xl border border-gift-slate/15 dark:border-gift-slate-bright/20 bg-white dark:bg-dark-card transition-all duration-300">
+                <div class="h-48 sm:h-60 lg:h-72 overflow-hidden">
+                    <img src="Assets/h3.png" alt="Obsidian Modern" class="w-full h-full object-cover">
+                </div>
+                <div class="p-4 sm:p-6">
+                    <div class="flex items-center gap-2 mb-2 sm:mb-3">
+                        <span class="badge text-[10px]">Home Elevator</span>
+                        <span class="text-[10px] uppercase tracking-widest opacity-60">2025</span>
+                    </div>
+                    <h3 class="font-display font-bold text-lg sm:text-xl mb-1.5 sm:mb-2 text-neutral-dark dark:text-white">Obsidian Modern</h3>
+                    <p class="text-xs sm:text-sm opacity-75 mb-3 sm:mb-4 leading-relaxed">Matte black aluminium, tinted glass, and integrated LED halo. Designed for a Manhattan loft with industrial leanings.</p>
+                    <div class="flex flex-wrap gap-1.5 sm:gap-2">
+                        <span class="text-[10px] px-2.5 py-1 rounded-full bg-gift-slate/10 dark:bg-gift-slate-bright/15 text-gift-slate dark:text-gift-slate-bright font-bold uppercase tracking-wider">Obsidian</span>
+                        <span class="text-[10px] px-2.5 py-1 rounded-full bg-gift-slate/10 dark:bg-gift-slate-bright/15 text-gift-slate dark:text-gift-slate-bright font-bold uppercase tracking-wider">Glass</span>
+                        <span class="text-[10px] px-2.5 py-1 rounded-full bg-gift-slate/10 dark:bg-gift-slate-bright/15 text-gift-slate dark:text-gift-slate-bright font-bold uppercase tracking-wider">Modern</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="insp-card snap-center sm:snap-start flex-shrink-0 w-[76vw] sm:w-[380px] lg:w-[420px] rounded-2xl sm:rounded-3xl overflow-hidden shadow-lg hover:shadow-xl border border-gift-slate/15 dark:border-gift-slate-bright/20 bg-white dark:bg-dark-card transition-all duration-300">
+                <div class="h-48 sm:h-60 lg:h-72 overflow-hidden">
+                    <img src="Assets/h2.png" alt="Coastal Classic Stairlift" class="w-full h-full object-cover">
+                </div>
+                <div class="p-4 sm:p-6">
+                    <div class="flex items-center gap-2 mb-2 sm:mb-3">
+                        <span class="badge text-[10px]">Stairlift</span>
+                        <span class="text-[10px] uppercase tracking-widest opacity-60">2024</span>
+                    </div>
+                    <h3 class="font-display font-bold text-lg sm:text-xl mb-1.5 sm:mb-2 text-neutral-dark dark:text-white">Coastal Classic Stairlift</h3>
+                    <p class="text-xs sm:text-sm opacity-75 mb-3 sm:mb-4 leading-relaxed">Warm ivory cushions, white rail, brushed brass accents. Custom-fitted to a curved seaside staircase.</p>
+                    <div class="flex flex-wrap gap-1.5 sm:gap-2">
+                        <span class="text-[10px] px-2.5 py-1 rounded-full bg-gift-slate/10 dark:bg-gift-slate-bright/15 text-gift-slate dark:text-gift-slate-bright font-bold uppercase tracking-wider">Ivory</span>
+                        <span class="text-[10px] px-2.5 py-1 rounded-full bg-gift-slate/10 dark:bg-gift-slate-bright/15 text-gift-slate dark:text-gift-slate-bright font-bold uppercase tracking-wider">Brass</span>
+                        <span class="text-[10px] px-2.5 py-1 rounded-full bg-gift-slate/10 dark:bg-gift-slate-bright/15 text-gift-slate dark:text-gift-slate-bright font-bold uppercase tracking-wider">Classic</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="insp-card snap-center sm:snap-start flex-shrink-0 w-[76vw] sm:w-[380px] lg:w-[420px] rounded-2xl sm:rounded-3xl overflow-hidden shadow-lg hover:shadow-xl border border-gift-slate/15 dark:border-gift-slate-bright/20 bg-white dark:bg-dark-card transition-all duration-300">
+                <div class="h-48 sm:h-60 lg:h-72 overflow-hidden">
+                    <img src="Assets/h5.png" alt="Carrara Grand" class="w-full h-full object-cover">
+                </div>
+                <div class="p-4 sm:p-6">
+                    <div class="flex items-center gap-2 mb-2 sm:mb-3">
+                        <span class="badge text-[10px]">Commercial</span>
+                        <span class="text-[10px] uppercase tracking-widest opacity-60">2025</span>
+                    </div>
+                    <h3 class="font-display font-bold text-lg sm:text-xl mb-1.5 sm:mb-2 text-neutral-dark dark:text-white">Carrara Grand</h3>
+                    <p class="text-xs sm:text-sm opacity-75 mb-3 sm:mb-4 leading-relaxed">Italian marble floor, glass cabin, brass touch panel — for a boutique hotel lobby in Charleston.</p>
+                    <div class="flex flex-wrap gap-1.5 sm:gap-2">
+                        <span class="text-[10px] px-2.5 py-1 rounded-full bg-gift-slate/10 dark:bg-gift-slate-bright/15 text-gift-slate dark:text-gift-slate-bright font-bold uppercase tracking-wider">Marble</span>
+                        <span class="text-[10px] px-2.5 py-1 rounded-full bg-gift-slate/10 dark:bg-gift-slate-bright/15 text-gift-slate dark:text-gift-slate-bright font-bold uppercase tracking-wider">Glass</span>
+                        <span class="text-[10px] px-2.5 py-1 rounded-full bg-gift-slate/10 dark:bg-gift-slate-bright/15 text-gift-slate dark:text-gift-slate-bright font-bold uppercase tracking-wider">Luxury</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="insp-card snap-center sm:snap-start flex-shrink-0 w-[76vw] sm:w-[380px] lg:w-[420px] rounded-2xl sm:rounded-3xl overflow-hidden shadow-lg hover:shadow-xl border border-gift-slate/15 dark:border-gift-slate-bright/20 bg-white dark:bg-dark-card transition-all duration-300">
+                <div class="h-48 sm:h-60 lg:h-72 overflow-hidden">
+                    <img src="Assets/h7.png" alt="Forest Retreat" class="w-full h-full object-cover">
+                </div>
+                <div class="p-4 sm:p-6">
+                    <div class="flex items-center gap-2 mb-2 sm:mb-3">
+                        <span class="badge text-[10px]">Home Elevator</span>
+                        <span class="text-[10px] uppercase tracking-widest opacity-60">2024</span>
+                    </div>
+                    <h3 class="font-display font-bold text-lg sm:text-xl mb-1.5 sm:mb-2 text-neutral-dark dark:text-white">Forest Retreat</h3>
+                    <p class="text-xs sm:text-sm opacity-75 mb-3 sm:mb-4 leading-relaxed">Forest green paneling, oak handrail, herringbone floor. Set in a Vermont cabin with mountain views.</p>
+                    <div class="flex flex-wrap gap-1.5 sm:gap-2">
+                        <span class="text-[10px] px-2.5 py-1 rounded-full bg-gift-slate/10 dark:bg-gift-slate-bright/15 text-gift-slate dark:text-gift-slate-bright font-bold uppercase tracking-wider">Forest</span>
+                        <span class="text-[10px] px-2.5 py-1 rounded-full bg-gift-slate/10 dark:bg-gift-slate-bright/15 text-gift-slate dark:text-gift-slate-bright font-bold uppercase tracking-wider">Herringbone</span>
+                        <span class="text-[10px] px-2.5 py-1 rounded-full bg-gift-slate/10 dark:bg-gift-slate-bright/15 text-gift-slate dark:text-gift-slate-bright font-bold uppercase tracking-wider">Classic</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================================================== -->
+    <!-- CUSTOMIZATION SECTION 6: FAQ + FINAL CTA -->
+    <!-- ==================================================== -->
+    <section class="py-12 sm:py-16 lg:py-20 bg-white dark:bg-dark-card border-y border-neutral-light/50 dark:border-gray-800/60">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-12 gap-10 max-w-6xl mx-auto">
+                <!-- Left: heading -->
+                <div class="lg:col-span-4">
+                    <span class="text-gift-slate dark:text-gift-slate-bright font-bold text-xs tracking-[0.3em] font-alt uppercase">Common Questions</span>
+                    <h2 class="text-3xl md:text-4xl font-display font-bold mt-3 text-neutral-dark dark:text-white leading-tight">
+                        Customization <span class="gold-gradient-text">FAQs</span>
+                    </h2>
+                    <p class="text-base opacity-75 mt-4 leading-relaxed">Everything you need to know about the bespoke process, lead times, and options.</p>
+
+                    <div class="mt-8 p-5 rounded-2xl bg-bg-warm dark:bg-dark-bg border border-gift-slate/15 dark:border-gift-slate-bright/20">
+                        <div class="flex items-center gap-3 mb-2">
+                            <i class="fas fa-palette text-gift-slate dark:text-gift-slate-bright text-xl"></i>
+                            <span class="font-display font-bold text-neutral-dark dark:text-white">Want to talk design?</span>
+                        </div>
+                        <p class="text-sm opacity-75 mb-3">Book a 20-minute call with a designer — free, no obligation.</p>
+                        <a href="contact.html" class="inline-flex items-center gap-2 text-gift-slate dark:text-gift-slate-bright font-bold text-sm hover:underline">
+                            <i class="fas fa-calendar-check text-xs"></i> Book a design call
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right: FAQ accordion -->
+                <div class="lg:col-span-8 space-y-4">
+                    <details class="group rounded-2xl border border-gift-slate/15 dark:border-gift-slate-bright/20 bg-bg-warm/60 dark:bg-dark-bg/60 p-6 cursor-pointer">
+                        <summary class="flex items-start justify-between gap-4 list-none">
+                            <h3 class="font-display font-bold text-lg text-neutral-dark dark:text-white">How long does a bespoke build take?</h3>
+                            <i class="fas fa-plus text-gift-slate dark:text-gift-slate-bright flex-shrink-0 mt-1 group-open:rotate-45 transition-transform"></i>
+                        </summary>
+                        <p class="text-sm opacity-80 leading-relaxed pt-4">Typical custom cabins are crafted in 4–8 weeks after design approval. Stairlift customization is faster — usually 2–4 weeks. Installation itself adds 1–5 days depending on the scope.</p>
+                    </details>
+
+                    <details class="group rounded-2xl border border-gift-slate/15 dark:border-gift-slate-bright/20 bg-bg-warm/60 dark:bg-dark-bg/60 p-6 cursor-pointer">
+                        <summary class="flex items-start justify-between gap-4 list-none">
+                            <h3 class="font-display font-bold text-lg text-neutral-dark dark:text-white">Can I provide my own reference images?</h3>
+                            <i class="fas fa-plus text-gift-slate dark:text-gift-slate-bright flex-shrink-0 mt-1 group-open:rotate-45 transition-transform"></i>
+                        </summary>
+                        <p class="text-sm opacity-80 leading-relaxed pt-4">Absolutely — we love it when clients share Pinterest boards, interior photos, or fabric samples. Our design team will translate your aesthetic into a cabin concept that fits your home's existing character.</p>
+                    </details>
+
+                    <details class="group rounded-2xl border border-gift-slate/15 dark:border-gift-slate-bright/20 bg-bg-warm/60 dark:bg-dark-bg/60 p-6 cursor-pointer">
+                        <summary class="flex items-start justify-between gap-4 list-none">
+                            <h3 class="font-display font-bold text-lg text-neutral-dark dark:text-white">What if I don't like the 3D render?</h3>
+                            <i class="fas fa-plus text-gift-slate dark:text-gift-slate-bright flex-shrink-0 mt-1 group-open:rotate-45 transition-transform"></i>
+                        </summary>
+                        <p class="text-sm opacity-80 leading-relaxed pt-4">You'll receive unlimited revisions until the render matches your vision. Nothing is built until you sign off — this is the whole point of the render phase.</p>
+                    </details>
+
+                    <details class="group rounded-2xl border border-gift-slate/15 dark:border-gift-slate-bright/20 bg-bg-warm/60 dark:bg-dark-bg/60 p-6 cursor-pointer">
+                        <summary class="flex items-start justify-between gap-4 list-none">
+                            <h3 class="font-display font-bold text-lg text-neutral-dark dark:text-white">Does customization affect the warranty?</h3>
+                            <i class="fas fa-plus text-gift-slate dark:text-gift-slate-bright flex-shrink-0 mt-1 group-open:rotate-45 transition-transform"></i>
+                        </summary>
+                        <p class="text-sm opacity-80 leading-relaxed pt-4">No — any customization we perform is covered under the same 5–10 year warranty as our standard products. We only use certified components and finishes that meet our quality standards.</p>
+                    </details>
+
+                    <details class="group rounded-2xl border border-gift-slate/15 dark:border-gift-slate-bright/20 bg-bg-warm/60 dark:bg-dark-bg/60 p-6 cursor-pointer">
+                        <summary class="flex items-start justify-between gap-4 list-none">
+                            <h3 class="font-display font-bold text-lg text-neutral-dark dark:text-white">Is customization expensive?</h3>
+                            <i class="fas fa-plus text-gift-slate dark:text-gift-slate-bright flex-shrink-0 mt-1 group-open:rotate-45 transition-transform"></i>
+                        </summary>
+                        <p class="text-sm opacity-80 leading-relaxed pt-4">It depends entirely on scope. A color change might add a few hundred dollars; a full custom cabin with premium materials can add several thousand. We'll always provide a transparent line-item quote before any commitment.</p>
+                    </details>
+                </div>
+            </div>
+
+            <!-- Final CTA -->
+            <div class="max-w-5xl mx-auto mt-20 rounded-3xl bg-gradient-to-br from-gift-slate-dark via-gift-slate to-gift-slate-dark dark:from-dark-surface dark:via-dark-card dark:to-dark-surface text-white p-10 lg:p-14 shadow-2xl relative overflow-hidden">
+                <div class="orb w-72 h-72 bg-white/10 -top-20 -right-20"></div>
+                <div class="relative z-10 text-center">
+                    <span class="text-white/80 font-bold text-xs tracking-[0.3em] uppercase">Start Your Design</span>
+                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-display font-bold mt-4 mb-4 leading-tight">
+                        Let's craft something <span class="gold-gradient-text">uniquely yours</span>
+                    </h2>
+                    <p class="text-base opacity-85 max-w-2xl mx-auto mb-8">Configure online, then talk to a designer. Together we'll refine every detail — from the finish of the handrail to the color of the LED glow.</p>
+                    <div class="flex flex-wrap gap-4 justify-center">
+                        <a href="contact.html" class="bg-white text-neutral-dark dark:bg-gift-slate-bright dark:text-dark-bg px-8 py-4 rounded-full font-bold text-sm uppercase tracking-wider hover:shadow-2xl hover:-translate-y-0.5 transition flex items-center gap-2">
+                            <i class="fas fa-comments"></i> Book Design Call
+                        </a>
+                        <a href="order.html" class="border-2 border-white/40 dark:border-gift-slate-bright/50 text-white dark:text-gift-slate-bright px-8 py-4 rounded-full font-bold text-sm uppercase tracking-wider hover:bg-white/10 dark:hover:bg-gift-slate-bright/10 transition flex items-center gap-2">
+                            <i class="fas fa-file-invoice"></i> Submit Configuration
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER (copied from reference) ========== -->
+    <footer class="py-20 transition-colors duration-400">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <div class="text-center md:text-start">
+                    <div class="flex items-center justify-center md:justify-start gap-3 mb-6">
+                        <a href="index.html" class="flex items-center space-x-3 group flex-nowrap" dir="ltr">
+                            <div class="w-11 h-11 bg-gradient-to-br from-gift-slate-light to-gift-slate rounded-2xl flex items-center justify-center flex-shrink-0 transform group-hover:rotate-12 transition-transform duration-300 shadow-lg border border-gift-slate/20">
+                                <i class="fas fa-elevator text-white dark:text-dark-bg text-xl"></i>
+                            </div>
+                            <div class="flex items-center whitespace-nowrap">
+                                <span class="text-2xl font-display font-extrabold tracking-tight text-neutral-dark dark:text-white">Home</span>
+                                <span class="text-2xl font-display font-extrabold tracking-tight gold-gradient-text ml-0.5">Elevator</span>
+                            </div>
+                        </a>
+                    </div>
+                    <p class="text-base opacity-80 mb-6 leading-relaxed font-sans">Elevator & stairlift installation experts. Safety, dignity, and architectural excellence.</p>
+                    <div class="flex justify-center md:justify-start gap-4">
+                        <a href="#" class="social-icon text-base"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon text-base"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon text-base"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+                <div class="text-center md:text-start">
+                    <h3 class="text-neutral-dark dark:text-white text-xl font-display font-bold mb-6">Quick Links</h3>
+                    <ul class="space-y-4 text-base font-sans">
+                        <li><a href="index.html" class="hover:text-gift-slate dark:hover:text-gift-slate-bright transition">Home</a></li>
+                        <li><a href="about.html" class="hover:text-gift-slate dark:hover:text-gift-slate-bright transition">About Us</a></li>
+                        <li><a href="products.html" class="hover:text-gift-slate dark:hover:text-gift-slate-bright transition">Products</a></li>
+                        <li><a href="customization.html" class="hover:text-gift-slate dark:hover:text-gift-slate-bright transition">Customization</a></li>
+                        <li><a href="order.html" class="hover:text-gift-slate dark:hover:text-gift-slate-bright transition">Order</a></li>
+                        <li><a href="contact.html" class="hover:text-gift-slate dark:hover:text-gift-slate-bright transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="text-center md:text-start">
+                    <h3 class="text-neutral-dark dark:text-white text-xl font-display font-bold mb-6">Solutions</h3>
+                    <ul class="space-y-4 text-base font-sans">
+                        <li><a href="#" class="hover:text-gift-slate dark:hover:text-gift-slate-bright transition">Stairlifts</a></li>
+                        <li><a href="#" class="hover:text-gift-slate dark:hover:text-gift-slate-bright transition">Home Elevators</a></li>
+                        <li><a href="#" class="hover:text-gift-slate dark:hover:text-gift-slate-bright transition">Commercial Lifts</a></li>
+                        <li><a href="#" class="hover:text-gift-slate dark:hover:text-gift-slate-bright transition">Platform Lifts</a></li>
+                        <li><a href="#" class="hover:text-gift-slate dark:hover:text-gift-slate-bright transition">Maintenance</a></li>
+                    </ul>
+                </div>
+                <div class="text-center md:text-start">
+                    <h3 class="text-neutral-dark dark:text-white text-xl font-display font-bold mb-6">Contact Concierge</h3>
+                    <ul class="space-y-4 text-base mb-8 font-sans">
+                        <li class="flex items-center justify-center md:justify-start gap-3"><i class="fas fa-map-marker-alt text-gift-slate dark:text-gift-slate-bright w-5 text-lg"></i><span class="text-base" dir="ltr">5th Ave Luxury Tower, NYC 10001</span></li>
+                        <li class="flex items-center justify-center md:justify-start gap-3"><i class="fas fa-phone text-gift-slate dark:text-gift-slate-bright w-5 text-lg"></i><span class="text-base" dir="ltr">+1 (800) 555-0199</span></li>
+                        <li class="flex items-center justify-center md:justify-start gap-3"><i class="fas fa-envelope text-gift-slate dark:text-gift-slate-bright w-5 text-lg"></i><span class="text-base" dir="ltr">concierge@homeelevator.com</span></li>
+                        <li class="flex items-center justify-center md:justify-start gap-3"><i class="fas fa-clock text-gift-slate dark:text-gift-slate-bright w-5 text-lg"></i><span class="text-base" dir="ltr">Mon-Fri: 9AM - 6PM EST</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gift-slate/15 dark:border-gift-slate-bright/15 mt-14 pt-8 text-center">
+                <p class="text-base opacity-90 font-sans" dir="ltr">© 2026 Home Elevator & Stairlift. All rights reserved.</p>
+                <p class="text-sm opacity-75 mt-2 font-premium italic">Accessibility • Safety • Architectural Integration</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.documentElement.setAttribute('data-theme', 'gold-obsidian');
+
+            // ===== Theme Toggle =====
+            const themeToggle = document.getElementById('theme-toggle');
+            const themeIcon = themeToggle?.querySelector('.fa-moon');
+            const themeIconSun = themeToggle?.querySelector('.fa-sun');
+            const mobileThemeToggle = document.getElementById('theme-toggle-mobile');
+            const mobileThemeIcon = mobileThemeToggle?.querySelector('.fa-moon');
+            const mobileThemeIconSun = mobileThemeToggle?.querySelector('.fa-sun');
+
+            function toggleTheme() {
+                document.documentElement.classList.toggle('dark');
+                if (document.documentElement.classList.contains('dark')) {
+                    if (themeIcon) themeIcon.classList.add('hidden');
+                    if (themeIconSun) themeIconSun.classList.remove('hidden');
+                    if (themeToggle) themeToggle.classList.add('active');
+                    if (mobileThemeIcon) mobileThemeIcon.classList.add('hidden');
+                    if (mobileThemeIconSun) mobileThemeIconSun.classList.remove('hidden');
+                    if (mobileThemeToggle) mobileThemeToggle.classList.add('active');
+                    localStorage.setItem('theme', 'dark');
+                } else {
+                    if (themeIcon) themeIcon.classList.remove('hidden');
+                    if (themeIconSun) themeIconSun.classList.add('hidden');
+                    if (themeToggle) themeToggle.classList.remove('active');
+                    if (mobileThemeIcon) mobileThemeIcon.classList.remove('hidden');
+                    if (mobileThemeIconSun) mobileThemeIconSun.classList.add('hidden');
+                    if (mobileThemeToggle) mobileThemeToggle.classList.remove('active');
+                    localStorage.setItem('theme', 'light');
+                }
+            }
+
+            if (themeToggle) themeToggle.addEventListener('click', toggleTheme);
+            if (mobileThemeToggle) mobileThemeToggle.addEventListener('click', toggleTheme);
+
+            if (localStorage.getItem('theme') === 'dark') {
+                document.documentElement.classList.add('dark');
+                if (themeIcon) themeIcon.classList.add('hidden');
+                if (themeIconSun) themeIconSun.classList.remove('hidden');
+                if (themeToggle) themeToggle.classList.add('active');
+                if (mobileThemeIcon) mobileThemeIcon.classList.add('hidden');
+                if (mobileThemeIconSun) mobileThemeIconSun.classList.remove('hidden');
+                if (mobileThemeToggle) mobileThemeToggle.classList.add('active');
+            }
+
+            // ===== RTL Toggle =====
+            const rtlToggle = document.getElementById('rtl-toggle');
+            const mobileRtlToggle = document.getElementById('rtl-toggle-mobile');
+
+            function toggleRTL() {
+                if (document.documentElement.dir === 'rtl') {
+                    document.documentElement.dir = 'ltr';
+                    document.documentElement.lang = 'en';
+                    if (rtlToggle) { rtlToggle.textContent = '⇄'; rtlToggle.classList.remove('active'); }
+                    if (mobileRtlToggle) { mobileRtlToggle.textContent = '⇄'; mobileRtlToggle.classList.remove('active'); }
+                    localStorage.setItem('dir', 'ltr');
+                } else {
+                    document.documentElement.dir = 'rtl';
+                    document.documentElement.lang = 'ar';
+                    if (rtlToggle) { rtlToggle.textContent = '⇄'; rtlToggle.classList.add('active'); }
+                    if (mobileRtlToggle) { mobileRtlToggle.textContent = '⇄'; mobileRtlToggle.classList.add('active'); }
+                    localStorage.setItem('dir', 'rtl');
+                }
+            }
+
+            if (rtlToggle) rtlToggle.addEventListener('click', toggleRTL);
+            if (mobileRtlToggle) mobileRtlToggle.addEventListener('click', toggleRTL);
+
+            if (localStorage.getItem('dir') === 'rtl') {
+                document.documentElement.dir = 'rtl';
+                document.documentElement.lang = 'ar';
+                if (rtlToggle) { rtlToggle.textContent = '⇄'; rtlToggle.classList.add('active'); }
+                if (mobileRtlToggle) { mobileRtlToggle.textContent = '⇄'; mobileRtlToggle.classList.add('active'); }
+            }
+
+            // ===== Mobile Menu =====
+            const mobileToggle = document.getElementById('mobile-toggle');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileToggleIcon = document.querySelector('#mobile-toggle i');
+
+            if (mobileToggle) {
+                mobileToggle.addEventListener('click', () => {
+                    const isOpening = !mobileMenu.classList.contains('open');
+                    if (isOpening) {
+                        mobileMenu.classList.add('open');
+                        mobileToggleIcon.classList.remove('fa-bars');
+                        mobileToggleIcon.classList.add('fa-times');
+                        document.body.style.overflow = 'hidden';
+                    } else {
+                        mobileMenu.classList.remove('open');
+                        mobileToggleIcon.classList.remove('fa-times');
+                        mobileToggleIcon.classList.add('fa-bars');
+                        document.body.style.overflow = '';
+                        document.querySelectorAll('.mobile-dropdown-content').forEach(c => c.classList.remove('show'));
+                    }
+                });
+            }
+
+            document.querySelectorAll('.mobile-dropdown-btn').forEach(button => {
+                button.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const dropdown = e.target.closest('.mobile-dropdown');
+                    const content = dropdown.querySelector('.mobile-dropdown-content');
+                    const icon = dropdown.querySelector('.fa-chevron-down');
+                    const isOpening = !content.classList.contains('show');
+                    content.classList.toggle('show');
+                    icon.style.transform = content.classList.contains('show') ? 'rotate(180deg)' : 'rotate(0deg)';
+                    if (isOpening) {
+                        document.querySelectorAll('.mobile-dropdown-content').forEach(other => {
+                            if (other !== content) {
+                                other.classList.remove('show');
+                                const otherIcon = other.parentElement.querySelector('.fa-chevron-down');
+                                if (otherIcon) otherIcon.style.transform = 'rotate(0deg)';
+                            }
+                        });
+                    }
+                });
+            });
+
+            // ====== CUSTOMIZER LOGIC ======
+            const config = {
+                type: 'stairlift',
+                style: 'classic',
+                color: 'gold',
+                material: 'solid',
+                lighting: 'led-strip',
+                controls: 'touch'
+            };
+
+            const colorLabels = {
+                gold: 'Champagne Gold',
+                platinum: 'Platinum Silver',
+                obsidian: 'Obsidian Black',
+                ivory: 'Warm Ivory',
+                walnut: 'Walnut Brown',
+                forest: 'Forest Green',
+                navy: 'Navy Blue',
+                burgundy: 'Burgundy'
+            };
+            const materialLabels = {
+                solid: 'Solid Matte',
+                herringbone: 'Herringbone',
+                stripes: 'Diagonal Stripes',
+                dots: 'Micro Dots'
+            };
+            const lightingLabels = { 'led-strip': 'LED Strip', 'spot': 'Recessed Spots' };
+            const controlsLabels = { 'touch': 'Touch Panel', 'mechanical': 'Mechanical Buttons' };
+            const typeLabels = { 'stairlift': 'Stairlift', 'home-elevator': 'Home Elevator', 'platform': 'Platform Lift' };
+            const styleLabels = { 'classic': 'Classic', 'modern': 'Modern', 'luxury': 'Luxury' };
+
+            // Base price modifiers
+            const priceMods = {
+                type: { 'stairlift': 400, 'home-elevator': 1200, 'platform': 600 },
+                style: { 'classic': 0, 'modern': 150, 'luxury': 400 },
+                color: { 'gold': 200, 'platinum': 150, 'obsidian': 180, 'ivory': 120, 'walnut': 250, 'forest': 220, 'navy': 200, 'burgundy': 220 },
+                material: { 'solid': 0, 'herringbone': 320, 'stripes': 280, 'dots': 240 },
+                lighting: { 'led-strip': 180, 'spot': 240 },
+                controls: { 'touch': 220, 'mechanical': 80 }
+            };
+
+            function updatePreview() {
+                // Update summary text
+                const sumType = document.getElementById('sum-type');
+                const sumStyle = document.getElementById('sum-style');
+                const sumColor = document.getElementById('sum-color');
+                const sumMaterial = document.getElementById('sum-material');
+                const sumLighting = document.getElementById('sum-lighting');
+                const sumControls = document.getElementById('sum-controls');
+                const sumPrice = document.getElementById('sum-price');
+                const colorLabel = document.getElementById('color-label');
+
+                if (sumType) sumType.textContent = typeLabels[config.type];
+                if (sumStyle) sumStyle.textContent = styleLabels[config.style];
+                if (sumColor) sumColor.textContent = colorLabels[config.color];
+                if (sumMaterial) sumMaterial.textContent = materialLabels[config.material];
+                if (sumLighting) sumLighting.textContent = lightingLabels[config.lighting];
+                if (sumControls) sumControls.textContent = controlsLabels[config.controls];
+                if (colorLabel) colorLabel.textContent = colorLabels[config.color];
+
+                // Compute price
+                let total = 0;
+                total += priceMods.type[config.type] || 0;
+                total += priceMods.style[config.style] || 0;
+                total += priceMods.color[config.color] || 0;
+                total += priceMods.material[config.material] || 0;
+                total += priceMods.lighting[config.lighting] || 0;
+                total += priceMods.controls[config.controls] || 0;
+                if (sumPrice) sumPrice.textContent = total.toLocaleString();
+
+                // Update preview image based on type
+                const previewImg = document.getElementById('preview-image');
+                if (previewImg) {
+                    const imageMap = {
+                        'stairlift': 'Assets/h2.png',
+                        'home-elevator': 'Assets/h3.png',
+                        'platform': 'Assets/h4.png'
+                    };
+                    previewImg.src = imageMap[config.type] || 'Assets/h1.png';
+                }
+            }
+
+            // Option card click handler
+            document.querySelectorAll('.option-card').forEach(card => {
+                card.addEventListener('click', () => {
+                    const group = card.getAttribute('data-group');
+                    const value = card.getAttribute('data-value');
+                    if (!group || !value) return;
+
+                    // Remove active from siblings in same group
+                    document.querySelectorAll(`.option-card[data-group="${group}"]`).forEach(c => c.classList.remove('active'));
+                    card.classList.add('active');
+                    config[group] = value;
+                    updatePreview();
+                });
+            });
+
+            // Swatch click handler
+            document.querySelectorAll('.swatch').forEach(swatch => {
+                swatch.addEventListener('click', () => {
+                    const group = swatch.getAttribute('data-group');
+                    const value = swatch.getAttribute('data-value');
+                    if (!group || !value) return;
+
+                    document.querySelectorAll(`.swatch[data-group="${group}"]`).forEach(s => s.classList.remove('active'));
+                    swatch.classList.add('active');
+                    config[group] = value;
+                    updatePreview();
+                });
+            });
+
+            // Reset button
+            const resetBtn = document.getElementById('reset-config');
+            if (resetBtn) {
+                resetBtn.addEventListener('click', () => {
+                    config.type = 'stairlift';
+                    config.style = 'classic';
+                    config.color = 'gold';
+                    config.material = 'solid';
+                    config.lighting = 'led-strip';
+                    config.controls = 'touch';
+
+                    // Reset visual active states
+                    document.querySelectorAll('.option-card, .swatch').forEach(el => el.classList.remove('active'));
+
+                    // Reactivate defaults
+                    const defaultCards = [
+                        '.option-card[data-group="type"][data-value="stairlift"]',
+                        '.option-card[data-group="style"][data-value="classic"]',
+                        '.swatch[data-group="color"][data-value="gold"]',
+                        '.option-card[data-group="material"][data-value="solid"]',
+                        '.option-card[data-group="lighting"][data-value="led-strip"]',
+                        '.option-card[data-group="controls"][data-value="touch"]'
+                    ];
+                    defaultCards.forEach(sel => {
+                        const el = document.querySelector(sel);
+                        if (el) el.classList.add('active');
+                    });
+
+                    updatePreview();
+                });
+            }
+
+            // Initial render
+            updatePreview();
+
+            // ===== Inspiration gallery scroll =====
+            const inspScroll = document.getElementById('insp-scroll');
+            const inspPrev = document.getElementById('insp-prev');
+            const inspNext = document.getElementById('insp-next');
+            if (inspScroll && inspPrev && inspNext) {
+                const getScrollStep = () => {
+                    const firstCard = inspScroll.querySelector('.insp-card');
+                    if (firstCard) {
+                        const style = window.getComputedStyle(inspScroll);
+                        const gap = parseFloat(style.columnGap || style.gap) || 16;
+                        return firstCard.offsetWidth + gap;
+                    }
+                    return 340;
+                };
+                inspPrev.addEventListener('click', () => inspScroll.scrollBy({ left: -getScrollStep(), behavior: 'smooth' }));
+                inspNext.addEventListener('click', () => inspScroll.scrollBy({ left: getScrollStep(), behavior: 'smooth' }));
+            }
+        });
+    </script>
+</body>
+</html>

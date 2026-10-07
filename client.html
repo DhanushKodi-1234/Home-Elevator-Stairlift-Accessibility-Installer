@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth" data-theme="gold-obsidian">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Client Dashboard | Home Elevator — Accessibility Installers</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%23DFBA67'/%3E%3Cstop offset='100%25' stop-color='%23C5A059'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Cg transform='translate(14, 15.2) scale(0.07)'%3E%3Cpath fill='%23ffffff' d='M292.7-4.7l64 64c6.2 6.2 16.4 6.2 22.6 0l64-64c4.6-4.6 5.9-11.5 3.5-17.4S438.5-32 432-32L304-32c-6.5 0-12.3 3.9-14.8 9.9s-1.1 12.9 3.5 17.4zm-160-22.6l-64 64c-4.6 4.6-5.9 11.5-3.5 17.4S73.5 64 80 64l128 0c6.5 0 12.3-3.9 14.8-9.9s1.1-12.9-3.5-17.4l-64-64c-6.2-6.2-16.4-6.2-22.6 0zM64 128c-35.3 0-64 28.7-64 64L0 448c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-256c0-35.3-28.7-64-64-64L64 128zm96 96a48 48 0 1 1 0 96 48 48 0 1 1 0-96zM80 400c0-26.5 21.5-48 48-48l64 0c26.5 0 48 21.5 48 48l0 16c0 17.7-14.3 32-32 32l-96 0c-17.7 0-32-14.3-32-32l0-16zm192 0c0-26.5 21.5-48 48-48l64 0c26.5 0 48 21.5 48 48l0 16c0 17.7-14.3 32-32 32l-96 0c-17.7 0-32-14.3-32-32l0-16zm32-128a48 48 0 1 1 96 0 48 48 0 1 1 -96 0z'/%3E%3C/g%3E%3C/svg%3E">
+
+    <!-- Tailwind CSS -->
+    <script src="tailwind.js"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        'gift-slate': 'var(--color-primary)',
+                        'gift-slate-light': 'var(--color-primary-light)',
+                        'gift-slate-dark': 'var(--color-primary-dark)',
+                        'gift-slate-bright': 'var(--color-primary-bright)',
+                        'gift-accent': 'var(--color-accent)',
+                        'bg-warm': 'var(--color-bg-warm)',
+                        'neutral-dark': 'var(--color-text-dark)',
+                        'neutral-light': '#E8EDF2',
+                        'dark-bg': '#0A0D12',
+                        'dark-card': '#141A24',
+                        'dark-surface': '#1C2432',
+                    },
+                    fontFamily: {
+                        'sans': ['Plus Jakarta Sans', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+                        'display': ['Outfit', 'Plus Jakarta Sans', 'sans-serif'],
+                        'premium': ['Outfit', 'sans-serif'],
+                        'alt': ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    animation: {
+                        'slide-up': 'slideUp 0.5s ease-out',
+                        'fade-in': 'fadeIn 0.3s ease-out',
+                        'pulse-glow': 'pulseGlow 3s infinite',
+                        'float-slow': 'floatSlow 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        slideUp: { '0%': { transform: 'translateY(30px)', opacity: '0' }, '100%': { transform: 'translateY(0)', opacity: '1' } },
+                        fadeIn: { '0%': { opacity: '0' }, '100%': { opacity: '1' } },
+                        pulseGlow: { '0%, 100%': { opacity: '0.6' }, '50%': { opacity: '1' } },
+                        floatSlow: { '0%,100%': { transform: 'translateY(0px)' }, '50%': { transform: 'translateY(-8px)' } },
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root, [data-theme="gold-obsidian"] {
+            --color-primary: #C5A059;
+            --color-primary-light: #DFBA67;
+            --color-primary-dark: #9E7D3B;
+            --color-primary-bright: #E6C687;
+            --color-accent: #D4AF37;
+            --color-bg-warm: #FAF8F5;
+            --color-text-dark: #0B0F17;
+            --color-rgb-primary: 197, 160, 89;
+            --color-rgb-bright: 230, 198, 135;
+        }
+
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: var(--color-bg-warm); color: var(--color-text-dark); transition: background-color 0.4s ease, color 0.4s ease; }
+        .dark body { background-color: #0A0D12; color: #E2E8F0; }
+        h1,h2,h3,h4,h5,h6 { font-family: 'Outfit', sans-serif; font-weight: 700; letter-spacing: -0.025em; }
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #E6C687 0%, #C5A059 50%, #9E7D3B 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .dark .text-gift-slate { color: var(--color-primary-bright) !important; }
+        .dark .border-gift-slate { border-color: var(--color-primary-bright) !important; }
+        .dark .bg-gift-slate { background-color: var(--color-primary-bright) !important; }
+        body::-webkit-scrollbar { display: none; }
+        body { -ms-overflow-style: none; scrollbar-width: none; }
+
+        .sidebar {
+            position: fixed;
+            left: 0; top: 0; height: 100vh;
+            width: 280px;
+            background: #FFFFFF;
+            border-right: 1px solid rgba(var(--color-rgb-primary), 0.12);
+            transition: transform 0.3s ease;
+            z-index: 100;
+            overflow-y: auto;
+        }
+        .dark .sidebar { background: #0A0D12; border-right-color: rgba(var(--color-rgb-bright), 0.15); }
+        @media (max-width: 768px) { .sidebar { transform: translateX(-100%); } .sidebar.open { transform: translateX(0); } }
+        .sidebar-overlay { position: fixed; top:0;left:0;right:0;bottom:0; background: rgba(0,0,0,0.5); z-index:99; display:none; }
+        .sidebar-overlay.open { display:block; }
+
+        .sidebar-item {
+            display: flex; align-items: center; gap: 0.75rem;
+            padding: 0.85rem 1.5rem; margin: 0.25rem 0.75rem;
+            border-radius: 12px; color: var(--color-text-dark);
+            transition: all 0.2s; cursor: pointer;
+        }
+        .dark .sidebar-item { color: #E2E8F0; }
+        .sidebar-item:hover { background: rgba(var(--color-rgb-primary), 0.08); color: var(--color-primary); }
+        .dark .sidebar-item:hover { background: rgba(var(--color-rgb-bright), 0.12); color: var(--color-primary-bright); }
+        .sidebar-item.active { background: var(--color-primary); color: #FFFFFF; }
+        .dark .sidebar-item.active { background: var(--color-primary-bright); color: #0A0D12; }
+        .sidebar-item i { width: 24px; font-size: 1.1rem; }
+
+        .main-content { margin-left: 280px; padding: 1.5rem; min-height: 100vh; }
+        @media (max-width: 768px) { .main-content { margin-left: 0; padding-top: 70px; } }
+
+        .mobile-header {
+            display: none; position: fixed; top:0;left:0;right:0;
+            background: #FFFFFF; padding: 0.75rem 1rem;
+            border-bottom: 1px solid rgba(var(--color-rgb-primary), 0.12);
+            z-index: 50; align-items: center; justify-content: space-between;
+        }
+        .dark .mobile-header { background: #0A0D12; border-bottom-color: rgba(var(--color-rgb-bright), 0.15); }
+        @media (max-width: 768px) { .mobile-header { display: flex; } }
+
+        .toggle-btn {
+            width: 36px; height: 36px; border-radius: 10px;
+            background: rgba(var(--color-rgb-primary), 0.08);
+            color: var(--color-text-dark); display: inline-flex;
+            align-items: center; justify-content: center; cursor: pointer;
+            transition: all 0.2s; border: none;
+        }
+        .dark .toggle-btn { background: rgba(var(--color-rgb-bright), 0.12); color: #E2E8F0; }
+        .toggle-btn:hover { background: var(--color-primary); color: #FFFFFF; }
+        .dark .toggle-btn:hover { background: var(--color-primary-bright); color: #0A0D12; }
+
+        .card-design {
+            background: #FFFFFF; border-radius: 28px;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(var(--color-rgb-primary), 0.12);
+            box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+        }
+        .dark .card-design { background: #141A24; border-color: rgba(var(--color-rgb-bright), 0.15); }
+        .card-design:hover { border-color: var(--color-primary); }
+
+        .btn-primary-design {
+            background: var(--color-primary); color: #FFFFFF;
+            font-weight: 700; border-radius: 60px; transition: all 0.3s;
+            box-shadow: 0 4px 12px rgba(var(--color-rgb-primary), 0.3);
+            white-space: nowrap; border: none;
+        }
+        .btn-primary-design:hover { background: var(--color-primary-dark); transform: translateY(-2px); box-shadow: 0 8px 20px rgba(var(--color-rgb-primary), 0.4); color: #FFFFFF; }
+        .dark .btn-primary-design { background: var(--color-primary-bright); color: #0A0D12; }
+        .dark .btn-primary-design:hover { background: var(--color-primary); color: #FFFFFF; }
+
+        .btn-outline-design {
+            border: 1.5px solid var(--color-primary); color: var(--color-primary);
+            background: transparent; border-radius: 60px; font-weight: 600;
+            transition: all 0.3s; white-space: nowrap;
+        }
+        .btn-outline-design:hover { background: var(--color-primary); color: #FFFFFF; transform: translateY(-2px); }
+        .dark .btn-outline-design { border-color: var(--color-primary-bright); color: var(--color-primary-bright); }
+        .dark .btn-outline-design:hover { background: var(--color-primary-bright); color: #0A0D12; }
+
+        .stat-card {
+            background: #FFFFFF; border-radius: 20px; padding: 1.2rem;
+            border: 1px solid rgba(var(--color-rgb-primary), 0.12);
+            transition: all 0.3s;
+        }
+        .dark .stat-card { background: #141A24; border-color: rgba(var(--color-rgb-bright), 0.15); }
+        .stat-card:hover { transform: translateY(-3px); border-color: var(--color-primary); }
+
+        .status-badge {
+            display: inline-flex; align-items: center; padding: 0.25rem 0.75rem;
+            border-radius: 40px; font-size: 0.7rem; font-weight: 700;
+        }
+        .status-order { background: #E3F2FD; color: #0D47A1; }
+        .status-customization { background: #FFF3E0; color: #E65100; }
+        .status-production { background: #F3E5F5; color: #6A1B9A; }
+        .status-dispatch { background: #E8F5E9; color: #1B5E20; }
+        .status-completed { background: #E8F5E9; color: #1B5E20; }
+        .status-installed { background: #E8F5E9; color: #1B5E20; }
+        .status-survey { background: #E3F2FD; color: #0D47A1; }
+        .status-warranty { background: #E8F5E9; color: #1B5E20; }
+        .status-scheduled { background: #F3E5F5; color: #6A1B9A; }
+        .dark .status-order { background: #0D47A1; color: #90CAF9; }
+        .dark .status-customization { background: #E65100; color: #FFCC80; }
+        .dark .status-production { background: #4A148C; color: #CE93D8; }
+        .dark .status-dispatch { background: #1B5E20; color: #A5D6A7; }
+        .dark .status-completed { background: #1B5E20; color: #A5D6A7; }
+        .dark .status-installed { background: #1B5E20; color: #A5D6A7; }
+        .dark .status-survey { background: #0D47A1; color: #90CAF9; }
+        .dark .status-warranty { background: #1B5E20; color: #A5D6A7; }
+        .dark .status-scheduled { background: #4A148C; color: #CE93D8; }
+
+        .form-input {
+            width: 100%; padding: 0.75rem 1rem;
+            border-radius: 16px; border: 1.5px solid rgba(var(--color-rgb-primary), 0.2);
+            background: #FFFFFF; transition: all 0.3s;
+            color: var(--color-text-dark); font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .dark .form-input { background: #0A0D12; border-color: rgba(var(--color-rgb-bright), 0.2); color: #E2E8F0; }
+        .form-input:focus { outline: none; border-color: var(--color-primary); box-shadow: 0 0 0 4px rgba(var(--color-rgb-primary), 0.15); }
+        .form-label { display: block; font-weight: 600; font-size: 0.9rem; margin-bottom: 0.4rem; color: var(--color-text-dark); }
+        .dark .form-label { color: #E2E8F0; }
+
+        input[type="date"]::-webkit-calendar-picker-indicator {
+            cursor: pointer; opacity: 0.85; transition: all 0.2s ease;
+        }
+        input[type="date"]::-webkit-calendar-picker-indicator:hover { opacity: 1; }
+        .dark input[type="date"]::-webkit-calendar-picker-indicator {
+            filter: invert(1) brightness(1.2); opacity: 0.9;
+        }
+
+        .progress-bar { height: 8px; background: rgba(var(--color-rgb-primary), 0.12); border-radius: 10px; overflow: hidden; }
+        .dark .progress-bar { background: rgba(var(--color-rgb-bright), 0.15); }
+        .progress-fill { height: 100%; background: var(--color-primary); border-radius: 10px; transition: width 0.6s ease; }
+        .dark .progress-fill { background: var(--color-primary-bright); }
+
+        .receipt-item { padding: 0.75rem 0; border-bottom: 1px solid rgba(var(--color-rgb-primary), 0.08); }
+        .dark .receipt-item { border-bottom-color: rgba(var(--color-rgb-bright), 0.1); }
+
+        .warranty-card {
+            background: linear-gradient(135deg, #9E7D3B, #C5A059, #DFBA67);
+            border-radius: 20px; padding: 24px; color: white;
+            position: relative; overflow: hidden;
+        }
+        .warranty-card::before {
+            content: ''; position: absolute; inset: 0;
+            background-image: radial-gradient(circle at 20% 50%, white 1px, transparent 1px),
+                              radial-gradient(circle at 80% 20%, white 1px, transparent 1px);
+            background-size: 40px 40px; opacity: 0.08;
+        }
+
+        .page-content.hidden { display: none; }
+
+        [dir="rtl"] .sidebar { left: auto; right: 0; border-right: none; border-left: 1px solid rgba(var(--color-rgb-primary), 0.12); }
+        [dir="rtl"] .main-content { margin-left: 0; margin-right: 280px; }
+        [dir="rtl"] .sidebar-item i { margin-right: 0; margin-left: 0.75rem; }
+        @media (max-width: 768px) {
+            [dir="rtl"] .sidebar { transform: translateX(100%); }
+            [dir="rtl"] .sidebar.open { transform: translateX(0); }
+            [dir="rtl"] .main-content { margin-right: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Mobile Header -->
+    <div class="mobile-header">
+        <div class="flex items-center gap-3">
+            <button id="menuToggle" class="toggle-btn"><i class="fas fa-bars"></i></button>
+            <a href="index.html" class="flex items-center space-x-2 group flex-nowrap shrink-0" dir="ltr" title="Home Elevator">
+                <div class="w-8 h-8 bg-gradient-to-br from-gift-slate-light to-gift-slate rounded-xl flex items-center justify-center flex-shrink-0 transform group-hover:rotate-12 transition-transform duration-300 shadow border border-gift-slate/20">
+                    <i class="fas fa-elevator text-white dark:text-dark-bg text-sm"></i>
+                </div>
+                <div class="flex items-center whitespace-nowrap">
+                    <span class="text-lg font-display font-extrabold tracking-tight text-neutral-dark dark:text-white">Home</span>
+                    <span class="text-lg font-display font-extrabold tracking-tight gold-gradient-text ml-0.5">Elevator</span>
+                </div>
+            </a>
+        </div>
+        <div class="flex gap-2">
+            <button id="theme-toggle-mobile" class="toggle-btn"><i class="fas fa-moon dark:hidden"></i><i class="fas fa-sun hidden dark:inline"></i></button>
+            <button id="rtl-toggle-mobile" class="toggle-btn"><i class="fas fa-exchange-alt"></i></button>
+        </div>
+    </div>
+
+    <div id="sidebarOverlay" class="sidebar-overlay"></div>
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <div class="p-5 border-b border-[rgba(var(--color-rgb-primary),0.12)] dark:border-[rgba(var(--color-rgb-bright),0.15)]">
+            <a href="index.html" class="flex items-center space-x-3 group flex-nowrap" dir="ltr" title="Home Elevator">
+                <div class="w-11 h-11 bg-gradient-to-br from-gift-slate-light to-gift-slate rounded-2xl flex items-center justify-center flex-shrink-0 transform group-hover:rotate-12 transition-transform duration-300 shadow-lg border border-gift-slate/20">
+                    <i class="fas fa-elevator text-white dark:text-dark-bg text-xl"></i>
+                </div>
+                <div>
+                    <div class="flex items-center whitespace-nowrap">
+                        <span class="text-xl font-display font-extrabold tracking-tight text-neutral-dark dark:text-white">Home</span>
+                        <span class="text-xl font-display font-extrabold tracking-tight gold-gradient-text ml-0.5">Elevator</span>
+                    </div>
+                    <p class="text-xs text-neutral-dark/60 dark:text-gray-400">Client Portal</p>
+                </div>
+            </a>
+        </div>
+        <nav class="py-4">
+            <div class="sidebar-item active" data-page="dashboard"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></div>
+            <div class="sidebar-item" data-page="installation"><i class="fas fa-tools"></i><span>My Installation</span></div>
+            <div class="sidebar-item" data-page="maintenance"><i class="fas fa-calendar-check"></i><span>Maintenance</span></div>
+            <div class="sidebar-item" data-page="warranty"><i class="fas fa-shield-halved"></i><span>Warranty</span></div>
+            <div class="sidebar-item" data-page="billing"><i class="fas fa-receipt"></i><span>Invoices</span></div>
+            <div class="sidebar-item" data-page="messages"><i class="fas fa-comments"></i><span>Messages</span></div>
+            <div class="sidebar-item" data-page="support"><i class="fas fa-headset"></i><span>Support</span></div>
+        </nav>
+        <div class="absolute bottom-0 left-0 right-0 p-4 border-t border-[rgba(var(--color-rgb-primary),0.12)] dark:border-[rgba(var(--color-rgb-bright),0.15)]">
+            <a href="login.html" class="flex items-center justify-center gap-2 w-full p-2.5 rounded-xl bg-[rgba(var(--color-rgb-primary),0.08)] hover:bg-gift-slate transition font-semibold text-sm text-neutral-dark dark:text-gray-200 hover:text-white">
+                <i class="fas fa-sign-out-alt"></i><span>Logout</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="card-design p-4 md:p-6 flex justify-between items-center flex-wrap gap-3 mb-6">
+            <div>
+                <h1 class="text-2xl font-display font-bold" id="page-title">Client Dashboard</h1>
+                <p class="text-sm text-neutral-dark/60 dark:text-gray-400" id="page-subtitle">Welcome back, Margaret</p>
+            </div>
+            <div class="hidden lg:flex items-center gap-4">
+                <button id="theme-toggle" class="toggle-btn"><i class="fas fa-moon dark:hidden"></i><i class="fas fa-sun hidden dark:inline"></i></button>
+                <button id="rtl-toggle" class="toggle-btn"><i class="fas fa-exchange-alt"></i></button>
+                <div class="flex items-center gap-3 border-l border-[rgba(var(--color-rgb-primary),0.12)] dark:border-[rgba(var(--color-rgb-bright),0.15)] pl-4">
+                    <div class="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold bg-gradient-to-br from-gift-slate-light to-gift-slate shrink-0">MJ</div>
+                    <div class="text-left hidden lg:block">
+                        <p class="text-sm font-bold text-neutral-dark dark:text-white leading-tight">Margaret Johnson</p>
+                        <p class="text-[10px] text-neutral-dark/60 dark:text-gray-400">Client since 2024</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ========== DASHBOARD ========== -->
+        <div id="page-dashboard" class="page-content">
+
+            <!-- Welcome banner -->
+            <div class="warranty-card mb-6">
+                <div class="relative z-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+                    <div>
+                        <div class="text-[10px] uppercase font-bold tracking-[0.25em] text-white/80 mb-1">Safety Active</div>
+                        <h2 class="font-display font-extrabold text-2xl md:text-3xl mb-1">Your Home Lift is Running Safely</h2>
+                        <p class="text-white/85 text-sm">Last check-in: 2 hours ago · All systems healthy ✅</p>
+                    </div>
+                    <div class="flex gap-2">
+                        <a href="contact.html" class="bg-white/15 hover:bg-white/25 backdrop-blur px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition flex items-center gap-2 text-white">
+                            <i class="fas fa-headset"></i> Request Help
+                        </a>
+                        <button data-nav="maintenance" class="bg-white text-gift-slate-dark px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition hover:-translate-y-0.5 flex items-center gap-2">
+                            <i class="fas fa-calendar-plus"></i> Book Service
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+                <div class="stat-card">
+                    <div class="flex justify-between">
+                        <div>
+                            <p class="text-xs text-neutral-dark/60 dark:text-gray-400 mb-1">Active Lift</p>
+                            <p class="text-lg font-bold text-neutral-dark dark:text-white leading-tight">Panoramic Villa Elevator</p>
+                            <p class="text-[10px] text-neutral-dark/60 dark:text-gray-400 mt-1">Model VE-2400 · Installed Mar 2024</p>
+                        </div>
+                        <div class="w-10 h-10 bg-[rgba(var(--color-rgb-primary),0.08)] rounded-full flex items-center justify-center flex-shrink-0"><i class="fas fa-elevator text-gift-slate"></i></div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="flex justify-between">
+                        <div>
+                            <p class="text-xs text-neutral-dark/60 dark:text-gray-400 mb-1">Next Maintenance</p>
+                            <p class="text-2xl font-bold text-neutral-dark dark:text-white">Dec 15</p>
+                            <p class="text-[10px] text-neutral-dark/60 dark:text-gray-400 mt-1">Routine visit · 10:00 AM</p>
+                        </div>
+                        <div class="w-10 h-10 bg-[rgba(var(--color-rgb-primary),0.08)] rounded-full flex items-center justify-center flex-shrink-0"><i class="fas fa-calendar-check text-gift-slate"></i></div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="flex justify-between">
+                        <div>
+                            <p class="text-xs text-neutral-dark/60 dark:text-gray-400 mb-1">Warranty Remaining</p>
+                            <p class="text-2xl font-bold text-neutral-dark dark:text-white">7 yrs left</p>
+                            <p class="text-[10px] text-neutral-dark/60 dark:text-gray-400 mt-1">Expires Mar 2033</p>
+                        </div>
+                        <div class="w-10 h-10 bg-[rgba(var(--color-rgb-primary),0.08)] rounded-full flex items-center justify-center flex-shrink-0"><i class="fas fa-shield-halved text-gift-slate"></i></div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="flex justify-between">
+                        <div>
+                            <p class="text-xs text-neutral-dark/60 dark:text-gray-400 mb-1">System Health</p>
+                            <p class="text-2xl font-bold text-neutral-dark dark:text-white">100%</p>
+                            <p class="text-[10px] text-neutral-dark/60 dark:text-gray-400 mt-1">All systems nominal</p>
+                        </div>
+                        <div class="w-10 h-10 bg-[rgba(var(--color-rgb-primary),0.08)] rounded-full flex items-center justify-center flex-shrink-0"><i class="fas fa-heart-pulse text-gift-slate"></i></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <div class="card-design p-6">
+                    <h3 class="font-display font-bold text-lg mb-4">Installation Status</h3>
+                    <div class="space-y-3">
+                        <div class="flex gap-3 pb-3 border-b border-[rgba(var(--color-rgb-primary),0.08)] dark:border-[rgba(var(--color-rgb-bright),0.1)]">
+                            <i class="fas fa-clipboard-check text-gift-slate mt-1"></i>
+                            <div class="flex-1"><p class="text-sm font-medium">Site Survey Completed</p><p class="text-xs text-neutral-dark/60 dark:text-gray-400">Feb 8, 2024 · Engineer: Sofia A.</p></div>
+                            <span class="status-badge status-completed text-xs">Done</span>
+                        </div>
+                        <div class="flex gap-3 pb-3 border-b border-[rgba(var(--color-rgb-primary),0.08)] dark:border-[rgba(var(--color-rgb-bright),0.1)]">
+                            <i class="fas fa-palette text-gift-slate mt-1"></i>
+                            <div class="flex-1"><p class="text-sm font-medium">Design Approved</p><p class="text-xs text-neutral-dark/60 dark:text-gray-400">Feb 22, 2024 · Champagne Gold cabin</p></div>
+                            <span class="status-badge status-completed text-xs">Done</span>
+                        </div>
+                        <div class="flex gap-3 pb-3 border-b border-[rgba(var(--color-rgb-primary),0.08)] dark:border-[rgba(var(--color-rgb-bright),0.1)]">
+                            <i class="fas fa-industry text-gift-slate mt-1"></i>
+                            <div class="flex-1"><p class="text-sm font-medium">Production & Craft</p><p class="text-xs text-neutral-dark/60 dark:text-gray-400">Feb 26 – Mar 8, 2024</p></div>
+                            <span class="status-badge status-completed text-xs">Done</span>
+                        </div>
+                        <div class="flex gap-3">
+                            <i class="fas fa-check-circle text-gift-slate mt-1"></i>
+                            <div class="flex-1"><p class="text-sm font-medium">Installed & Certified</p><p class="text-xs text-neutral-dark/60 dark:text-gray-400">Mar 12, 2024 · Passed inspection</p></div>
+                            <span class="status-badge status-installed text-xs">Installed</span>
+                        </div>
+                    </div>
+                    <button data-nav="installation" class="btn-outline-design w-full mt-4 py-2 text-sm">View Full Timeline</button>
+                </div>
+                <div class="card-design p-6">
+                    <h3 class="font-display font-bold text-lg mb-4">Quick Actions</h3>
+                    <div class="space-y-3">
+                        <button data-nav="maintenance" class="w-full text-left px-4 py-3 bg-[rgba(var(--color-rgb-primary),0.08)] dark:bg-[rgba(var(--color-rgb-bright),0.1)] text-neutral-dark dark:text-white rounded-xl hover:bg-[rgba(var(--color-rgb-primary),0.2)] transition flex items-center gap-3">
+                            <i class="fas fa-calendar-plus text-gift-slate"></i><span>Schedule Maintenance Visit</span>
+                        </button>
+                        <button data-nav="warranty" class="w-full text-left px-4 py-3 bg-[rgba(var(--color-rgb-primary),0.08)] dark:bg-[rgba(var(--color-rgb-bright),0.1)] text-neutral-dark dark:text-white rounded-xl hover:bg-[rgba(var(--color-rgb-primary),0.2)] transition flex items-center gap-3">
+                            <i class="fas fa-file-pdf text-gift-slate"></i><span>Download Warranty Certificate</span>
+                        </button>
+                        <button data-nav="support" class="w-full text-left px-4 py-3 bg-[rgba(var(--color-rgb-primary),0.08)] dark:bg-[rgba(var(--color-rgb-bright),0.1)] text-neutral-dark dark:text-white rounded-xl hover:bg-[rgba(var(--color-rgb-primary),0.2)] transition flex items-center gap-3">
+                            <i class="fas fa-headset text-gift-slate"></i><span>Contact Support (24/7)</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ========== INSTALLATION ========== -->
+        <div id="page-installation" class="page-content hidden">
+            <div class="card-design p-6">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="font-display font-bold text-2xl">My Installation</h3>
+                    <span class="status-badge status-installed text-sm"><i class="fas fa-check-circle mr-1"></i> Completed</span>
+                </div>
+                <p class="text-sm text-neutral-dark/60 dark:text-gray-400 mb-6">Complete timeline of your Panoramic Villa Elevator installation.</p>
+
+                <div class="space-y-4">
+                    <div class="p-5 bg-[rgba(var(--color-rgb-primary),0.04)] dark:bg-[rgba(var(--color-rgb-bright),0.05)] rounded-2xl border border-[rgba(var(--color-rgb-primary),0.08)]">
+                        <div class="flex flex-wrap justify-between items-start gap-3">
+                            <div>
+                                <p class="font-bold text-lg">Panoramic Villa Elevator · VE-2400</p>
+                                <p class="text-sm text-neutral-dark/60 dark:text-gray-400">Serial: VE-2400-18242 · Cabin: Champagne Gold</p>
+                                <div class="flex items-center gap-3 mt-2">
+                                    <span class="status-badge status-installed">Installed</span>
+                                    <span class="text-xs text-neutral-dark/60 dark:text-gray-400">Installed: Mar 12, 2024</span>
+                                </div>
+                            </div>
+                            <button class="btn-outline-design text-xs px-4 py-1.5"><i class="fas fa-file-pdf mr-1"></i>Download Report</button>
+                        </div>
+                        <div class="mt-4">
+                            <div class="grid grid-cols-5 text-[10px] sm:text-xs text-neutral-dark/60 dark:text-gray-400 mb-1.5 font-medium">
+                                <span class="text-left">Survey</span>
+                                <span class="text-center">Design</span>
+                                <span class="text-center">Craft</span>
+                                <span class="text-center">Install</span>
+                                <span class="text-right">Certified</span>
+                            </div>
+                            <div class="progress-bar"><div class="progress-fill" style="width:100%"></div></div>
+                        </div>
+                    </div>
+
+                    <div class="grid sm:grid-cols-2 gap-4">
+                        <div class="p-4 rounded-2xl border border-[rgba(var(--color-rgb-primary),0.12)] dark:border-[rgba(var(--color-rgb-bright),0.15)]">
+                            <p class="text-xs text-neutral-dark/60 dark:text-gray-400 mb-1">Installation Date</p>
+                            <p class="font-bold">March 12, 2024</p>
+                        </div>
+                        <div class="p-4 rounded-2xl border border-[rgba(var(--color-rgb-primary),0.12)] dark:border-[rgba(var(--color-rgb-bright),0.15)]">
+                            <p class="text-xs text-neutral-dark/60 dark:text-gray-400 mb-1">Installation Team</p>
+                            <p class="font-bold">Team Bravo · Marcus C.</p>
+                        </div>
+                        <div class="p-4 rounded-2xl border border-[rgba(var(--color-rgb-primary),0.12)] dark:border-[rgba(var(--color-rgb-bright),0.15)]">
+                            <p class="text-xs text-neutral-dark/60 dark:text-gray-400 mb-1">Stops</p>
+                            <p class="font-bold">3 floors (Ground → 2nd)</p>
+                        </div>
+                        <div class="p-4 rounded-2xl border border-[rgba(var(--color-rgb-primary),0.12)] dark:border-[rgba(var(--color-rgb-bright),0.15)]">
+                            <p class="text-xs text-neutral-dark/60 dark:text-gray-400 mb-1">Inspection Status</p>
+                            <p class="font-bold text-green-600 dark:text-green-400">Passed ✅</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ========== MAINTENANCE ========== -->
+        <div id="page-maintenance" class="page-content hidden">
+            <div class="card-design p-6">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="font-display font-bold text-2xl">Maintenance</h3>
+                    <button class="btn-primary-design px-4 py-1.5 text-sm"><i class="fas fa-plus"></i> Book Visit</button>
+                </div>
+                <p class="text-sm text-neutral-dark/60 dark:text-gray-400 mb-6">Schedule routine maintenance visits and view your service history.</p>
+
+                <div class="p-5 bg-[rgba(var(--color-rgb-primary),0.04)] dark:bg-[rgba(var(--color-rgb-bright),0.05)] rounded-2xl border border-[rgba(var(--color-rgb-primary),0.08)] mb-5">
+                    <div class="flex flex-wrap justify-between items-center gap-3">
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-gift-slate-light to-gift-slate flex flex-col items-center justify-center text-white flex-shrink-0">
+                                <div class="text-[9px] font-bold uppercase leading-none">Dec</div>
+                                <div class="text-sm font-extrabold leading-none mt-0.5">15</div>
+                            </div>
+                            <div>
+                                <p class="font-bold">Routine Maintenance Visit</p>
+                                <p class="text-sm text-neutral-dark/60 dark:text-gray-400">10:00 AM · 45 min · Technician: Marcus C.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-2">
+                            <span class="status-badge status-scheduled">Confirmed</span>
+                            <button class="btn-outline-design text-xs px-4 py-1.5">Reschedule</button>
+                        </div>
+                    </div>
+                </div>
+
+                <h4 class="font-display font-bold text-lg mb-3">Service History</h4>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-sm">
+                        <thead>
+                            <tr class="border-b border-[rgba(var(--color-rgb-primary),0.08)] dark:border-[rgba(var(--color-rgb-bright),0.15)]">
+                                <th class="text-left py-2 px-3 font-semibold">Date</th>
+                                <th class="text-left py-2 px-3 font-semibold">Type</th>
+                                <th class="text-left py-2 px-3 font-semibold">Technician</th>
+                                <th class="text-left py-2 px-3 font-semibold">Notes</th>
+                                <th class="text-left py-2 px-3 font-semibold">Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-b border-[rgba(var(--color-rgb-primary),0.08)] dark:border-[rgba(var(--color-rgb-bright),0.15)]">
+                                <td class="py-2 px-3 font-medium">Sep 18, 2026</td>
+                                <td class="py-2 px-3">Routine Check</td>
+                                <td class="py-2 px-3">Marcus C.</td>
+                                <td class="py-2 px-3 text-xs text-neutral-dark/60 dark:text-gray-400">All systems nominal</td>
+                                <td class="py-2 px-3"><span class="status-badge status-completed">Passed</span></td>
+                            </tr>
+                            <tr class="border-b border-[rgba(var(--color-rgb-primary),0.08)] dark:border-[rgba(var(--color-rgb-bright),0.15)]">
+                                <td class="py-2 px-3 font-medium">Jun 22, 2026</td>
+                                <td class="py-2 px-3">Routine Check</td>
+                                <td class="py-2 px-3">Aisha R.</td>
+                                <td class="py-2 px-3 text-xs text-neutral-dark/60 dark:text-gray-400">Tightened rail mounts</td>
+                                <td class="py-2 px-3"><span class="status-badge status-completed">Passed</span></td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 px-3 font-medium">Mar 14, 2026</td>
+                                <td class="py-2 px-3">1-Year Service</td>
+                                <td class="py-2 px-3">Marcus C.</td>
+                                <td class="py-2 px-3 text-xs text-neutral-dark/60 dark:text-gray-400">Full inspection · Firmware updated</td>
+                                <td class="py-2 px-3"><span class="status-badge status-completed">Passed</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- ========== WARRANTY ========== -->
+        <div id="page-warranty" class="page-content hidden">
+            <div class="warranty-card mb-6">
+                <div class="relative z-10">
+                    <div class="flex items-start justify-between mb-5">
+                        <div>
+                            <div class="text-[10px] uppercase font-bold tracking-[0.25em] text-white/80">Warranty Coverage</div>
+                            <h3 class="font-display font-extrabold text-2xl mt-1">Active & Protected</h3>
+                        </div>
+                        <i class="fas fa-shield-halved text-4xl text-white/40"></i>
+                    </div>
+
+                    <div class="space-y-3 mb-5">
+                        <div class="flex justify-between text-sm">
+                            <span class="text-white/75">Product</span>
+                            <span class="font-bold">Panoramic Villa Elevator</span>
+                        </div>
+                        <div class="flex justify-between text-sm">
+                            <span class="text-white/75">Serial No.</span>
+                            <span class="font-bold">VE-2400-18242</span>
+                        </div>
+                        <div class="flex justify-between text-sm">
+                            <span class="text-white/75">Started</span>
+                            <span class="font-bold">Mar 12, 2024</span>
+                        </div>
+                        <div class="flex justify-between text-sm">
+                            <span class="text-white/75">Expires</span>
+                            <span class="font-bold">Mar 12, 2033</span>
+                        </div>
+                    </div>
+
+                    <div class="mb-5">
+                        <div class="flex justify-between text-xs mb-1.5 text-white/80">
+                            <span>Coverage</span>
+                            <span class="font-bold">7 of 10 years</span>
+                        </div>
+                        <div class="h-2 rounded-full bg-white/20 overflow-hidden">
+                            <div class="h-full rounded-full bg-white" style="width: 70%;"></div>
+                        </div>
+                    </div>
+
+                    <button class="w-full py-3 rounded-xl bg-white/15 hover:bg-white/25 backdrop-blur text-white font-bold text-xs uppercase tracking-wider transition flex items-center justify-center gap-2">
+                        <i class="fas fa-file-pdf"></i> Download Certificate
+                    </button>
+                </div>
+            </div>
+
+            <div class="card-design p-6">
+                <h3 class="font-display font-bold text-lg mb-4">What's Covered</h3>
+                <div class="grid sm:grid-cols-2 gap-4">
+                    <div class="flex items-start gap-3">
+                        <i class="fas fa-check-circle text-gift-slate mt-0.5"></i>
+                        <div>
+                            <p class="font-bold text-sm">Structural Rails</p>
+                            <p class="text-xs text-neutral-dark/60 dark:text-gray-400">Lifetime warranty on all rail components</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <i class="fas fa-check-circle text-gift-slate mt-0.5"></i>
+                        <div>
+                            <p class="font-bold text-sm">Drive System</p>
+                            <p class="text-xs text-neutral-dark/60 dark:text-gray-400">10 years on motor and gearbox</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <i class="fas fa-check-circle text-gift-slate mt-0.5"></i>
+                        <div>
+                            <p class="font-bold text-sm">Electronics & Controls</p>
+                            <p class="text-xs text-neutral-dark/60 dark:text-gray-400">5 years on panels, sensors, and wiring</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <i class="fas fa-check-circle text-gift-slate mt-0.5"></i>
+                        <div>
+                            <p class="font-bold text-sm">Labor & Service</p>
+                            <p class="text-xs text-neutral-dark/60 dark:text-gray-400">All repairs covered during warranty period</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ========== BILLING ========== -->
+        <div id="page-billing" class="page-content hidden">
+            <div class="card-design p-6">
+                <h3 class="font-display font-bold text-2xl mb-4">Invoices</h3>
+                <p class="text-sm text-neutral-dark/60 dark:text-gray-400 mb-6">View and download all your installation and service invoices.</p>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-sm">
+                        <thead>
+                            <tr class="border-b border-[rgba(var(--color-rgb-primary),0.08)] dark:border-[rgba(var(--color-rgb-bright),0.15)]">
+                                <th class="text-left py-2 px-3 font-semibold">Invoice</th>
+                                <th class="text-left py-2 px-3 font-semibold">Description</th>
+                                <th class="text-left py-2 px-3 font-semibold">Amount</th>
+                                <th class="text-left py-2 px-3 font-semibold">Date</th>
+                                <th class="text-left py-2 px-3 font-semibold">Status</th>
+                                <th class="text-left py-2 px-3 font-semibold">PDF</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-b border-[rgba(var(--color-rgb-primary),0.08)] dark:border-[rgba(var(--color-rgb-bright),0.15)]">
+                                <td class="py-2 px-3 font-medium">#INV-0441</td>
+                                <td class="py-2 px-3">Annual Maintenance Visit</td>
+                                <td class="py-2 px-3 font-bold text-gift-slate">$425.00</td>
+                                <td class="py-2 px-3">Sep 18, 2026</td>
+                                <td class="py-2 px-3"><span class="status-badge status-warranty">Paid</span></td>
+                                <td class="py-2 px-3"><button class="text-gift-slate hover:text-gift-slate-dark"><i class="fas fa-download"></i></button></td>
+                            </tr>
+                            <tr class="border-b border-[rgba(var(--color-rgb-primary),0.08)] dark:border-[rgba(var(--color-rgb-bright),0.15)]">
+                                <td class="py-2 px-3 font-medium">#INV-0287</td>
+                                <td class="py-2 px-3">Routine Maintenance · Jun 2026</td>
+                                <td class="py-2 px-3 font-bold text-gift-slate">$425.00</td>
+                                <td class="py-2 px-3">Jun 22, 2026</td>
+                                <td class="py-2 px-3"><span class="status-badge status-warranty">Paid</span></td>
+                                <td class="py-2 px-3"><button class="text-gift-slate hover:text-gift-slate-dark"><i class="fas fa-download"></i></button></td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 px-3 font-medium">#INV-0182</td>
+                                <td class="py-2 px-3">Panoramic Villa Elevator · Installation</td>
+                                <td class="py-2 px-3 font-bold text-gift-slate">$24,900.00</td>
+                                <td class="py-2 px-3">Mar 12, 2024</td>
+                                <td class="py-2 px-3"><span class="status-badge status-warranty">Paid</span></td>
+                                <td class="py-2 px-3"><button class="text-gift-slate hover:text-gift-slate-dark"><i class="fas fa-download"></i></button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="mt-6 flex flex-wrap items-center gap-3">
+                    <button class="btn-primary-design px-5 py-2.5 text-sm inline-flex items-center gap-2"><i class="fas fa-file-invoice"></i> Request New Invoice</button>
+                    <button class="btn-outline-design px-5 py-2.5 text-sm inline-flex items-center gap-2"><i class="fas fa-download"></i> Export All</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- ========== MESSAGES ========== -->
+        <div id="page-messages" class="page-content hidden">
+            <div class="card-design p-6">
+                <h3 class="font-display font-bold text-2xl mb-4">Messages</h3>
+                <p class="text-sm text-neutral-dark/60 dark:text-gray-400 mb-6">Communicate directly with your Home Elevator service team.</p>
+                <div class="space-y-4">
+                    <div class="p-4 bg-[rgba(var(--color-rgb-primary),0.05)] dark:bg-[rgba(var(--color-rgb-bright),0.08)] rounded-xl">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <p class="font-bold">Support Team <span class="text-xs font-normal text-neutral-dark/60">Home Elevator</span></p>
+                                <p class="text-sm mt-1">Your routine maintenance visit is confirmed for Dec 15 at 10:00 AM. Technician Marcus C. will arrive.</p>
+                            </div>
+                            <span class="text-xs text-neutral-dark/60">Today, 9:15 AM</span>
+                        </div>
+                    </div>
+                    <div class="p-4 bg-[#FFFFFF] dark:bg-[#0A0D12] rounded-xl border border-[rgba(var(--color-rgb-primary),0.12)] dark:border-[rgba(var(--color-rgb-bright),0.15)]">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <p class="font-bold">You <span class="text-xs font-normal text-neutral-dark/60">Margaret</span></p>
+                                <p class="text-sm mt-1">Perfect, thank you! Can you also check the cabin LED lighting while you're here?</p>
+                            </div>
+                            <span class="text-xs text-neutral-dark/60">Yesterday, 6:30 PM</span>
+                        </div>
+                    </div>
+                    <div class="p-4 bg-[rgba(var(--color-rgb-primary),0.05)] dark:bg-[rgba(var(--color-rgb-bright),0.08)] rounded-xl">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <p class="font-bold">Support Team <span class="text-xs font-normal text-neutral-dark/60">Home Elevator</span></p>
+                                <p class="text-sm mt-1">Absolutely — we've added an LED check to your service ticket. See you on the 15th!</p>
+                            </div>
+                            <span class="text-xs text-neutral-dark/60">Yesterday, 8:00 PM</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-6">
+                    <label class="form-label">Send a Message</label>
+                    <div class="flex gap-3">
+                        <input type="text" class="form-input flex-1" placeholder="Type your message..." />
+                        <button class="btn-primary-design px-6 py-2"><i class="fas fa-paper-plane"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ========== SUPPORT ========== -->
+        <div id="page-support" class="page-content hidden">
+            <div class="card-design p-6">
+                <h3 class="font-display font-bold text-2xl mb-4">Contact Support</h3>
+                <p class="text-sm text-neutral-dark/60 dark:text-gray-400 mb-6">Our team is here 24/7 for emergencies and always ready to help.</p>
+                <div class="grid sm:grid-cols-3 gap-4">
+                    <a href="tel:+18005550199" class="p-5 rounded-2xl border border-[rgba(var(--color-rgb-primary),0.15)] hover:border-gift-slate transition flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-[rgba(var(--color-rgb-primary),0.1)] flex items-center justify-center text-gift-slate text-xl flex-shrink-0">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <p class="font-bold">Emergency Line</p>
+                            <p class="text-xs text-neutral-dark/60 dark:text-gray-400 mt-0.5">Available 24/7</p>
+                            <p class="font-bold text-gift-slate mt-2">+1 (800) 555-0199</p>
+                        </div>
+                    </a>
+                    <a href="mailto:support@homeelevator.com" class="p-5 rounded-2xl border border-[rgba(var(--color-rgb-primary),0.15)] hover:border-gift-slate transition flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-[rgba(var(--color-rgb-primary),0.1)] flex items-center justify-center text-gift-slate text-xl flex-shrink-0">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <p class="font-bold">Email Support</p>
+                            <p class="text-xs text-neutral-dark/60 dark:text-gray-400 mt-0.5">Reply within 2 hours</p>
+                            <p class="font-bold text-gift-slate mt-2 text-sm break-all">support@homeelevator.com</p>
+                        </div>
+                    </a>
+                    <a href="contact.html" class="p-5 rounded-2xl border border-[rgba(var(--color-rgb-primary),0.15)] hover:border-gift-slate transition flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-[rgba(var(--color-rgb-primary),0.1)] flex items-center justify-center text-gift-slate text-xl flex-shrink-0">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <div>
+                            <p class="font-bold">Live Chat</p>
+                            <p class="text-xs text-neutral-dark/60 dark:text-gray-400 mt-0.5">Average wait: 1 min</p>
+                            <p class="font-bold text-gift-slate mt-2">Start chat →</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // RTL Toggle
+            const rtlToggle = document.getElementById('rtl-toggle');
+            const rtlToggleMobile = document.getElementById('rtl-toggle-mobile');
+            function setRTL(isRTL) {
+                document.documentElement.setAttribute('dir', isRTL ? 'rtl' : 'ltr');
+                localStorage.setItem('dir', isRTL ? 'rtl' : 'ltr');
+            }
+            const savedDir = localStorage.getItem('dir');
+            setRTL(savedDir === 'rtl');
+            if (rtlToggle) rtlToggle.addEventListener('click', () => setRTL(document.documentElement.getAttribute('dir') !== 'rtl'));
+            if (rtlToggleMobile) rtlToggleMobile.addEventListener('click', () => setRTL(document.documentElement.getAttribute('dir') !== 'rtl'));
+
+            // Theme Toggle
+            const themeToggle = document.getElementById('theme-toggle');
+            const themeToggleMobile = document.getElementById('theme-toggle-mobile');
+            function setTheme(isDark) {
+                if (isDark) document.documentElement.classList.add('dark');
+                else document.documentElement.classList.remove('dark');
+                [themeToggle, themeToggleMobile].forEach(btn => {
+                    if (btn) {
+                        let moon = btn.querySelector('.fa-moon'), sun = btn.querySelector('.fa-sun');
+                        if (isDark) { moon?.classList.add('hidden'); sun?.classList.remove('hidden'); }
+                        else { moon?.classList.remove('hidden'); sun?.classList.add('hidden'); }
+                    }
+                });
+                localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            }
+            const savedTheme = localStorage.getItem('theme');
+            setTheme(savedTheme === 'dark');
+            if (themeToggle) themeToggle.addEventListener('click', () => setTheme(!document.documentElement.classList.contains('dark')));
+            if (themeToggleMobile) themeToggleMobile.addEventListener('click', () => setTheme(!document.documentElement.classList.contains('dark')));
+
+            // Mobile Sidebar
+            const menuToggle = document.getElementById('menuToggle');
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('sidebarOverlay');
+            function closeSidebar() { sidebar.classList.remove('open'); overlay.classList.remove('open'); }
+            function openSidebar() { sidebar.classList.add('open'); overlay.classList.add('open'); }
+            if (menuToggle) menuToggle.addEventListener('click', (e) => { e.stopPropagation(); sidebar.classList.contains('open') ? closeSidebar() : openSidebar(); });
+            if (overlay) overlay.addEventListener('click', closeSidebar);
+            window.addEventListener('resize', () => { if (window.innerWidth > 768 && sidebar.classList.contains('open')) closeSidebar(); });
+
+            // Navigation
+            const sidebarItems = document.querySelectorAll('.sidebar-item');
+            const pages = document.querySelectorAll('.page-content');
+            const pageTitle = document.getElementById('page-title');
+            const pageSubtitle = document.getElementById('page-subtitle');
+            const titles = {
+                dashboard: { title: 'Client Dashboard', subtitle: 'Welcome back, Margaret' },
+                installation: { title: 'My Installation', subtitle: 'Panoramic Villa Elevator · VE-2400' },
+                maintenance: { title: 'Maintenance', subtitle: 'Schedule visits and view service history' },
+                warranty: { title: 'Warranty', subtitle: 'Your coverage details and certificate' },
+                billing: { title: 'Invoices', subtitle: 'All your payments and receipts' },
+                messages: { title: 'Messages', subtitle: 'Chat with your service team' },
+                support: { title: 'Support', subtitle: 'We are here 24/7' }
+            };
+            function navigateTo(page) {
+                sidebarItems.forEach(i => i.classList.remove('active'));
+                document.querySelector(`.sidebar-item[data-page="${page}"]`)?.classList.add('active');
+                pages.forEach(p => p.classList.add('hidden'));
+                document.getElementById(`page-${page}`)?.classList.remove('hidden');
+                if (titles[page]) { pageTitle.textContent = titles[page].title; pageSubtitle.textContent = titles[page].subtitle; }
+                closeSidebar();
+            }
+            sidebarItems.forEach(item => { item.addEventListener('click', () => { navigateTo(item.getAttribute('data-page')); }); });
+            document.querySelectorAll('[data-nav]').forEach(btn => { btn.addEventListener('click', () => { navigateTo(btn.getAttribute('data-nav')); }); });
+        });
+    </script>
+</body>
+</html>

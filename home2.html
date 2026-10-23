@@ -223,6 +223,17 @@
         /* Scrollbar for horizontal scroll */
         .no-scrollbar::-webkit-scrollbar { display: none; }
         .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+        /* Gallery scroll snap padding */
+        #gallery-scroll {
+            scroll-padding-inline: 1.5rem;
+            -webkit-overflow-scrolling: touch;
+        }
+        @media (max-width: 640px) {
+            #gallery-scroll {
+                scroll-padding-inline: 8vw;
+            }
+        }
     </style>
 </head>
 <body class="bg-bg-warm dark:bg-dark-bg text-neutral-dark dark:text-gray-200 transition-colors duration-400">
@@ -485,16 +496,16 @@
     <!-- ==================================================== -->
     <!-- HOME2 SECTION 3: HORIZONTAL SCROLL SHOWCASE (Full-bleed gallery strip) -->
     <!-- ==================================================== -->
-    <section class="py-12 sm:py-16 lg:py-20 bg-bg-warm dark:bg-dark-bg overflow-hidden">
-        <div class="container mx-auto px-6 mb-12">
-            <div class="flex flex-wrap justify-between items-end gap-6">
+    <section class="py-10 sm:py-16 lg:py-20 bg-bg-warm dark:bg-dark-bg overflow-hidden">
+        <div class="container mx-auto px-6 mb-6 sm:mb-10">
+            <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 sm:gap-6">
                 <div class="max-w-xl">
                     <span class="text-gift-slate dark:text-gift-slate-bright font-bold text-xs tracking-[0.3em] font-alt uppercase">Vertical Portfolio</span>
-                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-display font-bold mt-3 leading-tight text-neutral-dark dark:text-white">
+                    <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display font-bold mt-2 sm:mt-3 leading-tight text-neutral-dark dark:text-white">
                         A curated gallery of <span class="gold-gradient-text">ascending spaces</span>
                     </h2>
                 </div>
-                <div class="flex gap-3">
+                <div class="flex items-center gap-3 self-start sm:self-auto">
                     <button id="gallery-prev" class="gallery-nav-btn shadow-md" aria-label="Previous Project">
                         <i class="fas fa-arrow-left"></i>
                     </button>
@@ -505,61 +516,64 @@
             </div>
         </div>
 
-        <div id="gallery-scroll" class="flex gap-6 overflow-x-auto no-scrollbar pb-6 px-6 snap-x snap-mandatory scroll-smooth">
+        <div id="gallery-scroll" class="flex gap-4 sm:gap-6 overflow-x-auto no-scrollbar pt-2 pb-8 px-[8vw] sm:px-8 snap-x snap-mandatory scroll-smooth" style="scroll-padding-left: 8vw; scroll-padding-right: 8vw;">
             <!-- Gallery item 1 -->
-            <div class="gallery-item snap-start flex-shrink-0 w-[85%] sm:w-[420px] lg:w-[480px] h-[540px] rounded-3xl overflow-hidden relative group cursor-pointer">
+            <div class="gallery-item snap-center sm:snap-start flex-shrink-0 w-[84vw] max-w-[340px] sm:max-w-none sm:w-[400px] lg:w-[460px] h-[440px] sm:h-[500px] lg:h-[540px] rounded-3xl overflow-hidden relative group cursor-pointer shadow-xl border border-black/5 dark:border-white/10">
                 <img src="Assets/home2_port_stairlift.jpg" alt="Straight stairlift" class="w-full h-full object-cover">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent"></div>
-                <div class="absolute bottom-0 left-0 right-0 p-7 text-white">
+                <div class="absolute bottom-0 left-0 right-0 p-6 sm:p-7 text-white">
                     <span class="inline-block px-3 py-1 rounded-full bg-gift-slate/90 text-[10px] font-bold uppercase tracking-widest mb-3">Stairlift</span>
-                    <h3 class="text-2xl font-display font-bold mb-1">Straight Rail Stairlift</h3>
-                    <p class="text-sm opacity-80">Slim profile, folding seat, 140 kg capacity.</p>
+                    <h3 class="text-xl sm:text-2xl font-display font-bold mb-1">Straight Rail Stairlift</h3>
+                    <p class="text-xs sm:text-sm opacity-80">Slim profile, folding seat, 140 kg capacity.</p>
                 </div>
             </div>
 
             <!-- Gallery item 2 -->
-            <div class="gallery-item snap-start flex-shrink-0 w-[85%] sm:w-[420px] lg:w-[480px] h-[540px] rounded-3xl overflow-hidden relative group cursor-pointer">
+            <div class="gallery-item snap-center sm:snap-start flex-shrink-0 w-[84vw] max-w-[340px] sm:max-w-none sm:w-[400px] lg:w-[460px] h-[440px] sm:h-[500px] lg:h-[540px] rounded-3xl overflow-hidden relative group cursor-pointer shadow-xl border border-black/5 dark:border-white/10">
                 <img src="Assets/home2_port_elevator.jpg" alt="Home elevator" class="w-full h-full object-cover">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent"></div>
-                <div class="absolute bottom-0 left-0 right-0 p-7 text-white">
+                <div class="absolute bottom-0 left-0 right-0 p-6 sm:p-7 text-white">
                     <span class="inline-block px-3 py-1 rounded-full bg-gift-slate/90 text-[10px] font-bold uppercase tracking-widest mb-3">Home Elevator</span>
-                    <h3 class="text-2xl font-display font-bold mb-1">Panoramic Villa Lift</h3>
-                    <p class="text-sm opacity-80">Glass cabin with smart call and backup battery.</p>
+                    <h3 class="text-xl sm:text-2xl font-display font-bold mb-1">Panoramic Villa Lift</h3>
+                    <p class="text-xs sm:text-sm opacity-80">Glass cabin with smart call and backup battery.</p>
                 </div>
             </div>
 
             <!-- Gallery item 3 -->
-            <div class="gallery-item snap-start flex-shrink-0 w-[85%] sm:w-[420px] lg:w-[480px] h-[540px] rounded-3xl overflow-hidden relative group cursor-pointer">
+            <div class="gallery-item snap-center sm:snap-start flex-shrink-0 w-[84vw] max-w-[340px] sm:max-w-none sm:w-[400px] lg:w-[460px] h-[440px] sm:h-[500px] lg:h-[540px] rounded-3xl overflow-hidden relative group cursor-pointer shadow-xl border border-black/5 dark:border-white/10">
                 <img src="Assets/home2_port_commercial.jpg" alt="Commercial lift" class="w-full h-full object-cover">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent"></div>
-                <div class="absolute bottom-0 left-0 right-0 p-7 text-white">
+                <div class="absolute bottom-0 left-0 right-0 p-6 sm:p-7 text-white">
                     <span class="inline-block px-3 py-1 rounded-full bg-gift-slate/90 text-[10px] font-bold uppercase tracking-widest mb-3">Commercial</span>
-                    <h3 class="text-2xl font-display font-bold mb-1">Boutique Hotel Elevator</h3>
-                    <p class="text-sm opacity-80">Machine-room-less, custom brass doors.</p>
+                    <h3 class="text-xl sm:text-2xl font-display font-bold mb-1">Boutique Hotel Elevator</h3>
+                    <p class="text-xs sm:text-sm opacity-80">Machine-room-less, custom brass doors.</p>
                 </div>
             </div>
 
             <!-- Gallery item 4 -->
-            <div class="gallery-item snap-start flex-shrink-0 w-[85%] sm:w-[420px] lg:w-[480px] h-[540px] rounded-3xl overflow-hidden relative group cursor-pointer">
+            <div class="gallery-item snap-center sm:snap-start flex-shrink-0 w-[84vw] max-w-[340px] sm:max-w-none sm:w-[400px] lg:w-[460px] h-[440px] sm:h-[500px] lg:h-[540px] rounded-3xl overflow-hidden relative group cursor-pointer shadow-xl border border-black/5 dark:border-white/10">
                 <img src="Assets/home2_port_platform.jpg" alt="Platform lift" class="w-full h-full object-cover">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent"></div>
-                <div class="absolute bottom-0 left-0 right-0 p-7 text-white">
+                <div class="absolute bottom-0 left-0 right-0 p-6 sm:p-7 text-white">
                     <span class="inline-block px-3 py-1 rounded-full bg-gift-slate/90 text-[10px] font-bold uppercase tracking-widest mb-3">Platform</span>
-                    <h3 class="text-2xl font-display font-bold mb-1">Vertical Platform Lift</h3>
-                    <p class="text-sm opacity-80">Short-rise accessibility for stages & schools.</p>
+                    <h3 class="text-xl sm:text-2xl font-display font-bold mb-1">Vertical Platform Lift</h3>
+                    <p class="text-xs sm:text-sm opacity-80">Short-rise accessibility for stages & schools.</p>
                 </div>
             </div>
 
             <!-- Gallery item 5 -->
-            <div class="gallery-item snap-start flex-shrink-0 w-[85%] sm:w-[420px] lg:w-[480px] h-[540px] rounded-3xl overflow-hidden relative group cursor-pointer">
+            <div class="gallery-item snap-center sm:snap-start flex-shrink-0 w-[84vw] max-w-[340px] sm:max-w-none sm:w-[400px] lg:w-[460px] h-[440px] sm:h-[500px] lg:h-[540px] rounded-3xl overflow-hidden relative group cursor-pointer shadow-xl border border-black/5 dark:border-white/10">
                 <img src="Assets/home2_port_cabin.jpg" alt="Custom cabin" class="w-full h-full object-cover">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent"></div>
-                <div class="absolute bottom-0 left-0 right-0 p-7 text-white">
+                <div class="absolute bottom-0 left-0 right-0 p-6 sm:p-7 text-white">
                     <span class="inline-block px-3 py-1 rounded-full bg-gift-slate/90 text-[10px] font-bold uppercase tracking-widest mb-3">Custom</span>
-                    <h3 class="text-2xl font-display font-bold mb-1">Heritage Wood Cabin</h3>
-                    <p class="text-sm opacity-80">Bespoke interior matching historic architecture.</p>
+                    <h3 class="text-xl sm:text-2xl font-display font-bold mb-1">Heritage Wood Cabin</h3>
+                    <p class="text-xs sm:text-sm opacity-80">Bespoke interior matching historic architecture.</p>
                 </div>
             </div>
+
+            <!-- Spacer to ensure clean right edge spacing on final card -->
+            <div class="flex-shrink-0 w-2 sm:w-6" aria-hidden="true"></div>
         </div>
     </section>
 
@@ -954,11 +968,15 @@
             const prevBtn = document.getElementById('gallery-prev');
             const nextBtn = document.getElementById('gallery-next');
             if (galleryScroll && prevBtn && nextBtn) {
+                const getScrollStep = () => {
+                    const firstCard = galleryScroll.querySelector('.gallery-item');
+                    return firstCard ? firstCard.offsetWidth + 16 : 340;
+                };
                 prevBtn.addEventListener('click', () => {
-                    galleryScroll.scrollBy({ left: -500, behavior: 'smooth' });
+                    galleryScroll.scrollBy({ left: -getScrollStep(), behavior: 'smooth' });
                 });
                 nextBtn.addEventListener('click', () => {
-                    galleryScroll.scrollBy({ left: 500, behavior: 'smooth' });
+                    galleryScroll.scrollBy({ left: getScrollStep(), behavior: 'smooth' });
                 });
             }
         });

@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sign In | Home Elevator</title>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%23DFBA67'/%3E%3Cstop offset='100%25' stop-color='%23C5A059'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Cg transform='translate(14, 15.2) scale(0.07)'%3E%3Cpath fill='%23ffffff' d='M292.7-4.7l64 64c6.2 6.2 16.4 6.2 22.6 0l64-64c4.6-4.6 5.9-11.5 3.5-17.4S438.5-32 432-32L304-32c-6.5 0-12.3 3.9-14.8 9.9s-1.1 12.9 3.5 17.4zm-160-22.6l-64 64c-4.6 4.6-5.9 11.5-3.5 17.4S73.5 64 80 64l128 0c6.5 0 12.3-3.9 14.8-9.9s1.1-12.9-3.5-17.4l-64-64c-6.2-6.2-16.4-6.2-22.6 0zM64 128c-35.3 0-64 28.7-64 64L0 448c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-256c0-35.3-28.7-64-64-64L64 128zm96 96a48 48 0 1 1 0 96 48 48 0 1 1 0-96zM80 400c0-26.5 21.5-48 48-48l64 0c26.5 0 48 21.5 48 48l0 16c0 17.7-14.3 32-32 32l-96 0c-17.7 0-32-14.3-32-32l0-16zm192 0c0-26.5 21.5-48 48-48l64 0c26.5 0 48 21.5 48 48l0 16c0 17.7-14.3 32-32 32l-96 0c-17.7 0-32-14.3-32-32l0-16zm32-128a48 48 0 1 1 96 0 48 48 0 1 1 -96 0z'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
 <script src="tailwind.js"></script>
 <script>
 tailwind.config = {
@@ -109,12 +109,13 @@ tailwind.config = {
 
   .btn-gold {
     background: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-primary) 100%);
-    color: white;
+    color: #0B0F17 !important;
+    font-weight: 700;
     box-shadow: 0 6px 16px -4px rgba(var(--color-rgb-primary), 0.4);
     transition: all 0.3s ease;
   }
   .btn-gold:hover { transform: translateY(-2px); box-shadow: 0 10px 22px -5px rgba(var(--color-rgb-primary), 0.5); }
-  .dark .btn-gold { background: linear-gradient(135deg, var(--color-primary-bright) 0%, var(--color-primary) 100%); color: #0A0D12; }
+  .dark .btn-gold { background: linear-gradient(135deg, var(--color-primary-bright) 0%, var(--color-primary) 100%); color: #0A0D12 !important; }
 
   /* Compact card */
   .auth-card {
@@ -142,9 +143,7 @@ tailwind.config = {
     <!-- Logo -->
     <div class="text-center mb-5">
       <a href="index.html" class="inline-flex items-center space-x-3 group flex-nowrap mb-4" dir="ltr" title="Home Elevator">
-        <div class="w-11 h-11 bg-gradient-to-br from-gift-slate-light to-gift-slate rounded-2xl flex items-center justify-center flex-shrink-0 transform group-hover:rotate-12 transition-transform duration-300 shadow-lg border border-gift-slate/20">
-          <i class="fas fa-elevator text-white dark:text-dark-bg text-xl"></i>
-        </div>
+        <img src="Assets/logo.svg" alt="Home Elevator Logo" class="w-10 h-10 object-contain flex-shrink-0 group-hover:scale-105 transition-transform duration-300">
         <div class="flex items-center whitespace-nowrap">
           <span class="text-2xl font-display font-extrabold tracking-tight text-neutral-dark dark:text-white">Home</span>
           <span class="text-2xl font-display font-extrabold tracking-tight gold-gradient-text ml-0.5">Elevator</span>

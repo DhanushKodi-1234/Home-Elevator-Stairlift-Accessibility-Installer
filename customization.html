@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Customization | Home Elevator — Design Your Perfect Lift</title>
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%23DFBA67'/%3E%3Cstop offset='100%25' stop-color='%23C5A059'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Cg transform='translate(14, 15.2) scale(0.07)'%3E%3Cpath fill='%23ffffff' d='M292.7-4.7l64 64c6.2 6.2 16.4 6.2 22.6 0l64-64c4.6-4.6 5.9-11.5 3.5-17.4S438.5-32 432-32L304-32c-6.5 0-12.3 3.9-14.8 9.9s-1.1 12.9 3.5 17.4zm-160-22.6l-64 64c-4.6 4.6-5.9 11.5-3.5 17.4S73.5 64 80 64l128 0c6.5 0 12.3-3.9 14.8-9.9s1.1-12.9-3.5-17.4l-64-64c-6.2-6.2-16.4-6.2-22.6 0zM64 128c-35.3 0-64 28.7-64 64L0 448c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-256c0-35.3-28.7-64-64-64L64 128zm96 96a48 48 0 1 1 0 96 48 48 0 1 1 0-96zM80 400c0-26.5 21.5-48 48-48l64 0c26.5 0 48 21.5 48 48l0 16c0 17.7-14.3 32-32 32l-96 0c-17.7 0-32-14.3-32-32l0-16zm192 0c0-26.5 21.5-48 48-48l64 0c26.5 0 48 21.5 48 48l0 16c0 17.7-14.3 32-32 32l-96 0c-17.7 0-32-14.3-32-32l0-16zm32-128a48 48 0 1 1 96 0 48 48 0 1 1 -96 0z'/%3E%3C/g%3E%3C/svg%3E">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <meta name="description" content="Customize your elevator or stairlift — cabin finishes, rail shapes, control panels, lighting, and bespoke details tailored to your space.">
     <!-- Tailwind CSS -->
     <script src="tailwind.js"></script>
@@ -98,17 +98,17 @@
         .no-scrollbar::-webkit-scrollbar { display: none; }
         .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
         
-        /* Premium Navigation */
-        .nav-item { position: relative; padding: 0.5rem 0; font-weight: 600; font-size: 0.85rem; letter-spacing: 0.02em; color: var(--color-text-dark); transition: color 0.3s ease; font-family: 'Plus Jakarta Sans', sans-serif; text-transform: uppercase; white-space: nowrap; }
+        /* Premium Navigation - Issue 3: Uniform 40px height */
+        .nav-item { position: relative; height: 2.5rem; display: inline-flex; align-items: center; padding: 0 0.5rem; font-weight: 600; font-size: 0.85rem; letter-spacing: 0.02em; color: var(--color-text-dark); transition: color 0.3s ease; font-family: 'Plus Jakarta Sans', sans-serif; text-transform: uppercase; white-space: nowrap; }
         .dark .nav-item { color: #E2E8F0; }
         .nav-item:hover { color: var(--color-primary); }
         .dark .nav-item:hover { color: var(--color-primary-bright); }
-        .nav-item::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 0; height: 2px; background: linear-gradient(90deg, var(--color-primary), var(--color-primary-light)); transition: width 0.3s ease; }
+        .nav-item::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background: linear-gradient(90deg, var(--color-primary), var(--color-primary-light)); transition: width 0.3s ease; }
         .dark .nav-item::after { background: linear-gradient(90deg, var(--color-primary-bright), var(--color-primary-light)); }
         [dir="rtl"] .nav-item::after { left: auto; right: 0; }
         .nav-item:hover::after { width: 100%; }
         
-        .dropdown { position: relative; }
+        .dropdown { position: relative; display: inline-flex; align-items: center; }
         .dropdown-menu { position: absolute; top: 100%; left: 0; min-width: 230px; background: rgba(255,255,255,0.98); border-radius: 16px; padding: 0.85rem 0; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.18); opacity: 0; visibility: hidden; transform: translateY(12px); transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1); z-index: 1000; border: 1px solid rgba(var(--color-rgb-primary), 0.2); backdrop-filter: blur(12px); }
         .dark .dropdown-menu { background: rgba(20, 26, 36, 0.98); border-color: rgba(var(--color-rgb-bright), 0.25); box-shadow: 0 25px 50px -12px rgba(0,0,0,0.6); }
         .dropdown:hover .dropdown-menu { opacity: 1; visibility: visible; transform: translateY(0); }
@@ -120,13 +120,14 @@
         .dropdown-item i { margin-right: 0.85rem; width: 20px; text-align: center; color: var(--color-primary); }
         .dark .dropdown-item i { color: var(--color-primary-bright); }
         
-        .auth-btn { padding: 0.6rem 1.75rem; border-radius: 50px; font-weight: 600; font-size: 0.88rem; letter-spacing: 0.04em; transition: all 0.3s ease; border: 1px solid transparent; white-space: nowrap; font-family: 'Plus Jakarta Sans', sans-serif; text-transform: uppercase; }
-        .auth-btn.login { background: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-primary) 100%); color: #ffffff !important; box-shadow: 0 4px 15px rgba(var(--color-rgb-primary), 0.35); border: none; }
+        /* Auth button - Issue 3: Uniform 40px height & Issue 8/9: WCAG AA contrast */
+        .auth-btn { height: 2.5rem; display: inline-flex; align-items: center; justify-content: center; padding: 0 1.75rem; border-radius: 50px; font-weight: 600; font-size: 0.88rem; letter-spacing: 0.04em; transition: all 0.3s ease; border: 1px solid transparent; white-space: nowrap; font-family: 'Plus Jakarta Sans', sans-serif; text-transform: uppercase; }
+        .auth-btn.login { background: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-primary) 100%); color: #0B0F17 !important; box-shadow: 0 4px 15px rgba(var(--color-rgb-primary), 0.35); border: none; }
         .dark .auth-btn.login { background: linear-gradient(135deg, var(--color-primary-bright) 0%, var(--color-primary) 100%); color: #0A0D12 !important; box-shadow: 0 4px 15px rgba(var(--color-rgb-bright), 0.3); border: none; }
-        .auth-btn.login:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(var(--color-rgb-primary), 0.45); color: #ffffff !important; }
+        .auth-btn.login:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(var(--color-rgb-primary), 0.45); color: #0B0F17 !important; }
         .dark .auth-btn.login:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(var(--color-rgb-bright), 0.45); color: #0A0D12 !important; }
         
-        .toggle-btn { width: 38px; height: 38px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: rgba(var(--color-rgb-primary), 0.12); color: var(--color-primary); transition: all 0.3s ease; border: 1px solid rgba(var(--color-rgb-primary), 0.2); cursor: pointer; }
+        .toggle-btn { width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: rgba(var(--color-rgb-primary), 0.12); color: var(--color-primary); transition: all 0.3s ease; border: 1px solid rgba(var(--color-rgb-primary), 0.2); cursor: pointer; flex-shrink: 0; }
         .dark .toggle-btn { background: rgba(var(--color-rgb-bright), 0.12); color: var(--color-primary-bright); border-color: rgba(var(--color-rgb-bright), 0.25); }
         .toggle-btn:hover { background: var(--color-primary); color: white; transform: scale(1.08); }
         .dark .toggle-btn:hover { background: var(--color-primary-bright); color: #0A0D12; transform: scale(1.08); }
@@ -149,11 +150,11 @@
         .mobile-dropdown-item:hover { color: var(--color-primary); background-color: rgba(var(--color-rgb-primary), 0.1); }
         .dark .mobile-dropdown-item:hover { background-color: rgba(var(--color-rgb-bright), 0.15); color: var(--color-primary-bright); }
         .mobile-auth-btn { display: inline-block; padding: 0.85rem 1.75rem; font-weight: 600; border-radius: 50px; transition: all 0.3s ease; text-align: center; margin: 0.25rem; border: 1px solid transparent; font-family: 'Plus Jakarta Sans', sans-serif; text-transform: uppercase; letter-spacing: 0.04em; }
-        .mobile-auth-btn.login { background: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-primary) 100%); color: #ffffff !important; box-shadow: 0 4px 15px rgba(var(--color-rgb-primary), 0.3); border: none; }
+        .mobile-auth-btn.login { background: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-primary) 100%); color: #0B0F17 !important; box-shadow: 0 4px 15px rgba(var(--color-rgb-primary), 0.3); border: none; }
         .dark .mobile-auth-btn.login { background: linear-gradient(135deg, var(--color-primary-bright) 0%, var(--color-primary) 100%); color: #0A0D12 !important; border: none; }
-        .mobile-auth-btn.login:hover { opacity: 0.95; transform: translateY(-1px); }
+        .mobile-auth-btn.login:hover { opacity: 0.95; transform: translateY(-1px); color: #0B0F17 !important; }
         .dark .mobile-auth-btn.login:hover { opacity: 0.95; transform: translateY(-1px); color: #0A0D12 !important; }
-        .desktop-nav-container { display: flex; align-items: center; gap: 2rem; }
+        .desktop-nav-container { display: flex; align-items: center; gap: 1.5rem; }
 
         /* Shared utility styles */
         .service-icon { width: 84px; height: 84px; background: rgba(var(--color-rgb-primary), 0.12); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 1.25rem; font-size: 2.2rem; color: var(--color-primary); border: 1px solid rgba(var(--color-rgb-primary), 0.25); box-shadow: 0 10px 20px -5px rgba(var(--color-rgb-primary), 0.15); }
@@ -162,8 +163,8 @@
         .dark .badge { background: rgba(var(--color-rgb-bright), 0.18); color: var(--color-primary-bright); border-color: rgba(var(--color-rgb-bright), 0.35); }
         .premium-line { width: 90px; height: 3px; background: linear-gradient(90deg, var(--color-primary), var(--color-primary-light), transparent); margin: 24px 0; border-radius: 2px; }
         .dark .premium-line { background: linear-gradient(90deg, var(--color-primary-bright), var(--color-primary-light), transparent); }
-        .btn-gift { background: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-primary) 100%); color: white; padding: 0.9rem 2.25rem; border-radius: 50px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; display: inline-flex; align-items: center; gap: 0.6rem; transition: all 0.3s; font-size: 0.95rem; font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif; box-shadow: 0 10px 25px -5px rgba(var(--color-rgb-primary), 0.35); }
-        .dark .btn-gift { background: linear-gradient(135deg, var(--color-primary-bright) 0%, var(--color-primary) 100%); color: #0A0D12; box-shadow: 0 10px 25px -5px rgba(var(--color-rgb-bright), 0.35); }
+        .btn-gift { background: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-primary) 100%); color: #0B0F17 !important; padding: 0.9rem 2.25rem; border-radius: 50px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; display: inline-flex; align-items: center; gap: 0.6rem; transition: all 0.3s; font-size: 0.95rem; font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif; box-shadow: 0 10px 25px -5px rgba(var(--color-rgb-primary), 0.35); }
+        .dark .btn-gift { background: linear-gradient(135deg, var(--color-primary-bright) 0%, var(--color-primary) 100%); color: #0A0D12 !important; box-shadow: 0 10px 25px -5px rgba(var(--color-rgb-bright), 0.35); }
         .btn-gift:hover { transform: translateY(-3px); box-shadow: 0 18px 35px -8px rgba(var(--color-rgb-primary), 0.5); }
         .dark .btn-gift:hover { box-shadow: 0 18px 35px -8px rgba(var(--color-rgb-bright), 0.5); }
         
@@ -356,9 +357,7 @@
             <div class="flex items-center justify-between h-22 py-4">
                 <!-- Logo -->
                 <a href="index.html" class="flex items-center space-x-3 group flex-nowrap" dir="ltr">
-                    <div class="w-11 h-11 bg-gradient-to-br from-gift-slate-light to-gift-slate rounded-2xl flex items-center justify-center flex-shrink-0 transform group-hover:rotate-12 transition-transform duration-300 shadow-lg border border-gift-slate/20">
-                        <i class="fas fa-elevator text-white dark:text-dark-bg text-xl"></i>
-                    </div>
+                    <img src="Assets/logo.svg" alt="Home Elevator Logo" class="w-10 h-10 object-contain flex-shrink-0 group-hover:scale-105 transition-transform duration-300">
                     <div class="flex items-center whitespace-nowrap">
                         <span class="text-2xl font-display font-extrabold tracking-tight text-neutral-dark dark:text-white">Home </span>
                         <span class="text-2xl font-display font-extrabold tracking-tight gold-gradient-text ml-0.5">Elevator</span>
@@ -393,13 +392,11 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="flex items-center gap-3 ml-2">
-                            <a href="login.html" class="auth-btn login">Sign In</a>
+                        <div class="flex items-center gap-2.5 ml-4">
+                            <button id="theme-toggle" class="toggle-btn" title="Toggle Dark/Light Mode"><i class="fas fa-moon"></i><i class="fas fa-sun hidden"></i></button>
+                            <button id="rtl-toggle" class="toggle-btn" title="Toggle RTL/LTR">⇄</button>
+                            <a href="login.html" class="auth-btn login ml-2">Sign In</a>
                         </div>
-                    </div>
-                    <div class="flex gap-2.5 ml-5 desktop-toggle-group">
-                        <button id="theme-toggle" class="toggle-btn" title="Toggle Dark/Light Mode"><i class="fas fa-moon"></i><i class="fas fa-sun hidden"></i></button>
-                        <button id="rtl-toggle" class="toggle-btn" title="Toggle RTL/LTR">⇄</button>
                     </div>
                 </div>
 
@@ -434,13 +431,12 @@
                         <a href="client.html" class="mobile-dropdown-item">Client</a>
                     </div>
                 </div>
-                <div class="flex flex-col sm:flex-row gap-3 p-6">
-                    <a href="login.html" class="mobile-auth-btn login flex-1 text-center">Sign In</a>
-                </div>
-
-                <div class="flex justify-center gap-3 p-6 border-t border-gray-200 dark:border-gray-800">
+                <div class="flex justify-center gap-3 p-4 border-t border-gray-200 dark:border-gray-800">
                     <button id="theme-toggle-mobile" class="toggle-btn"><i class="fas fa-moon"></i><i class="fas fa-sun hidden"></i></button>
                     <button id="rtl-toggle-mobile" class="toggle-btn">⇄</button>
+                </div>
+                <div class="p-4 pt-0">
+                    <a href="login.html" class="mobile-auth-btn login block w-full text-center">Sign In</a>
                 </div>
             </div>
         </div>
@@ -452,7 +448,7 @@
     <section class="pt-24 pb-8 sm:pt-28 sm:pb-12 lg:pt-32 lg:pb-16 relative overflow-hidden">
         <!-- Luxury Elevator Interior Background Image with Overlay -->
         <div class="absolute inset-0 z-0">
-            <img src="Assets/h1.png" alt="Luxury elevator cabin interior" class="w-full h-full object-cover object-center opacity-15 dark:opacity-20 scale-105 filter blur-[1px]">
+            <img src="Assets/custom_hero.jpg" alt="Luxury elevator cabin interior" class="w-full h-full object-cover object-center opacity-15 dark:opacity-20 scale-105 filter blur-[1px]">
             <div class="absolute inset-0 bg-gradient-to-b from-bg-warm/70 via-bg-warm/90 to-bg-warm dark:from-dark-bg/75 dark:via-dark-bg/90 dark:to-dark-bg"></div>
         </div>
 
@@ -668,7 +664,7 @@
 
                             <!-- Preview image -->
                             <div class="rounded-2xl overflow-hidden mb-5 border border-gift-slate/15 dark:border-gift-slate-bright/20 shadow-lg">
-                                <img id="preview-image" src="Assets/h1.png" alt="Your lift preview" class="w-full h-64 object-cover transition-all duration-500">
+                                <img id="preview-image" src="Assets/config_preview_hero.jpg" alt="Your lift preview" class="w-full h-64 object-cover transition-all duration-500">
                             </div>
 
                             <!-- Configuration summary -->
@@ -749,7 +745,7 @@
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
                 <!-- Material 1 -->
                 <div class="material-card">
-                    <img src="Assets/h1.png" alt="Walnut wood finish" class="w-full h-full object-cover">
+                    <img src="Assets/mat_walnut.jpg" alt="Walnut wood finish" class="w-full h-full object-cover">
                     <span class="material-tag">Wood</span>
                     <div class="material-info">
                         <div class="text-[10px] uppercase tracking-widest text-gift-slate-bright font-bold mb-1">Signature</div>
@@ -760,7 +756,7 @@
 
                 <!-- Material 2 -->
                 <div class="material-card">
-                    <img src="Assets/h3.png" alt="Brushed brass finish" class="w-full h-full object-cover">
+                    <img src="Assets/mat_brass.jpg" alt="Brushed brass finish" class="w-full h-full object-cover">
                     <span class="material-tag">Metal</span>
                     <div class="material-info">
                         <div class="text-[10px] uppercase tracking-widest text-gift-slate-bright font-bold mb-1">Statement</div>
@@ -771,7 +767,7 @@
 
                 <!-- Material 3 -->
                 <div class="material-card">
-                    <img src="Assets/h4.png" alt="Matte black cabin" class="w-full h-full object-cover">
+                    <img src="Assets/mat_matte_black.jpg" alt="Matte black cabin" class="w-full h-full object-cover">
                     <span class="material-tag">Metal</span>
                     <div class="material-info">
                         <div class="text-[10px] uppercase tracking-widest text-gift-slate-bright font-bold mb-1">Modern</div>
@@ -782,7 +778,7 @@
 
                 <!-- Material 4 -->
                 <div class="material-card">
-                    <img src="Assets/h5.png" alt="Glass cabin" class="w-full h-full object-cover">
+                    <img src="Assets/mat_glass.jpg" alt="Glass cabin" class="w-full h-full object-cover">
                     <span class="material-tag">Glass</span>
                     <div class="material-info">
                         <div class="text-[10px] uppercase tracking-widest text-gift-slate-bright font-bold mb-1">Panoramic</div>
@@ -793,7 +789,7 @@
 
                 <!-- Material 5 -->
                 <div class="material-card">
-                    <img src="Assets/h7.png" alt="Marble floor" class="w-full h-full object-cover">
+                    <img src="Assets/mat_marble.jpg" alt="Marble floor" class="w-full h-full object-cover">
                     <span class="material-tag">Stone</span>
                     <div class="material-info">
                         <div class="text-[10px] uppercase tracking-widest text-gift-slate-bright font-bold mb-1">Luxury</div>
@@ -804,7 +800,7 @@
 
                 <!-- Material 6 -->
                 <div class="material-card">
-                    <img src="Assets/h8.png" alt="Leather panel" class="w-full h-full object-cover">
+                    <img src="Assets/mat_leather.jpg" alt="Leather panel" class="w-full h-full object-cover">
                     <span class="material-tag">Textile</span>
                     <div class="material-info">
                         <div class="text-[10px] uppercase tracking-widest text-gift-slate-bright font-bold mb-1">Bespoke</div>
@@ -833,7 +829,7 @@
             <div class="grid lg:grid-cols-2 gap-12 items-center mb-20 max-w-6xl mx-auto">
                 <div class="relative order-2 lg:order-1">
                     <div class="rounded-3xl overflow-hidden shadow-2xl border border-gift-slate/15 dark:border-gift-slate-bright/20">
-                        <img src="Assets/h2.png" alt="Discovery call" class="w-full h-[380px] object-cover">
+                        <img src="Assets/custom_proc_discovery.jpg" alt="Discovery call" class="w-full h-[380px] object-cover">
                     </div>
                     <div class="absolute -top-5 -left-5 w-20 h-20 rounded-2xl bg-gift-slate/15 dark:bg-gift-slate-bright/15 -z-10"></div>
                     <div class="absolute -bottom-5 -right-5 bg-neutral-dark dark:bg-dark-surface text-white rounded-2xl px-6 py-4 shadow-2xl border border-gift-slate/30">
@@ -865,7 +861,7 @@
                 </div>
                 <div class="relative">
                     <div class="rounded-3xl overflow-hidden shadow-2xl border border-gift-slate/15 dark:border-gift-slate-bright/20">
-                        <img src="Assets/h3.png" alt="3D render" class="w-full h-[380px] object-cover">
+                        <img src="Assets/custom_proc_render.jpg" alt="3D render" class="w-full h-[380px] object-cover">
                     </div>
                     <div class="absolute -top-5 -right-5 w-20 h-20 rounded-2xl bg-gift-slate/15 dark:bg-gift-slate-bright/15 -z-10"></div>
                     <div class="absolute -bottom-5 -left-5 bg-neutral-dark dark:bg-dark-surface text-white rounded-2xl px-6 py-4 shadow-2xl border border-gift-slate/30">
@@ -879,7 +875,7 @@
             <div class="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
                 <div class="relative order-2 lg:order-1">
                     <div class="rounded-3xl overflow-hidden shadow-2xl border border-gift-slate/15 dark:border-gift-slate-bright/20">
-                        <img src="Assets/h5.png" alt="Craft and install" class="w-full h-[380px] object-cover">
+                        <img src="Assets/custom_proc_craft.jpg" alt="Craft and install" class="w-full h-[380px] object-cover">
                     </div>
                     <div class="absolute -top-5 -left-5 w-20 h-20 rounded-2xl bg-gift-slate/15 dark:bg-gift-slate-bright/15 -z-10"></div>
                     <div class="absolute -bottom-5 -right-5 bg-neutral-dark dark:bg-dark-surface text-white rounded-2xl px-6 py-4 shadow-2xl border border-gift-slate/30">
@@ -928,7 +924,7 @@
             <!-- Card 1 -->
             <div class="insp-card snap-center sm:snap-start flex-shrink-0 w-[76vw] sm:w-[380px] lg:w-[420px] rounded-2xl sm:rounded-3xl overflow-hidden shadow-lg hover:shadow-xl border border-gift-slate/15 dark:border-gift-slate-bright/20 bg-white dark:bg-dark-card transition-all duration-300">
                 <div class="h-48 sm:h-60 lg:h-72 overflow-hidden">
-                    <img src="Assets/h1.png" alt="Warm Walnut Retreat" class="w-full h-full object-cover">
+                    <img src="Assets/gallery_walnut.jpg" alt="Warm Walnut Retreat" class="w-full h-full object-cover">
                 </div>
                 <div class="p-4 sm:p-6">
                     <div class="flex items-center gap-2 mb-2 sm:mb-3">
@@ -948,7 +944,7 @@
             <!-- Card 2 -->
             <div class="insp-card snap-center sm:snap-start flex-shrink-0 w-[76vw] sm:w-[380px] lg:w-[420px] rounded-2xl sm:rounded-3xl overflow-hidden shadow-lg hover:shadow-xl border border-gift-slate/15 dark:border-gift-slate-bright/20 bg-white dark:bg-dark-card transition-all duration-300">
                 <div class="h-48 sm:h-60 lg:h-72 overflow-hidden">
-                    <img src="Assets/h3.png" alt="Obsidian Modern" class="w-full h-full object-cover">
+                    <img src="Assets/gallery_obsidian.jpg" alt="Obsidian Modern" class="w-full h-full object-cover">
                 </div>
                 <div class="p-4 sm:p-6">
                     <div class="flex items-center gap-2 mb-2 sm:mb-3">
@@ -968,7 +964,7 @@
             <!-- Card 3 -->
             <div class="insp-card snap-center sm:snap-start flex-shrink-0 w-[76vw] sm:w-[380px] lg:w-[420px] rounded-2xl sm:rounded-3xl overflow-hidden shadow-lg hover:shadow-xl border border-gift-slate/15 dark:border-gift-slate-bright/20 bg-white dark:bg-dark-card transition-all duration-300">
                 <div class="h-48 sm:h-60 lg:h-72 overflow-hidden">
-                    <img src="Assets/h2.png" alt="Coastal Classic Stairlift" class="w-full h-full object-cover">
+                    <img src="Assets/gallery_coastal.jpg" alt="Coastal Classic Stairlift" class="w-full h-full object-cover">
                 </div>
                 <div class="p-4 sm:p-6">
                     <div class="flex items-center gap-2 mb-2 sm:mb-3">
@@ -988,7 +984,7 @@
             <!-- Card 4 -->
             <div class="insp-card snap-center sm:snap-start flex-shrink-0 w-[76vw] sm:w-[380px] lg:w-[420px] rounded-2xl sm:rounded-3xl overflow-hidden shadow-lg hover:shadow-xl border border-gift-slate/15 dark:border-gift-slate-bright/20 bg-white dark:bg-dark-card transition-all duration-300">
                 <div class="h-48 sm:h-60 lg:h-72 overflow-hidden">
-                    <img src="Assets/h5.png" alt="Carrara Grand" class="w-full h-full object-cover">
+                    <img src="Assets/gallery_carrara.jpg" alt="Carrara Grand" class="w-full h-full object-cover">
                 </div>
                 <div class="p-4 sm:p-6">
                     <div class="flex items-center gap-2 mb-2 sm:mb-3">
@@ -1008,7 +1004,7 @@
             <!-- Card 5 -->
             <div class="insp-card snap-center sm:snap-start flex-shrink-0 w-[76vw] sm:w-[380px] lg:w-[420px] rounded-2xl sm:rounded-3xl overflow-hidden shadow-lg hover:shadow-xl border border-gift-slate/15 dark:border-gift-slate-bright/20 bg-white dark:bg-dark-card transition-all duration-300">
                 <div class="h-48 sm:h-60 lg:h-72 overflow-hidden">
-                    <img src="Assets/h7.png" alt="Forest Retreat" class="w-full h-full object-cover">
+                    <img src="Assets/gallery_forest.jpg" alt="Forest Retreat" class="w-full h-full object-cover">
                 </div>
                 <div class="p-4 sm:p-6">
                     <div class="flex items-center gap-2 mb-2 sm:mb-3">
@@ -1097,20 +1093,20 @@
                 </div>
             </div>
 
-            <!-- Final CTA -->
-            <div class="max-w-5xl mx-auto mt-20 rounded-3xl bg-gradient-to-br from-gift-slate-dark via-gift-slate to-gift-slate-dark dark:from-dark-surface dark:via-dark-card dark:to-dark-surface text-white p-10 lg:p-14 shadow-2xl relative overflow-hidden">
-                <div class="orb w-72 h-72 bg-white/10 -top-20 -right-20"></div>
+            <!-- Final CTA (Issue 13: High contrast background & typography) -->
+            <div class="max-w-5xl mx-auto mt-20 rounded-3xl bg-gradient-to-br from-neutral-dark via-[#131A26] to-[#0B0F17] dark:from-[#0B0F17] dark:via-dark-card dark:to-[#0B0F17] border border-gift-slate/30 dark:border-gift-slate-bright/25 text-white p-10 lg:p-14 shadow-2xl relative overflow-hidden">
+                <div class="orb w-72 h-72 bg-gift-slate/20 -top-20 -right-20"></div>
                 <div class="relative z-10 text-center">
-                    <span class="text-white/80 font-bold text-xs tracking-[0.3em] uppercase">Start Your Design</span>
-                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-display font-bold mt-4 mb-4 leading-tight">
+                    <span class="text-gift-slate-bright font-bold text-xs tracking-[0.3em] uppercase font-alt">Start Your Design</span>
+                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-display font-bold mt-4 mb-4 leading-tight text-white">
                         Let's craft something <span class="gold-gradient-text">uniquely yours</span>
                     </h2>
-                    <p class="text-base opacity-85 max-w-2xl mx-auto mb-8">Configure online, then talk to a designer. Together we'll refine every detail — from the finish of the handrail to the color of the LED glow.</p>
+                    <p class="text-base text-gray-200 max-w-2xl mx-auto mb-8 leading-relaxed">Configure online, then talk to a designer. Together we'll refine every detail — from the finish of the handrail to the color of the LED glow.</p>
                     <div class="flex flex-wrap gap-4 justify-center">
-                        <a href="contact.html" class="bg-white text-neutral-dark dark:bg-gift-slate-bright dark:text-dark-bg px-8 py-4 rounded-full font-bold text-sm uppercase tracking-wider hover:shadow-2xl hover:-translate-y-0.5 transition flex items-center gap-2">
+                        <a href="contact.html" class="bg-gradient-to-r from-gift-slate-light to-gift-slate text-[#0B0F17] px-8 py-4 rounded-full font-bold text-sm uppercase tracking-wider hover:shadow-2xl hover:-translate-y-0.5 transition flex items-center gap-2 shadow-lg">
                             <i class="fas fa-comments"></i> Book Design Call
                         </a>
-                        <a href="order.html" class="border-2 border-white/40 dark:border-gift-slate-bright/50 text-white dark:text-gift-slate-bright px-8 py-4 rounded-full font-bold text-sm uppercase tracking-wider hover:bg-white/10 dark:hover:bg-gift-slate-bright/10 transition flex items-center gap-2">
+                        <a href="order.html" class="border-2 border-gift-slate/60 dark:border-gift-slate-bright/60 text-white hover:text-gift-slate-bright hover:border-gift-slate-bright px-8 py-4 rounded-full font-bold text-sm uppercase tracking-wider hover:bg-white/5 transition flex items-center gap-2">
                             <i class="fas fa-file-invoice"></i> Submit Configuration
                         </a>
                     </div>
@@ -1119,16 +1115,14 @@
         </div>
     </section>
 
-    <!-- ========== FOOTER (copied from reference) ========== -->
-    <footer class="py-20 transition-colors duration-400">
+    <!-- ========== FOOTER ========== -->
+    <footer class="py-20 transition-colors duration-400 bg-bg-warm/50 dark:bg-dark-bg/60 border-t border-gift-slate/15 dark:border-gift-slate-bright/15">
         <div class="container mx-auto px-6">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-                <div class="text-center md:text-start">
-                    <div class="flex items-center justify-center md:justify-start gap-3 mb-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-6 xl:gap-8">
+                <div class="text-center sm:text-start lg:col-span-4">
+                    <div class="flex items-center justify-center sm:justify-start gap-3 mb-6">
                         <a href="index.html" class="flex items-center space-x-3 group flex-nowrap" dir="ltr">
-                            <div class="w-11 h-11 bg-gradient-to-br from-gift-slate-light to-gift-slate rounded-2xl flex items-center justify-center flex-shrink-0 transform group-hover:rotate-12 transition-transform duration-300 shadow-lg border border-gift-slate/20">
-                                <i class="fas fa-elevator text-white dark:text-dark-bg text-xl"></i>
-                            </div>
+                            <img src="Assets/logo.svg" alt="Home Elevator Logo" class="w-10 h-10 object-contain flex-shrink-0 group-hover:scale-105 transition-transform duration-300">
                             <div class="flex items-center whitespace-nowrap">
                                 <span class="text-2xl font-display font-extrabold tracking-tight text-neutral-dark dark:text-white">Home</span>
                                 <span class="text-2xl font-display font-extrabold tracking-tight gold-gradient-text ml-0.5">Elevator</span>
@@ -1136,13 +1130,13 @@
                         </a>
                     </div>
                     <p class="text-base opacity-80 mb-6 leading-relaxed font-sans">Elevator & stairlift installation experts. Safety, dignity, and architectural excellence.</p>
-                    <div class="flex justify-center md:justify-start gap-4">
+                    <div class="flex justify-center sm:justify-start gap-4">
                         <a href="#" class="social-icon text-base"><i class="fab fa-instagram"></i></a>
                         <a href="#" class="social-icon text-base"><i class="fab fa-linkedin-in"></i></a>
                         <a href="#" class="social-icon text-base"><i class="fab fa-facebook-f"></i></a>
                     </div>
                 </div>
-                <div class="text-center md:text-start">
+                <div class="text-center sm:text-start lg:col-span-2">
                     <h3 class="text-neutral-dark dark:text-white text-xl font-display font-bold mb-6">Quick Links</h3>
                     <ul class="space-y-4 text-base font-sans">
                         <li><a href="index.html" class="hover:text-gift-slate dark:hover:text-gift-slate-bright transition">Home</a></li>
@@ -1153,7 +1147,7 @@
                         <li><a href="contact.html" class="hover:text-gift-slate dark:hover:text-gift-slate-bright transition">Contact</a></li>
                     </ul>
                 </div>
-                <div class="text-center md:text-start">
+                <div class="text-center sm:text-start lg:col-span-2">
                     <h3 class="text-neutral-dark dark:text-white text-xl font-display font-bold mb-6">Solutions</h3>
                     <ul class="space-y-4 text-base font-sans">
                         <li><a href="#" class="hover:text-gift-slate dark:hover:text-gift-slate-bright transition">Stairlifts</a></li>
@@ -1163,13 +1157,25 @@
                         <li><a href="#" class="hover:text-gift-slate dark:hover:text-gift-slate-bright transition">Maintenance</a></li>
                     </ul>
                 </div>
-                <div class="text-center md:text-start">
+                <div class="text-center sm:text-start sm:col-span-2 lg:col-span-4">
                     <h3 class="text-neutral-dark dark:text-white text-xl font-display font-bold mb-6">Contact Concierge</h3>
                     <ul class="space-y-4 text-base mb-8 font-sans">
-                        <li class="flex items-center justify-center md:justify-start gap-3"><i class="fas fa-map-marker-alt text-gift-slate dark:text-gift-slate-bright w-5 text-lg"></i><span class="text-base" dir="ltr">5th Ave Luxury Tower, NYC 10001</span></li>
-                        <li class="flex items-center justify-center md:justify-start gap-3"><i class="fas fa-phone text-gift-slate dark:text-gift-slate-bright w-5 text-lg"></i><span class="text-base" dir="ltr">+1 (800) 555-0199</span></li>
-                        <li class="flex items-center justify-center md:justify-start gap-3"><i class="fas fa-envelope text-gift-slate dark:text-gift-slate-bright w-5 text-lg"></i><span class="text-base" dir="ltr">concierge@homeelevator.com</span></li>
-                        <li class="flex items-center justify-center md:justify-start gap-3"><i class="fas fa-clock text-gift-slate dark:text-gift-slate-bright w-5 text-lg"></i><span class="text-base" dir="ltr">Mon-Fri: 9AM - 6PM EST</span></li>
+                        <li class="flex items-start justify-center sm:justify-start gap-3">
+                            <i class="fas fa-map-marker-alt text-gift-slate dark:text-gift-slate-bright w-5 text-lg mt-0.5 flex-shrink-0"></i>
+                            <span class="text-sm xl:text-base" dir="ltr">5th Ave Luxury Tower, NYC 10001</span>
+                        </li>
+                        <li class="flex items-start justify-center sm:justify-start gap-3">
+                            <i class="fas fa-phone text-gift-slate dark:text-gift-slate-bright w-5 text-lg mt-0.5 flex-shrink-0"></i>
+                            <a href="tel:+18005550199" class="text-sm xl:text-base hover:text-gift-slate dark:hover:text-gift-slate-bright transition whitespace-nowrap" dir="ltr">+1 (800) 555-0199</a>
+                        </li>
+                        <li class="flex items-start justify-center sm:justify-start gap-3">
+                            <i class="fas fa-envelope text-gift-slate dark:text-gift-slate-bright w-5 text-lg mt-0.5 flex-shrink-0"></i>
+                            <a href="mailto:concierge@homeelevator.com" class="text-sm xl:text-base hover:text-gift-slate dark:hover:text-gift-slate-bright transition whitespace-nowrap" dir="ltr">concierge@homeelevator.com</a>
+                        </li>
+                        <li class="flex items-start justify-center sm:justify-start gap-3">
+                            <i class="fas fa-clock text-gift-slate dark:text-gift-slate-bright w-5 text-lg mt-0.5 flex-shrink-0"></i>
+                            <span class="text-sm xl:text-base whitespace-nowrap" dir="ltr">Mon-Fri: 9AM - 6PM EST</span>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -1375,11 +1381,11 @@
                 const previewImg = document.getElementById('preview-image');
                 if (previewImg) {
                     const imageMap = {
-                        'stairlift': 'Assets/h2.png',
-                        'home-elevator': 'Assets/h3.png',
-                        'platform': 'Assets/h4.png'
+                        'stairlift': 'Assets/config_stairlift.jpg',
+                        'home-elevator': 'Assets/config_elevator.jpg',
+                        'platform': 'Assets/config_platform.jpg'
                     };
-                    previewImg.src = imageMap[config.type] || 'Assets/h1.png';
+                    previewImg.src = imageMap[config.type] || 'Assets/config_default.jpg';
                 }
             }
 
